@@ -1,0 +1,85 @@
+[NAME]
+name=scleaner
+
+[VERSION]
+version=1.6
+
+[RELEASE]
+release=1.mrx8
+
+[GROUP]
+group=Applications/System
+
+[DESCRIPTION]
+0=Cleanup program for MgaRemix and Mageia Linux
+1=More information: /usr/share/doc/package_name/repack.txt
+
+[MAINTAINER]
+maintainer=Alex Kotov
+
+[VENDOR]
+vendor=alex_q_2000 (C) 2020
+
+[SUMMARY]
+summary=Cleanup program for MgaRemix
+
+[URLCOPY]
+urlcopy=https://cloud.mail.ru/public/5kma/573FjdpNE
+
+[LICENSE]
+license=GPLv3+
+
+[DEPS]
+deps=
+
+[META]
+meta=0
+
+[NOARCH]
+noarch=0
+
+[SIGN]
+sign=0
+
+[FILES]
+0=/usr/bin/scleaner
+1=/usr/share/applications/scleaner.desktop
+2=/usr/share/icons/scleaner.png
+3=/usr/share/polkit-1/actions/scleaner.policy
+4=/usr/share/SnappyCleaner/
+5=/usr/share/doc/scleaner/
+
+[AFTERINSTALL]
+0=chmod -R 777 /usr/share/SnappyCleaner/tmp
+
+[AFTERREMOVE]
+0=if [ $1 -eq 0 ]; then rm -rf /usr/share/SnappyCleaner; fi
+
+[URL32]
+url32=https://cloud.mail.ru/public/5kma/573FjdpNE
+
+[URL64]
+url64=
+
+[PROGRAMNAME]
+programname=SnappyCleaner
+
+[DEVTOOL]
+devtool=Lazarus
+
+[TOOLVERSION]
+toolversion=2.0.10
+
+[INFO]
+0=Lazarus 1.8.4 is required to compile the program
+1=The program uses standard components
+2=
+3=UPD: v1.6-1
+4=---
+5=+ Lazarus-2.0.10 rebuild
+6=+ Mageia-8 rebuild
+7=
+8=UPD: v1.6-0
+9=---
+10=Fixed calculation of the weight of the packages, old kernels
+11=Fixed counting the weight of orphaned packages when removing the orphanhood attribute
