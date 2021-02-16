@@ -1,4 +1,4 @@
-**scleaner** - (SnappyCleaner) program for comprehensive garbage clearing in the system
+**SnappyCleaner** - program for comprehensive garbage clearing in the system
 
 Performs the following actions:
 - Delete old kernel's
