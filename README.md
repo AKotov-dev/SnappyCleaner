@@ -3,7 +3,7 @@
 Performs the following actions:
 - Delete old kernel's
 - Temporary root files
-- User's shopping cart
+- User basket
 - Temporary user files
 - Recent User Documents
 - Directory-URPMI cache
