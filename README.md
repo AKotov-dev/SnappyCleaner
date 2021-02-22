@@ -17,6 +17,6 @@ Performs the following actions:
 - scleaner --auto (clean up without kernels and orphans)
 - Repairs the RPM database
 
-After installation, SnappyCleaner goes to the Utilities-System menu and starts with a shortcut, or with the 'scleaner' command from under a normal user ('scleaner --auto-auto' - cleaning without taking into account kernels and orphans). Requires root privileges.
+After installation, SnappyCleaner goes to the `Utilities-System` menu and starts with a shortcut, or with the `scleaner` command from under a normal user (`scleaner --auto-auto` - cleaning without taking into account kernels and orphans). Requires root privileges.
 
 Developed and tested only on Mageia Linux-7/8.
