@@ -1,0 +1,93 @@
+unit NotOrphanTRD;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, Forms, Controls, Process;
+
+type
+  StartNotOrphan = class(TThread)
+  private
+
+    { Private declarations }
+  protected
+
+    procedure Execute; override;
+    procedure ShowFinal;
+  end;
+
+implementation
+
+uses Unit1, DepsUnit;
+
+{ TRD }
+
+procedure StartNotOrphan.Execute;
+var
+  ExProcess: TProcess;
+begin
+  try
+    FreeOnTerminate := True;
+
+    ExProcess := TProcess.Create(nil);
+    ExProcess.Executable := 'sh';
+    ExProcess.Options := ExProcess.Options + [poWaitOnExit];
+    ExProcess.Parameters.Add('-c');
+
+    //Левый список
+    ExProcess.Parameters.Add('/usr/sbin/urpmi ' + NotOrphans);
+    ExProcess.Execute;
+
+  finally
+    ExProcess.Free;
+    Synchronize(@ShowFinal);
+  end;
+end;
+
+
+////// БЛОК ЗАВЕРШЕНИЯ ПРОЦЕССА /////////////
+
+//Финал очистки
+procedure StartNotOrphan.ShowFinal;
+var
+  i, a: integer;
+begin
+  //Скрываем прогресс
+  with MainForm do
+  begin
+    Timer1.Enabled := False;
+    ProgressBar1.Visible := False;
+    ProgressBar1.Position := 0;
+
+    Panel1.Enabled := True;
+    Panel2.Enabled := True;
+
+    if LangBtn.Caption = 'EN' then
+      StaticText1.Caption := 'отметки пакетов расставлены...'
+    else
+      StaticText1.Caption := 'mark packages placed...';
+
+    a := 0; //Указатель верхнего отмеченного Items
+    //Удаляем выделеные сироты из списка
+    for i := AutoOrphansBox.Count - 1 downto 0 do
+      if AutoOrphansBox.Checked[i] then
+      begin
+        AutoOrphansBox.Items.Delete(i);
+        a := i;
+      end;
+
+    //Возвращаем указатель в список пакетов-сирот
+    if a > 0 then
+      AutoOrphansBox.ItemIndex := a - 1
+    else
+    if AutoOrphansBox.Items.Count > 0 then
+      AutoOrphansBox.ItemIndex := 0;
+  end;
+
+  //Терминируем поток
+  Terminate;
+end;
+
+end.

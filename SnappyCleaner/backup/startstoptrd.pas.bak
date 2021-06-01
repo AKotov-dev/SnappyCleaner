@@ -1,0 +1,146 @@
+unit StartStopTRD;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Process;
+
+type
+  StartStop = class(TThread)
+  private
+
+
+    { Private declarations }
+  protected
+  var
+    KType, AllKernel, ActKernel, Signature, RemKernel, KlSize: TStringList;
+
+    procedure Execute; override;
+    procedure StartProc;
+  end;
+
+implementation
+
+uses Unit1;
+
+{ TRD }
+
+procedure StartStop.Execute;
+var
+  ExProcess: TProcess;
+begin
+  try
+    FreeOnTerminate := True;
+    KType := TStringList.Create;
+    AllKernel := TStringList.Create;
+    ActKernel := TStringList.Create;
+    Signature := TStringList.Create;
+    RemKernel := TStringList.Create;
+    KlSize := TStringList.Create;
+
+    ExProcess := TProcess.Create(nil);
+    ExProcess.Executable := 'sh';  //sh или xterm
+    ExProcess.Options := ExProcess.Options + [poUsePipes, poWaitOnExit];
+
+    //Узнаём тип ядра KType
+    ExProcess.Parameters.Add('-c');
+    ExProcess.Parameters.Add('for ktype in "server" "desktop" "linus"; do ' +
+      'if [ -n "$(echo $(uname -r) | grep $ktype)" ]; then break; fi; done; echo $ktype');
+    ExProcess.Execute;
+    KType.LoadFromStream(ExProcess.Output); //KType[0] - тип ядра
+
+    //Начитываем список всех ядер
+    ExProcess.Parameters.Delete(1);
+    ExProcess.Parameters.Add('allkernel=$(rpm -qa kernel-' + KType[0] +
+      '* --qf ' + '''%{name} %{installtime}\n''' + ' | ' +
+      'grep -v "latest" | sort -nk 2 | awk ' + '''{ print $1 }''' +
+      '); echo "$allkernel"');
+    ExProcess.Execute;
+    AllKernel.LoadFromStream(ExProcess.Output);
+    //Выгружаем в файл
+    AllKernel.SaveToFile(ExtractFilePath(ParamStr(0)) + 'remkernel');
+
+    //Выделяем активное ядро
+    ExProcess.Parameters.Delete(1);
+    ExProcess.Parameters.Add('actkernel=$(echo "' + Trim(AllKernel.Text) +
+      '" | grep -v "devel" | tail -n 1); echo "$actkernel"');
+    ExProcess.Execute;
+    ActKernel.LoadFromStream(ExProcess.Output);
+
+    //Вычисляю сигнатуру активного ядра
+    ExProcess.Parameters.Delete(1);
+    ExProcess.Parameters.Add('signature=$(echo ' + ActKernel[0] +
+      '| sed ' + '''s/[^0-9]/' + '/g''' + '); echo $signature');
+    ExProcess.Execute;
+    Signature.LoadFromStream(ExProcess.Output);
+
+    //Начитываем ядра на удаление по сигнатуре
+    ExProcess.Parameters.Delete(1);
+    ExProcess.Parameters.Add('while read LINE; do ' + 'if [[ $(echo $LINE | sed ' +
+      '''s/[^0-9]/' + '/g''' + ') -eq "' + Signature[0] + '" ]]; then ' +
+      'sed -i "/$LINE/d" "' + ExtractFilePath(ParamStr(0)) + 'remkernel"; ' +
+      'fi; done < "' + ExtractFilePath(ParamStr(0)) + 'remkernel"');
+    ExProcess.Execute;
+    RemKernel.LoadFromFile(ExtractFilePath(ParamStr(0)) + 'remkernel');
+
+    //Рассчитываю вес удаляемых ядер
+    if RemKernel.Text <> '' then
+    begin
+      ExProcess.Parameters.Delete(1);
+      ExProcess.Parameters.Add('klsize=$(rpm -qi ' +
+        StringReplace(RemKernel.Text, #10, ' ', [rfReplaceAll]) +
+        ' | grep "Size" | cut -f 2 -d : -s | cut -c 2-); ' +
+        'klsize=$(echo $klsize | sed ' + '''s/ /+/g''' +
+        '); let "klsize=($klsize) / 1048576"; echo $klsize Мбайт');
+      ExProcess.Execute;
+      KlSize.LoadFromStream(ExProcess.Output);
+    end
+    else
+      KlSize.Text := '0 Мбайт';
+
+  finally
+    ExProcess.Free;
+    Synchronize(@StartProc);
+  end;
+end;
+
+procedure StartStop.StartProc;
+begin
+  try
+    //Показываем список всех ядер
+    MainForm.AllKernelMemo.Lines.Assign(AllKernel);
+
+    //Показываем активное ядро
+    MainForm.Label1.Caption := ActKernel[0];
+
+    //Показываем список удаляемых ядер
+    MainForm.RemKernelMemo.Lines.Assign(RemKernel);
+
+    //Показываем вес удаляемых ядер
+    MainForm.Label6.Caption := KlSize[0];
+
+  finally
+    MainForm.ClearBtn.Enabled := True;
+
+    //Скрываем прогресс
+    MainForm.Timer1.Enabled := False;
+    MainForm.ProgressBar1.Visible := False;
+    MainForm.ProgressBar1.Position := 0;
+    MainForm.ClearBtn.Enabled := True;
+
+    KType.Free;
+    AllKernel.Free;
+    ActKernel.Free;
+    Signature.Free;
+    RemKernel.Free;
+    KlSize.Free;
+
+    Screen.Cursor := crDefault;
+    //Терминируем поток StartStop
+    Terminate;
+  end;
+end;
+
+end.
