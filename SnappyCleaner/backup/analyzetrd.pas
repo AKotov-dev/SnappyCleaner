@@ -205,14 +205,14 @@ begin
       '); else palemooncache="no"; fi; echo $palemooncache');
     ExProcess.Execute;
     Result.LoadFromStream(ExProcess.Output);
-    //Показываем размер кеша Chromium
+    //Показываем размер кеша Palemoon
     Synchronize(@ShowPaleMoonCache);
 
 
     //Использование HDD
     ExProcess.Parameters.Clear;
     ExProcess.Parameters.Add('-c');
-    ExProcess.Parameters.Add('/usr/bin/df / --output=pcent | tail -n 1 | cut -d% -f1');
+    ExProcess.Parameters.Add('/usr/bin/df /$(logname)/ --output=pcent | tail -n 1 | cut -d% -f1');
     ExProcess.Execute;
     Result.LoadFromStream(ExProcess.Output);
     //Показываем использование HDD
@@ -233,7 +233,7 @@ begin
     ExProcess.Parameters.Clear;
     ExProcess.Parameters.Add('-c');
     ExProcess.Parameters.Add('allkernel=$(rpm -qa kernel-' + Result[0] +
-      '* --qf ' + '''%{name} %{installtime}\n''' + ' | ' +
+      '* --qf ' + '''%{name}-%{version}-%{release} %{installtime}\n''' + ' | ' +
       'grep -v "latest" | sort -rnk 2 | awk ' + '''{ print $1 }''' +
       '); echo "$allkernel"');
     ExProcess.Execute;

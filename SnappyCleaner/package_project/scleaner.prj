@@ -2,10 +2,10 @@
 name=scleaner
 
 [VERSION]
-version=1.6
+version=1.7
 
 [RELEASE]
-release=1.mrx8
+release=0.mrx8
 
 [GROUP]
 group=Applications/System
@@ -24,13 +24,13 @@ vendor=alex_q_2000 (C) 2020
 summary=Cleanup program for MgaRemix
 
 [URLCOPY]
-urlcopy=https://cloud.mail.ru/public/5kma/573FjdpNE
+urlcopy=https://github.com/AKotov-dev/SnappyCleaner
 
 [LICENSE]
-license=GPLv3+
+license=GPLv3
 
 [DEPS]
-deps=
+deps=gtk2
 
 [META]
 meta=0
@@ -40,6 +40,9 @@ noarch=0
 
 [SIGN]
 sign=0
+
+[DEB]
+deb=0
 
 [FILES]
 0=/usr/bin/scleaner
@@ -56,7 +59,7 @@ sign=0
 0=if [ $1 -eq 0 ]; then rm -rf /usr/share/SnappyCleaner; fi
 
 [URL32]
-url32=https://cloud.mail.ru/public/5kma/573FjdpNE
+url32=https://github.com/AKotov-dev/SnappyCleaner
 
 [URL64]
 url64=
@@ -68,18 +71,21 @@ programname=SnappyCleaner
 devtool=Lazarus
 
 [TOOLVERSION]
-toolversion=2.0.10
+toolversion=2.2.0
 
 [INFO]
-0=Lazarus 1.8.4 is required to compile the program
-1=The program uses standard components
-2=
-3=UPD: v1.6-1
-4=---
-5=+ Lazarus-2.0.10 rebuild
-6=+ Mageia-8 rebuild
+0=v1.7
+1=+ The packages is designed for Mageia-9 and higher
+2=+ Updated tags of the kernels  filtering format (rpm --qf)
+3=+ Added gtk2 dependency
+4=+ Recompilation in Lazarus 2.2.0
+5=+ Improving interactive cleaning: scleaner --auto
+6=+ Usage indicator /home (%)
 7=
-8=UPD: v1.6-0
-9=---
-10=Fixed calculation of the weight of the packages, old kernels
-11=Fixed counting the weight of orphaned packages when removing the orphanhood attribute
+8=v1.6-1
+9=+ Lazarus-2.0.10 rebuild
+10=+ Mageia-8 rebuild
+11=
+12=v1.6-0
+13=Fixed calculation of the weight of the packages, old kernels
+14=Fixed counting the weight of orphaned packages when removing the orphanhood attribute

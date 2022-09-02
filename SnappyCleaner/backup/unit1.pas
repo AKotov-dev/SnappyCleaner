@@ -201,7 +201,7 @@ begin
     CacheOperaCheck.Caption := 'Кеш браузера Opera:';
     CacheChromiumCheck.Caption := 'Кеш Chromium:';
     CachePaleMoonCheck.Caption := 'Кеш PaleMoon:';
-    Label25.Caption := 'Использование HDD:';
+    Label25.Caption := 'Использование /home:';
 
     CleanBtn.Caption := 'Очистка';
     AnalyzeBtn.Caption := 'Анализ';
@@ -280,7 +280,7 @@ begin
     CacheOperaCheck.Caption := 'Opera cache:';
     CacheChromiumCheck.Caption := 'Chromium cache:';
     CachePaleMoonCheck.Caption := 'PaleMoon cache:';
-    Label25.Caption := 'HDD usage:';
+    Label25.Caption := 'Using /home:';
 
     CleanBtn.Caption := 'Clean';
     AnalyzeBtn.Caption := 'Analyze';

@@ -17,18 +17,18 @@ if [[ $LANG == "ru_RU.UTF-8" ]]; then
 
 #Очищаю корзину
   echo -en "Очищаю корзину пользователя... "
-  rm -rf /home/$USER/.local/share/Trash/files/*
-  rm -rf /home/$USER/.local/share/Trash/info/*
+  rm -rf /home/$(logname)/.local/share/Trash/files/*
+  rm -rf /home/$(logname)/.local/share/Trash/info/*
   echo -e "${rcolor}завершено${ncolor}\n"
 
 #Очищаю временные файлы пользователя
   echo -en "Очищаю временные файлы пользователя... "
-  rm -rf /home/$USER/tmp/*
+  rm -rf /home/$(logname)/tmp/*
   echo -e "${rcolor}завершено${ncolor}\n"
 
 #Очищаю временные файлы пользователя RecentDocuments
   echo -en "Очищаю файлы пользователя RecentDocuments... "
-  rm -rf /home/$USER/.local/share/RecentDocuments/*
+  rm -rf /home/$(logname)/.local/share/RecentDocuments/*
   echo -e "${rcolor}завершено${ncolor}\n"
 
 #Ремонтирую базу данных RPM
@@ -43,27 +43,27 @@ if [[ $LANG == "ru_RU.UTF-8" ]]; then
 
 #Очищаю кеш Mozilla Firefox
   echo -en "Очищаю кеш браузера Mozilla Firefox... "
-  rm -rf /home/$USER/.cache/mozilla/*
+  rm -rf /home/$(logname)/.cache/mozilla/*
   echo -e "${rcolor}завершено${ncolor}\n"
 
 #Очищаю кеш Google Chrome
   echo -en "Очищаю кеш браузера Google Chrome... "
-  rm -rf /home/$USER/.cache/google-chrome/*
+  rm -rf /home/$(logname)/.cache/google-chrome/*
   echo -e "${rcolor}завершено${ncolor}\n"
 
 #Очищаю кеш Opera
   echo -en "Очищаю кеш браузера Opera... "
-  rm -rf /home/$USER/.cache/opera/*
+  rm -rf /home/$(logname)/.cache/opera/*
   echo -e "${rcolor}завершено${ncolor}\n"
 
 #Очищаю кеш Chromium
   echo -en "Очищаю кеш браузера Chromium... "
-  rm -rf /home/$USER/.cache/chromium/*
+  rm -rf /home/$(logname)/.cache/chromium/*
   echo -e "${rcolor}завершено${ncolor}\n"
 
 #Очищаю кеш PaleMoon
   echo -en "Очищаю кеш браузера PaleMoon... "
-  rm -rf "/home/$USER/.cache/moonchild productions/"*
+  rm -rf "/home/$(logname)/.cache/moonchild productions/"*
   echo -e "${rcolor}завершено${ncolor}\n"
 
 #Завершаю очистку
@@ -79,18 +79,18 @@ fi;
 
 #Очищаю корзину
   echo -en "Clean the user recycle bin... "
-  rm -rf /home/$USER/.local/share/Trash/files/*
-  rm -rf /home/$USER/.local/share/Trash/info/*
+  rm -rf /home/$(logname)/.local/share/Trash/files/*
+  rm -rf /home/$(logname)/.local/share/Trash/info/*
   echo -e "${rcolor}completed${ncolor}\n"
 
 #Очищаю временные файлы пользователя
   echo -en "Clean user temporary files... "
-  rm -rf /home/$USER/tmp/*
+  rm -rf /home/$(logname)/tmp/*
   echo -e "${rcolor}completed${ncolor}\n"
 
 #Очищаю временные файлы пользователя RecentDocuments
   echo -en "Clean RecentDocuments... "
-  rm -rf /home/$USER/.local/share/RecentDocuments/*
+  rm -rf /home/$(logname)/.local/share/RecentDocuments/*
   echo -e "${rcolor}completed${ncolor}\n"
 
 #Ремонтирую базу данных RPM
@@ -105,27 +105,27 @@ fi;
 
 #Очищаю кеш Mozilla Firefox
   echo -en "Clean Mozilla Firefox cache... "
-  rm -rf /home/$USER/.cache/mozilla/*
+  rm -rf /home/$(logname)/.cache/mozilla/*
   echo -e "${rcolor}completed${ncolor}\n"
 
 #Очищаю кеш Google Chrome
   echo -en "Clean Google Chrome cache... "
-  rm -rf /home/$USER/.cache/google-chrome/*
+  rm -rf /home/$(logname)/.cache/google-chrome/*
   echo -e "${rcolor}completed${ncolor}\n"
 
 #Очищаю кеш Opera
   echo -en "Clean Opera cache... "
-  rm -rf /home/$USER/.cache/opera/*
+  rm -rf /home/$(logname)/.cache/opera/*
   echo -e "${rcolor}completed${ncolor}\n"
 
 #Очищаю кеш Chromium
   echo -en "Clean Chromium cache... "
-  rm -rf /home/$USER/.cache/chromium/*
+  rm -rf /home/$(logname)/.cache/chromium/*
   echo -e "${rcolor}completed${ncolor}\n"
 
 #Очищаю кеш PaleMoon
   echo -en "Clean PaleMoon cache... "
-  rm -rf "/home/$USER/.cache/moonchild productions/"*
+  rm -rf "/home/$(logname)/.cache/moonchild productions/"*
   echo -e "${rcolor}completed${ncolor}\n"
 
 #Завершаю очистку
