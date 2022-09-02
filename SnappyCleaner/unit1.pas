@@ -268,7 +268,7 @@ begin
     if Label27.Caption = 'пусто' then
       LAbel27.Caption := 'empty';
 
-    Label7.Caption := 'UserName:';
+    Label7.Caption := 'User:';
     SelectAllCheck.Caption := 'Select/Reset all';
     RepairRPMCheck.Caption := 'Repair RPM DataBase';
     RootTMPCheck.Caption := 'Directory /root/tmp:';

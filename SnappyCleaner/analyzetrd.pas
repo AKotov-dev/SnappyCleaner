@@ -29,7 +29,7 @@ type
     procedure ShowOperaCache;
     procedure ShowChromiumCache;
     procedure ShowPaleMoonCache;
-    procedure ShowHDDUsage;
+    procedure ShowHomeUsage;
 
     procedure ShowNewKernel;
 
@@ -209,14 +209,15 @@ begin
     Synchronize(@ShowPaleMoonCache);
 
 
-    //Использование HDD
+    //Использование /home
     ExProcess.Parameters.Clear;
     ExProcess.Parameters.Add('-c');
-    ExProcess.Parameters.Add('/usr/bin/df /home/ --output=pcent | tail -n 1 | cut -d% -f1');
+    ExProcess.Parameters.Add(
+      '/usr/bin/df /home/ --output=pcent | tail -n 1 | cut -d% -f1');
     ExProcess.Execute;
     Result.LoadFromStream(ExProcess.Output);
-    //Показываем использование HDD
-    Synchronize(@ShowHDDUsage);
+    //Показываем использование /home
+    Synchronize(@ShowHomeUsage);
 
 
     { ПРАВЫЙ БЛОК - ЯДРА И СИРОТЫ }
@@ -233,8 +234,8 @@ begin
     ExProcess.Parameters.Clear;
     ExProcess.Parameters.Add('-c');
     ExProcess.Parameters.Add('allkernel=$(rpm -qa kernel-' + Result[0] +
-      '* --qf ' + '''%{name}-%{version}-%{release} %{installtime}\n''' + ' | ' +
-      'grep -v "latest" | sort -rnk 2 | awk ' + '''{ print $1 }''' +
+      '* --qf ' + '''%{name}-%{version}-%{release} %{installtime}\n''' +
+      ' | ' + 'grep -v "latest" | sort -rnk 2 | awk ' + '''{ print $1 }''' +
       '); echo "$allkernel"');
     ExProcess.Execute;
     Result.LoadFromStream(ExProcess.Output);
@@ -426,7 +427,7 @@ begin
     MainForm.Label27.Caption := Result[0];
 end;
 
-procedure StartAnalyze.ShowHDDUsage;
+procedure StartAnalyze.ShowHomeUsage;
 begin
   //Показываем использование диска
   MainForm.Label26.Caption := Trim(Result[0]) + '%';

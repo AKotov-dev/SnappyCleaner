@@ -44,9 +44,9 @@ object MainForm: TMainForm
       Left = 8
       Height = 17
       Top = 8
-      Width = 66
+      Width = 30
       BorderSpacing.Left = 7
-      Caption = 'UserName:'
+      Caption = 'User:'
       Font.Color = clBlue
       Font.Style = [fsUnderline]
       ParentFont = False
@@ -57,7 +57,7 @@ object MainForm: TMainForm
       AnchorSideLeft.Side = asrBottom
       AnchorSideBottom.Control = Label7
       AnchorSideBottom.Side = asrBottom
-      Left = 78
+      Left = 42
       Height = 17
       Top = 8
       Width = 18

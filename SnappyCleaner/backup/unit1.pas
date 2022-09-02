@@ -657,7 +657,7 @@ begin
 
     AboutForm.Label3.Caption :=
       'MgaRemix cleanup program' + #13#10 + #13#10 + 'License: GNU GPL' +
-      #13#10 + 'Compilation: Lazarus 1.8.4' + #13#10 +
+      #13#10 + 'Compilation: Lazarus 2.2.0' + #13#10 +
       'Author: alex_q_2000 (C) 2020' + #13#10 + 'Co-authorship: ingvaro' +
       #13#10 + 'Gratitudes: algri14, AlexL' + #13#10 +
       'mozg1986, Zomby, TopE, kvv-vp' + #13#10 + #13#10 +
@@ -669,7 +669,7 @@ begin
 
     AboutForm.Label3.Caption :=
       'Программа очистки MgaRemix' + #13#10 + #13#10 +
-      'Лицензия: GNU GPL' + #13#10 + 'Компиляция: Lazarus 1.8.4' +
+      'Лицензия: GNU GPL' + #13#10 + 'Компиляция: Lazarus 2.2.0' +
       #13#10 + 'Автор: alex_q_2000 (C) 2020' + #13#10 +
       'Соавторство: ingvaro' + #13#10 +
       'Благодарности: algri14, AlexL,' + #13#10 +
