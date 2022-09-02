@@ -1492,7 +1492,7 @@ object AboutForm: TAboutForm
     Top = 38
     Width = 210
     Anchors = [akLeft]
-    Caption = 'Программа очистки MgaRemix'#10#10'Лицензия: GNU GPL'#10'Компиляция: Lazarus 1.8.4'#10'Автор: alex_q_2000 (C) 2020'#10'Соавторство: ingvaro'#10'Благодарности: algri14, AlexL,'#10'mozg1986, Zomby, TopE, kvv-vp'#10#10'Russian Linux Forum'#10'https://linuxforum.ru'
+    Caption = 'Программа очистки MgaRemix'#10#10'Лицензия: GNU GPL'#10'Компиляция: Lazarus 1.8.4'#10'Автор: alex_q_2000 (C) 2020'#10'Соавторство: ingvaro'#10'Благодарности: algri14, AlexL,'#10'mozg1986, Zomby, TopE, kvv-vp'#10#10'Russian Linux Forum:'#10'https://linuxforum.ru'
     ParentColor = False
   end
   object Bevel2: TBevel

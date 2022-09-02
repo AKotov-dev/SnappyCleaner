@@ -1,17 +1,16 @@
 object AboutForm: TAboutForm
-  Left = 466
+  Left = 447
   Height = 257
-  Top = 191
+  Top = 197
   Width = 360
   BorderIcons = [biSystemMenu]
   Caption = 'О программе'
   ClientHeight = 257
   ClientWidth = 360
-  DesignTimePPI = 92
   OnCreate = FormCreate
   Position = poMainFormCenter
   SessionProperties = 'Width;Height'
-  LCLVersion = '1.8.4.0'
+  LCLVersion = '2.2.0.4'
   object Bevel1: TBevel
     Left = 0
     Height = 257
@@ -22,9 +21,9 @@ object AboutForm: TAboutForm
   end
   object Image1: TImage
     Left = 8
-    Height = 90
+    Height = 94
     Top = 8
-    Width = 90
+    Width = 94
     Picture.Data = {
       1754506F727461626C654E6574776F726B477261706869635BB4000089504E47
       0D0A1A0A0000000D49484452000000F0000000F008060000003E55E992000000
@@ -1474,26 +1473,24 @@ object AboutForm: TAboutForm
     Stretch = True
   end
   object Label1: TLabel
-    Left = 120
-    Height = 23
+    Left = 125
+    Height = 24
     Top = 8
-    Width = 164
+    Width = 169
     Caption = 'SnappyCleaner'
     Font.Color = clBlack
-    Font.Height = -19
+    Font.Height = -20
     Font.Name = 'Sans'
     Font.Style = [fsBold]
-    ParentColor = False
     ParentFont = False
   end
   object Label3: TLabel
-    Left = 120
-    Height = 165
-    Top = 38
-    Width = 210
+    Left = 125
+    Height = 153
+    Top = 44
+    Width = 195
     Anchors = [akLeft]
-    Caption = 'Программа очистки MgaRemix'#10#10'Лицензия: GNU GPL'#10'Компиляция: Lazarus 1.8.4'#10'Автор: alex_q_2000 (C) 2020'#10'Соавторство: ingvaro'#10'Благодарности: algri14, AlexL,'#10'mozg1986, Zomby, TopE, kvv-vp'#10#10'Russian Linux Forum:'#10'https://linuxforum.ru'
-    ParentColor = False
+    Caption = 'Программа очистки MgaRemix'#10#10'Лицензия: GNU GPL'#10'Компиляция: Lazarus 2.2.0'#10'Автор: alex_q_2000 (C) 2020'#10'Соавторство: ingvaro'#10'Благодарности: algri14, AlexL,'#10'mozg1986, Zomby, TopE, kvv-vp'#10#10'Russian Linux Forum:'#10'https://linuxforum.ru'
   end
   object Bevel2: TBevel
     AnchorSideLeft.Control = Bevel1
@@ -1502,8 +1499,8 @@ object AboutForm: TAboutForm
     AnchorSideRight.Control = Bevel1
     AnchorSideRight.Side = asrBottom
     Left = 6
-    Height = 16
-    Top = 212
+    Height = 17
+    Top = 206
     Width = 348
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 6
@@ -1514,9 +1511,9 @@ object AboutForm: TAboutForm
   object BitBtn1: TBitBtn
     AnchorSideTop.Control = Bevel2
     Left = 142
-    Height = 30
-    Top = 221
-    Width = 75
+    Height = 31
+    Top = 215
+    Width = 78
     Anchors = [akTop]
     BorderSpacing.Top = 9
     Default = True
@@ -1527,7 +1524,7 @@ object AboutForm: TAboutForm
   end
   object XMLPropStorage1: TXMLPropStorage
     StoredValues = <>
-    left = 328
-    top = 224
+    Left = 342
+    Top = 234
   end
 end
