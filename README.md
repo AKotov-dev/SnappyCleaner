@@ -19,6 +19,6 @@ Performs the following actions:
 
 After installation, SnappyCleaner goes to the `Utilities-System` menu and starts with a shortcut, or with the `scleaner` command from under a normal user (`scleaner --auto-auto` - cleaning without taking into account kernels and orphans). Requires `root` privileges.
 
-Developed and tested only on Mageia Linux-7/8.
+Developed and tested only on Mageia Linux-7/8/9.
 
 ![](https://github.com/AKotov-dev/SnappyCleaner/blob/main/ScreenShots/scleaner4.png)
