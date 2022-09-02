@@ -5,7 +5,7 @@ name=scleaner
 version=1.7
 
 [RELEASE]
-release=0.mrx8
+release=0.mrx9
 
 [GROUP]
 group=Applications/System
