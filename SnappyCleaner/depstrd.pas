@@ -103,17 +103,8 @@ begin
     ProgressBar1.Visible := True;
     Timer1.Enabled := True;
 
-    if LangBtn.Caption = 'EN' then
-    begin
-      DepsForm.Caption := 'Пакет: ' + Package;
-      StaticText1.Caption :=
-        'запущен анализ зависимостей пакета, ждите...';
-    end
-    else
-    begin
-      DepsForm.Caption := 'Package: ' + Package;
-      StaticText1.Caption := 'run analysis of the package dependencies, wait...';
-    end;
+    DepsForm.Caption := SPackage + ' ' + Package;
+    StaticText1.Caption := SAnalizePackagesDeps;
   end;
 end;
 
@@ -145,11 +136,7 @@ begin
     DepsForm.SEdit.Enabled := True;
     DepsForm.SEdit.Button.Enabled := True;
 
-    if LangBtn.Caption = 'EN' then
-      StaticText1.Caption :=
-        'анализ зависимостей пакета завершен...'
-    else
-      StaticText1.Caption := 'dependency analysis package is completed...';
+    StaticText1.Caption := SDepsAnalyzeEnd;
   end;
 
   if DepsForm.ListBox1.Items.Count > 0 then

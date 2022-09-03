@@ -1,0 +1,152 @@
+object DepsForm: TDepsForm
+  Left = 311
+  Height = 534
+  Top = 175
+  Width = 855
+  Caption = 'DepsForm'
+  ClientHeight = 534
+  ClientWidth = 855
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poMainFormCenter
+  SessionProperties = 'Height;Width;Panel1.Width'
+  LCLVersion = '2.2.0.4'
+  object Panel1: TPanel
+    Left = 0
+    Height = 534
+    Top = 0
+    Width = 268
+    Align = alLeft
+    Alignment = taLeftJustify
+    BevelInner = bvRaised
+    BevelOuter = bvNone
+    ClientHeight = 534
+    ClientWidth = 268
+    TabOrder = 0
+    object ListBox1: TListBox
+      Left = 1
+      Height = 501
+      Top = 32
+      Width = 266
+      Align = alBottom
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      ItemHeight = 0
+      PopupMenu = MainForm.PopupMenu1
+      ScrollWidth = 253
+      TabOrder = 0
+      TopIndex = -1
+    end
+    object Label1: TLabel
+      AnchorSideBottom.Control = ListBox1
+      Left = 1
+      Height = 17
+      Top = 12
+      Width = 155
+      Anchors = [akLeft, akBottom]
+      BorderSpacing.Left = 1
+      BorderSpacing.Top = 6
+      BorderSpacing.Bottom = 3
+      Caption = 'Required for this package:'
+      Font.Color = clGreen
+      Font.Style = [fsUnderline]
+      ParentFont = False
+    end
+  end
+  object Panel3: TPanel
+    Left = 273
+    Height = 534
+    Top = 0
+    Width = 582
+    Align = alClient
+    BevelInner = bvRaised
+    BevelOuter = bvNone
+    Caption = 'Panel3'
+    ClientHeight = 534
+    ClientWidth = 582
+    TabOrder = 1
+    object ListBox2: TListBox
+      Left = 1
+      Height = 469
+      Top = 64
+      Width = 580
+      Align = alBottom
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      ItemHeight = 0
+      PopupMenu = MainForm.PopupMenu1
+      ScrollWidth = 553
+      TabOrder = 0
+      TopIndex = -1
+    end
+    object Label2: TLabel
+      AnchorSideBottom.Control = ListBox2
+      Left = 2
+      Height = 17
+      Top = 44
+      Width = 167
+      Anchors = [akLeft, akBottom]
+      BorderSpacing.Bottom = 3
+      Caption = 'This package is required for:'
+      Font.Color = clRed
+      Font.Style = [fsUnderline]
+      ParentFont = False
+    end
+    object Panel2: TPanel
+      AnchorSideLeft.Control = Panel3
+      AnchorSideRight.Control = Panel3
+      AnchorSideRight.Side = asrBottom
+      Left = 1
+      Height = 30
+      Top = 5
+      Width = 580
+      Anchors = [akTop, akLeft, akRight]
+      BevelInner = bvRaised
+      BevelOuter = bvNone
+      ClientHeight = 30
+      ClientWidth = 580
+      TabOrder = 1
+      object BreakBtn: TButton
+        Left = 496
+        Height = 28
+        Top = 1
+        Width = 83
+        Align = alRight
+        Anchors = [akTop, akRight]
+        Caption = 'Cancel'
+        OnClick = BreakBtnClick
+        TabOrder = 0
+      end
+      object SEdit: TEditButton
+        AnchorSideLeft.Control = Panel2
+        AnchorSideRight.Control = BreakBtn
+        Left = 1
+        Height = 28
+        Top = 1
+        Width = 495
+        AutoSelect = False
+        Align = alLeft
+        Anchors = [akLeft, akRight, akBottom]
+        ButtonCaption = 'Search'
+        ButtonWidth = 83
+        Color = 16121855
+        MaxLength = 0
+        NumGlyphs = 1
+        OnButtonClick = SEditButtonClick
+        OnKeyUp = SEditKeyUp
+        PasswordChar = #0
+        TabOrder = 1
+      end
+    end
+  end
+  object Splitter1: TSplitter
+    Left = 268
+    Height = 534
+    Top = 0
+    Width = 5
+  end
+  object XMLPropStorage1: TXMLPropStorage
+    StoredValues = <>
+    Left = 693
+    Top = 100
+  end
+end

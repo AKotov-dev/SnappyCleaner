@@ -1,0 +1,8 @@
+{"version":1,"strings":[
+{"hash":209179181,"name":"tdepsform.caption","sourcebytes":[68,101,112,115,70,111,114,109],"value":"DepsForm"},
+{"hash":126895018,"name":"tdepsform.label1.caption","sourcebytes":[82,101,113,117,105,114,101,100,32,102,111,114,32,116,104,105,115,32,112,97,99,107,97,103,101,58],"value":"Required for this package:"},
+{"hash":90721267,"name":"tdepsform.panel3.caption","sourcebytes":[80,97,110,101,108,51],"value":"Panel3"},
+{"hash":165814922,"name":"tdepsform.label2.caption","sourcebytes":[84,104,105,115,32,112,97,99,107,97,103,101,32,105,115,32,114,101,113,117,105,114,101,100,32,102,111,114,58],"value":"This package is required for:"},
+{"hash":77089212,"name":"tdepsform.breakbtn.caption","sourcebytes":[67,97,110,99,101,108],"value":"Cancel"},
+{"hash":94079128,"name":"tdepsform.sedit.buttoncaption","sourcebytes":[83,101,97,114,99,104],"value":"Search"}
+]}

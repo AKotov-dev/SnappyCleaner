@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Process,
   Dialogs, Buttons, StdCtrls, ComCtrls, ExtCtrls, XMLPropStorage,
-  LCLType, Translations, CheckLst, Menus, ClipBrd;
+  LCLType, DefaultTranslator, CheckLst, Menus, ClipBrd;
 
 type
 
@@ -38,7 +38,6 @@ type
     RemKernelBox: TCheckListBox;
     Label1: TLabel;
     Label11: TLabel;
-    LangBtn: TBitBtn;
     ProgressBar1: TProgressBar;
     OrphansResetSelection: TSpeedButton;
     RootTmpCheck: TCheckBox;
@@ -84,7 +83,6 @@ type
     procedure FormShow(Sender: TObject);
     procedure Label24ChangeBounds(Sender: TObject);
     procedure AnalyzeBtnClick(Sender: TObject);
-    procedure LangBtnClick(Sender: TObject);
     procedure MenuItem1Click(Sender: TObject);
     procedure MenuItem3Click(Sender: TObject);
     procedure NotOrphanBtnClick(Sender: TObject);
@@ -100,7 +98,6 @@ type
     procedure Timer1StopTimer(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure OrphanedDeps(CLB: TCheckListBox);
-    procedure LangSetting;
     procedure StartProcess;
 
   private
@@ -108,6 +105,38 @@ type
   public
     { public declarations }
   end;
+
+
+//Ресурсы перевода
+resourcestring
+  SMarkNotOrphan = 'Exclude the selected packages from the list of orphans?';
+  SLaunchMarkProcess = 'launched by the marking process, wait...';
+  SStartAnalyze = 'run analysis of the system, wait...';
+  SNo = 'no';
+  SEmpty = 'empty';
+  SAnalisesCompleted = 'analysis completed...';
+  SNoToClean = 'Nothing is selected to clean!';
+  SConfirmCleanUP = 'Confirm running the cleanup?';
+  SKernelToRemove = 'The kernels selected for removal:';
+  SCleanTMPRootFiles = 'clean the temporary root files, wait...';
+  SCleanUserRecycle = 'clean the user recycle bin, wait...';
+  SCleanTMPUserFiles = 'clean temporary user files, wait...';
+  SCleanRecentDocuments = 'clean RecentDocuments user files, wait...';
+  SRPMDBRepairing = 'repairing the RPM database, wait...';
+  SCleanURPMICache = 'clean URPMI cache, wait...';
+  SCleanMozillaCache = 'clean Mozilla Firefox cache, wait...';
+  SCleanChromeCache = 'clean Google Chrome cache, wait...';
+  SCleanOperaCache = 'clean Opera browser cache, wait...';
+  SCleanChromiumCache = 'clean Chromium browser cache, wait...';
+  SCleanPalemoonCache = 'clean PaleMoon browser cache, wait...';
+  SRemoveSelectedPackages = 'remove the selected packages, wait...';
+  SPackage = 'Package:';
+  SAnalizePackagesDeps = 'run analysis of the package dependencies, wait...';
+  SDepsAnalyzeEnd = 'dependency analysis package is completed...';
+  SProcessTerminate = 'process is terminated, wait...';
+  SMarkPackagesPlaced = 'mark packages placed';
+  SSearchDeps = 'Search the packages dependencies';
+
 
 var
   MainForm: TMainForm;
@@ -140,190 +169,10 @@ begin
   end;
 end;
 
-procedure TMainForm.LangSetting;
-begin
-  if LangBtn.Caption = 'EN' then
-  begin
-    if Label24.Caption = 'no' then
-      Label24.Caption := 'нет';
-    if Label24.Caption = 'empty' then
-      Label24.Caption := 'пусто';
-
-    if Label10.Caption = 'no' then
-      Label10.Caption := 'нет';
-    if Label10.Caption = 'empty' then
-      Label10.Caption := 'пусто';
-
-    if Label12.Caption = 'no' then
-      Label12.Caption := 'нет';
-    if Label12.Caption = 'empty' then
-      Label12.Caption := 'пусто';
-
-    if Label14.Caption = 'no' then
-      Label14.Caption := 'нет';
-    if Label14.Caption = 'empty' then
-      Label14.Caption := 'пусто';
-
-    if Label18.Caption = 'no' then
-      Label18.Caption := 'нет';
-    if Label18.Caption = 'empty' then
-      Label18.Caption := 'пусто';
-
-    if Label20.Caption = 'no' then
-      Label20.Caption := 'нет';
-    if Label20.Caption = 'empty' then
-      Label20.Caption := 'пусто';
-
-    if Label22.Caption = 'no' then
-      Label22.Caption := 'нет';
-    if Label22.Caption = 'empty' then
-      Label22.Caption := 'пусто';
-
-    if Label23.Caption = 'no' then
-      Label23.Caption := 'нет';
-    if Label23.Caption = 'empty' then
-      Label23.Caption := 'пусто';
-
-    if Label27.Caption = 'no' then
-      Label27.Caption := 'нет';
-    if Label27.Caption = 'empty' then
-      Label27.Caption := 'пусто';
-
-    Label7.Caption := 'Пользователь:';
-    SelectAllCheck.Caption := 'Выбрать/Сбросить все';
-    RepairRPMCheck.Caption := 'Ремонтировать RPM-DB';
-    RootTMPCheck.Caption := 'Каталог /root/tmp:';
-    UserTrashCheck.Caption := 'Корзина юзера:';
-    UserTMPCheck.Caption := 'Временные файлы:';
-    CacheURPMICheck.Caption := 'Каталог-кеш URPMI:';
-    CacheMozillaCheck.Caption := 'Кеш Mozilla Firefox:';
-    CacheChromeCheck.Caption := 'Кеш Google Chrome:';
-    CacheOperaCheck.Caption := 'Кеш браузера Opera:';
-    CacheChromiumCheck.Caption := 'Кеш Chromium:';
-    CachePaleMoonCheck.Caption := 'Кеш PaleMoon:';
-    Label25.Caption := 'Использование /home:';
-
-    CleanBtn.Caption := 'Очистка';
-    AnalyzeBtn.Caption := 'Анализ';
-
-    Label9.Caption := 'Новое ядро:';
-    Label5.Caption := 'Список старых ядер:';
-    Label11.Caption := 'Список осиротевших пакетов:';
-
-    OldSelectAllBtn.Hint := 'Выбрать все';
-    OldResetSelection.Hint := 'Сброс выбора';
-    OrphansSelectAllBtn.Hint := 'Выбрать все';
-    OrphansResetSelection.Hint := 'Сброс выбора';
-    OldKernelDepsBtn.Hint := 'Показать зависимости';
-    OrphansDepsBtn.Hint := 'Показать зависимости';
-    NotOrphanBtn.Hint := 'Отметить как не осиротевший';
-
-    StaticText1.Caption := 'запустите анализ системы...';
-
-    //Русские диалоги и кнопки
-    Translations.TranslateUnitResourceStrings('LCLStrConsts',
-      ExtractFilePath(ParamStr(0)) + 'lclstrconsts.ru.po', 'ru', 'ru');
-  end
-  else
-  begin
-    if Label24.Caption = 'нет' then
-      Label24.Caption := 'no';
-    if Label24.Caption = 'пусто' then
-      LAbel24.Caption := 'empty';
-    if Label10.Caption = 'нет' then
-      LAbel10.Caption := 'no';
-    if Label10.Caption = 'пусто' then
-      LAbel10.Caption := 'empty';
-    if Label12.Caption = 'нет' then
-      LAbel12.Caption := 'no';
-    if Label12.Caption = 'пусто' then
-      LAbel12.Caption := 'empty';
-    if Label14.Caption = 'нет' then
-      LAbel14.Caption := 'no';
-    if Label14.Caption = 'пусто' then
-      LAbel14.Caption := 'empty';
-
-    if Label18.Caption = 'нет' then
-      LAbel18.Caption := 'no';
-    if Label18.Caption = 'пусто' then
-      LAbel18.Caption := 'empty';
-
-    if Label20.Caption = 'нет' then
-      LAbel20.Caption := 'no';
-    if Label20.Caption = 'пусто' then
-      LAbel20.Caption := 'empty';
-
-    if Label22.Caption = 'нет' then
-      LAbel22.Caption := 'no';
-    if Label22.Caption = 'пусто' then
-      LAbel22.Caption := 'empty';
-
-    if Label23.Caption = 'нет' then
-      LAbel23.Caption := 'no';
-    if Label23.Caption = 'пусто' then
-      LAbel23.Caption := 'empty';
-
-    if Label27.Caption = 'нет' then
-      LAbel27.Caption := 'no';
-    if Label27.Caption = 'пусто' then
-      LAbel27.Caption := 'empty';
-
-    Label7.Caption := 'User:';
-    SelectAllCheck.Caption := 'Select/Reset all';
-    RepairRPMCheck.Caption := 'Repair RPM DataBase';
-    RootTMPCheck.Caption := 'Directory /root/tmp:';
-    UserTrashCheck.Caption := 'User Trash files:';
-    UserTMPCheck.Caption := 'User Temporary files:';
-    CacheURPMICheck.Caption := 'URPMI Cache:';
-    CacheMozillaCheck.Caption := 'Mozilla Firefox cache:';
-    CacheChromeCheck.Caption := 'Google Chrome cache:';
-    CacheOperaCheck.Caption := 'Opera cache:';
-    CacheChromiumCheck.Caption := 'Chromium cache:';
-    CachePaleMoonCheck.Caption := 'PaleMoon cache:';
-    Label25.Caption := 'Using /home:';
-
-    CleanBtn.Caption := 'Clean';
-    AnalyzeBtn.Caption := 'Analyze';
-
-    Label9.Caption := 'New kernel:';
-    Label5.Caption := 'Old kernels list:';
-    Label11.Caption := 'Orphaned packages list:';
-
-    OldSelectAllBtn.Hint := 'Select all';
-    OldResetSelection.Hint := 'Reset selection';
-    OrphansSelectAllBtn.Hint := 'Select all';
-    OrphansResetSelection.Hint := 'Reset selection';
-    OldKernelDepsBtn.Hint := 'Show dependencies';
-    OrphansDepsBtn.Hint := 'Show dependencies';
-    NotOrphanBtn.Hint := 'Mark as not orphaned';
-
-    StaticText1.Caption := 'start analysis of system...';
-
-    //Английские диалоги и кнопки
-    Translations.TranslateUnitResourceStrings('LCLStrConsts',
-      ExtractFilePath(ParamStr(0)) + 'lclstrconsts.po', 'en', 'en');
-  end;
-end;
-
 procedure TMainForm.OrphanedDeps(CLB: TCheckListBox);
 var
   FStartShowDepsThread: TThread;
 begin
-  if (MainForm.LangBtn.Caption = 'EN') then
-  begin
-    DepsForm.Label1.Caption := 'Требуются для пакета:';
-    DepsForm.Label2.Caption := 'Сам пакет требуется для:';
-    DepsForm.SEdit.Button.Caption := 'Поиск';
-    DepsForm.BreakBtn.Caption := 'Отмена';
-  end
-  else
-  begin
-    DepsForm.Label1.Caption := 'Required for this package:';
-    DepsForm.Label2.Caption := 'Package itself is needed to:';
-    DepsForm.SEdit.Button.Caption := 'Search';
-    DepsForm.BreakBtn.Caption := 'Cancel';
-  end;
-
   //Если сирота выбран
   if CLB.SelCount <> 0 then
   begin
@@ -336,10 +185,7 @@ begin
   end
   else
   begin   //Если сирота не выбран - произвольный поиск
-    if LangBtn.Caption = 'EN' then
-      DepsForm.Caption := 'Поиск зависимостей пакета'
-    else
-      DepsForm.Caption := 'Search the packages dependencies';
+    DepsForm.Caption := SSearchDeps;
     DepsForm.ShowModal;
   end;
 end;
@@ -377,27 +223,13 @@ begin
   AutoOrphansBox.Clear;
   RemKernelBox.Clear;
 
-  if (MainForm.LangBtn.Caption = 'EN') then
-    StaticText1.Caption := 'запущен анализ системы, ждите...'
-  else
-    StaticText1.Caption := 'run analysis of the system, wait...';
+  StaticText1.Caption := SStartAnalyze;
 
   ProgressBar1.Visible := True;
   Timer1.Enabled := True;
 
   FStartAnalizeThread := StartAnalyze.Create(False); //сразу
   FStartAnalizeThread.Priority := tpLowest;
-end;
-
-procedure TMainForm.LangBtnClick(Sender: TObject);
-begin
-  if LangBtn.Caption = 'EN' then
-    LangBtn.Caption := 'RU'
-  else
-    LangBtn.Caption := 'EN';
-
-  //Настраиваем локализацию
-  LangSetting;
 end;
 
 procedure TMainForm.MenuItem1Click(Sender: TObject);
@@ -426,17 +258,10 @@ end;
 procedure TMainForm.NotOrphanBtnClick(Sender: TObject);
 var
   i: integer;
-  a: string;
   FStartNotOrphan: TThread;
 begin
   //Строка с отмеченными пакетами-сиротами
   NotOrphans := '';
-
-  //Подключаем русские диалоги, если rus
-  if LangBtn.Caption = 'EN' then
-    a := 'Исключить выбранные пакеты из списка сирот?'
-  else
-    a := 'Exclude the selected packages from the list of orphans?';
 
   //Начитываем выделеные сироты в переменную
   for i := 0 to AutoOrphansBox.Count - 1 do
@@ -446,13 +271,9 @@ begin
   //Если есть, что маркировать - запускаем процесс
   if NotOrphans <> '' then
   begin
-    if MessageDlg(a, mtConfirmation, [mbYes, mbNo], 0) = mrYes then
+    if MessageDlg(SMarkNotOrphan, mtConfirmation, [mbYes, mbNo], 0) = mrYes then
     begin
-      if (MainForm.LangBtn.Caption = 'EN') then
-        StaticText1.Caption :=
-          'запущен процесс маркировки, ждите...'
-      else
-        StaticText1.Caption := 'launched by the marking process, wait...';
+      StaticText1.Caption := SLaunchMarkProcess;
 
       Panel1.Enabled := False;
       Panel2.Enabled := False;
@@ -513,18 +334,6 @@ begin
     (PopUpMenu1.PopupComponent as TCheckListBox).SetFocus;
     if (PopUpMenu1.PopupComponent as TCheckListBox).SelCount = 0 then
       Abort;
-  end;
-
-  //Выбираем язык
-  if LangBtn.Caption = 'EN' then
-  begin
-    PopUpMenu1.Items[0].Caption := 'Сохранить список в файл';
-    PopUpMenu1.Items[2].Caption := 'Скопировать позицию в буфер';
-  end
-  else
-  begin
-    PopUpMenu1.Items[0].Caption := 'Save the list to file';
-    PopUpMenu1.Items[2].Caption := 'Copy position to clipboard';
   end;
 end;
 
@@ -595,47 +404,24 @@ begin
     CacheChromiumCheck.Checked or CachePaleMoonCheck.Checked or
     (DelKernels <> '') or (DelOrphans <> '')) then
   begin
-    if MainForm.LangBtn.Caption = 'EN' then
-      MessageDlg('Ничего не выбрано для очистки!',
-        mtWarning, [mbOK], 0)
-    else
-      MessageDlg('Nothing is selected to clean!', mtWarning, [mbOK], 0);
+    MessageDlg(SNoToClean, mtWarning, [mbOK], 0);
     Exit;
   end;
 
   //Если ядра отмечены - подтверждение очистки с ядрами
   if DelKernels <> '' then
   begin
-    if (MainForm.LangBtn.Caption = 'EN') then
-      if MessageDlg('Выбраны ядра на удаление: ' +
-        #13#10 + #13#10 + DelKernels + #13#10 +
-        'Подтверждаете запуск очистки?',
-        mtConfirmation, [mbYes, mbNo], 0) = mrYes then
-        DelKernels := StringReplace(DelKernels, #13#10, ' ', [rfReplaceAll])
-      else
-        Exit
-    else
-    if MessageDlg('The kernels selected for removal: ' + #13#10 +
-      #13#10 + DelKernels + #13#10 + 'Confirm running the cleanup?',
-      mtConfirmation, [mbYes, mbNo], 0) = mrYes then
+    if MessageDlg(SKernelToRemove + ' ' + #13#10 + #13#10 + DelKernels +
+      #13#10 + 'Confirm running the cleanup?', mtConfirmation, [mbYes, mbNo], 0) =
+      mrYes then
       DelKernels := StringReplace(DelKernels, #13#10, ' ', [rfReplaceAll])
     else
       Exit;
   end
   else  //Иначе - обычное подтвеждение очистки
   begin
-    if MainForm.LangBtn.Caption = 'EN' then
-    begin
-      if MessageDlg('Подтверждаете запуск очистки?',
-        mtConfirmation, [mbYes, mbNo], 0) <> mrYes then
-        Exit;
-    end
-    else
-    begin
-      if MessageDlg('Confirm running the cleanup?', mtConfirmation,
-        [mbYes, mbNo], 0) <> mrYes then
-        Exit;
-    end;
+    if MessageDlg(SConfirmCleanUP, mtConfirmation, [mbYes, mbNo], 0) <> mrYes then
+      Exit;
   end;
 
   //Запуск очистки
@@ -649,34 +435,9 @@ begin
   FStartClearThread.Priority := tpLowest;
 end;
 
+//About
 procedure TMainForm.AboutBtnClick(Sender: TObject);
 begin
-  if LangBtn.Caption = 'RU' then
-  begin
-    AboutForm.Caption := 'About';
-
-    AboutForm.Label3.Caption :=
-      'MgaRemix cleanup program' + #13#10 + #13#10 + 'License: GNU GPL' +
-      #13#10 + 'Compilation: Lazarus 2.2.0' + #13#10 +
-      'Author: alex_q_2000 (C) 2020' + #13#10 + 'Co-authorship: ingvaro' +
-      #13#10 + 'Gratitudes: algri14, AlexL' + #13#10 +
-      'mozg1986, Zomby, TopE, kvv-vp' + #13#10 + #13#10 +
-      'Russian Linux Forum:' + #13#10 + 'https://linuxforum.ru';
-  end
-  else
-  begin
-    AboutForm.Caption := 'О программе';
-
-    AboutForm.Label3.Caption :=
-      'Программа очистки MgaRemix' + #13#10 + #13#10 +
-      'Лицензия: GNU GPL' + #13#10 + 'Компиляция: Lazarus 2.2.0' +
-      #13#10 + 'Автор: alex_q_2000 (C) 2020' + #13#10 +
-      'Соавторство: ingvaro' + #13#10 +
-      'Благодарности: algri14, AlexL,' + #13#10 +
-      'mozg1986, Zomby, TopE, kvv-vp' + #13#10 + #13#10 +
-      'Russian Linux Forum:' + #13#10 + 'https://linuxforum.ru';
-  end;
-
   AboutForm.ShowModal;
 end;
 
@@ -711,23 +472,18 @@ end;
 procedure TMainForm.FormShow(Sender: TObject);
 begin
   MainForm.Caption := Application.Title;
-  LangSetting;
 end;
 
+//Раскрашивание результатов
 procedure TMainForm.Label24ChangeBounds(Sender: TObject);
 begin
-  if ((Sender as TLabel).Caption = '0') or ((Sender as TLabel).Caption = 'пусто') or
-    ((Sender as TLabel).Caption = 'empty') then
-
+  if ((Sender as TLabel).Caption = '0') or ((Sender as TLabel).Caption = SEmpty) then
   begin
+    (Sender as TLabel).Caption := SEmpty;
     (Sender as TLabel).Font.Color := clGreen;
-    if (MainForm.LangBtn.Caption = 'EN') then
-      (Sender as TLabel).Caption := 'пусто'
-    else
-      (Sender as TLabel).Caption := 'empty';
   end
   else
-  if ((Sender as TLabel).Caption = 'нет') or ((Sender as TLabel).Caption = 'no') then
+  if (Sender as TLabel).Caption = SNo then
     (Sender as TLabel).Font.Color := clInActiveCaption
   else
     (Sender as TLabel).Font.Color := clRed;

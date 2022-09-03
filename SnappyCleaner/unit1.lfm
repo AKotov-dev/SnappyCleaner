@@ -1,12 +1,12 @@
 object MainForm: TMainForm
-  Left = 284
-  Height = 666
-  Top = 125
-  Width = 907
+  Left = 291
+  Height = 665
+  Top = 124
+  Width = 909
   ActiveControl = Panel1
   Caption = 'SnappyCleaner'
-  ClientHeight = 666
-  ClientWidth = 907
+  ClientHeight = 665
+  ClientWidth = 909
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
@@ -16,8 +16,8 @@ object MainForm: TMainForm
   object StaticText1: TStaticText
     Left = 0
     Height = 18
-    Top = 648
-    Width = 907
+    Top = 647
+    Width = 909
     Align = alBottom
     BorderSpacing.Top = 1
     Caption = 'start analysis of system...'
@@ -29,12 +29,12 @@ object MainForm: TMainForm
   end
   object Panel1: TPanel
     Left = 0
-    Height = 647
+    Height = 646
     Hint = 'Wipe options'
     Top = 0
     Width = 236
     Align = alLeft
-    ClientHeight = 647
+    ClientHeight = 646
     ClientWidth = 236
     ParentFont = False
     ParentShowHint = False
@@ -140,7 +140,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrCenter
       Left = 209
       Height = 17
-      Top = 326
+      Top = 325
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -156,7 +156,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrCenter
       Left = 209
       Height = 17
-      Top = 399
+      Top = 398
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -172,7 +172,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrCenter
       Left = 209
       Height = 17
-      Top = 441
+      Top = 440
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -188,7 +188,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrCenter
       Left = 209
       Height = 17
-      Top = 483
+      Top = 482
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -202,7 +202,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Control = Label26
       Left = 8
       Height = 17
-      Top = 617
+      Top = 616
       Width = 80
       Anchors = [akLeft]
       BorderSpacing.Left = 7
@@ -218,7 +218,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrBottom
       Left = 209
       Height = 17
-      Top = 617
+      Top = 616
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -283,7 +283,7 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 319
+      Top = 318
       Width = 117
       Anchors = [akLeft]
       BorderSpacing.Left = 4
@@ -296,7 +296,7 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 392
+      Top = 391
       Width = 162
       Anchors = [akLeft]
       BorderSpacing.Left = 4
@@ -309,7 +309,7 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 434
+      Top = 433
       Width = 171
       Anchors = [akLeft]
       BorderSpacing.Left = 4
@@ -322,7 +322,7 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 476
+      Top = 475
       Width = 111
       Anchors = [akLeft]
       BorderSpacing.Left = 4
@@ -350,7 +350,7 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       Left = 7
       Height = 10
-      Top = 601
+      Top = 600
       Width = 222
       Anchors = [akLeft, akRight]
       BorderSpacing.Left = 6
@@ -418,7 +418,7 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       Left = 7
       Height = 10
-      Top = 368
+      Top = 367
       Width = 222
       Anchors = [akLeft, akRight]
       BorderSpacing.Left = 6
@@ -445,7 +445,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrCenter
       Left = 209
       Height = 17
-      Top = 524
+      Top = 523
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -458,7 +458,7 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 517
+      Top = 516
       Width = 138
       Anchors = [akLeft]
       BorderSpacing.Left = 4
@@ -471,7 +471,7 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 559
+      Top = 558
       Width = 135
       Anchors = [akLeft]
       BorderSpacing.Left = 4
@@ -487,7 +487,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrCenter
       Left = 209
       Height = 17
-      Top = 566
+      Top = 565
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -499,19 +499,18 @@ object MainForm: TMainForm
   end
   object Panel2: TPanel
     Left = 241
-    Height = 647
-    Hint = 'Removal method'
+    Height = 646
     Top = 0
-    Width = 666
+    Width = 668
     Align = alClient
-    ClientHeight = 647
-    ClientWidth = 666
+    ClientHeight = 646
+    ClientWidth = 668
     ParentFont = False
     TabOrder = 2
     object AnalyzeBtn: TBitBtn
       AnchorSideRight.Control = Panel2
       AnchorSideRight.Side = asrBottom
-      Left = 545
+      Left = 547
       Height = 32
       Top = 8
       Width = 113
@@ -525,7 +524,7 @@ object MainForm: TMainForm
     end
     object CleanBtn: TBitBtn
       AnchorSideRight.Control = AnalyzeBtn
-      Left = 432
+      Left = 434
       Height = 32
       Top = 8
       Width = 113
@@ -577,7 +576,7 @@ object MainForm: TMainForm
       Left = 11
       Height = 10
       Top = 49
-      Width = 647
+      Width = 649
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Left = 10
       BorderSpacing.Right = 7
@@ -618,7 +617,7 @@ object MainForm: TMainForm
       AnchorSideLeft.Side = asrBottom
       AnchorSideRight.Control = OldSelectAllBtn
       AnchorSideBottom.Control = RemKernelBox
-      Left = 584
+      Left = 586
       Height = 25
       Hint = 'Reset selection'
       Top = 83
@@ -636,7 +635,7 @@ object MainForm: TMainForm
       AnchorSideRight.Control = Panel2
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = RemKernelBox
-      Left = 621
+      Left = 623
       Height = 25
       Hint = 'Select all'
       Top = 83
@@ -652,27 +651,17 @@ object MainForm: TMainForm
       ParentFont = False
       ParentShowHint = False
     end
-    object LangBtn: TBitBtn
+    object AboutBtn: TBitBtn
+      AnchorSideLeft.Control = Panel2
       Left = 11
       Height = 32
       Top = 8
       Width = 34
-      Caption = 'RU'
-      OnClick = LangBtnClick
-      ParentFont = False
-      TabOrder = 2
-    end
-    object AboutBtn: TBitBtn
-      AnchorSideLeft.Control = LangBtn
-      AnchorSideLeft.Side = asrBottom
-      Left = 45
-      Height = 32
-      Top = 8
-      Width = 34
+      BorderSpacing.Left = 10
       Caption = '?'
       OnClick = AboutBtnClick
       ParentFont = False
-      TabOrder = 3
+      TabOrder = 2
     end
     object AutoOrphansBox: TCheckListBox
       AnchorSideLeft.Control = Panel2
@@ -681,9 +670,9 @@ object MainForm: TMainForm
       AnchorSideBottom.Control = Panel2
       AnchorSideBottom.Side = asrBottom
       Left = 11
-      Height = 389
+      Height = 388
       Top = 250
-      Width = 647
+      Width = 649
       Anchors = [akTop, akLeft, akRight, akBottom]
       BorderSpacing.Left = 10
       BorderSpacing.Right = 7
@@ -691,7 +680,7 @@ object MainForm: TMainForm
       ItemHeight = 0
       ParentFont = False
       PopupMenu = PopupMenu1
-      TabOrder = 4
+      TabOrder = 3
       TopIndex = -1
     end
     object Label1: TLabel
@@ -729,7 +718,7 @@ object MainForm: TMainForm
       AnchorSideLeft.Side = asrBottom
       AnchorSideRight.Control = OrphansSelectAllBtn
       AnchorSideBottom.Control = AutoOrphansBox
-      Left = 584
+      Left = 586
       Height = 25
       Hint = 'Reset selection'
       Top = 222
@@ -747,7 +736,7 @@ object MainForm: TMainForm
       AnchorSideRight.Control = Panel2
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = AutoOrphansBox
-      Left = 621
+      Left = 623
       Height = 25
       Hint = 'Select all'
       Top = 222
@@ -771,7 +760,7 @@ object MainForm: TMainForm
       Left = 11
       Height = 106
       Top = 111
-      Width = 647
+      Width = 649
       Anchors = [akLeft, akRight, akBottom]
       BorderSpacing.Left = 10
       BorderSpacing.Right = 7
@@ -779,13 +768,13 @@ object MainForm: TMainForm
       ItemHeight = 0
       ParentFont = False
       PopupMenu = PopupMenu1
-      TabOrder = 5
+      TabOrder = 4
       TopIndex = -1
     end
     object OldKernelDepsBtn: TSpeedButton
       AnchorSideRight.Control = OldResetSelection
       AnchorSideBottom.Control = RemKernelBox
-      Left = 547
+      Left = 549
       Height = 25
       Hint = 'Show dependencies'
       Top = 83
@@ -801,7 +790,7 @@ object MainForm: TMainForm
     object OrphansDepsBtn: TSpeedButton
       AnchorSideRight.Control = NotOrphanBtn
       AnchorSideBottom.Control = AutoOrphansBox
-      Left = 510
+      Left = 512
       Height = 25
       Hint = 'Show dependencies'
       Top = 222
@@ -817,7 +806,7 @@ object MainForm: TMainForm
     object NotOrphanBtn: TSpeedButton
       AnchorSideRight.Control = OrphansResetSelection
       AnchorSideBottom.Control = AutoOrphansBox
-      Left = 547
+      Left = 549
       Height = 25
       Hint = 'Mark as not orphaned'
       Top = 222
@@ -833,7 +822,7 @@ object MainForm: TMainForm
   end
   object Splitter1: TSplitter
     Left = 236
-    Height = 647
+    Height = 646
     Top = 0
     Width = 5
   end
@@ -856,14 +845,14 @@ object MainForm: TMainForm
     Left = 518
     Top = 127
     object MenuItem1: TMenuItem
-      Caption = 'Сохранить список в файл'
+      Caption = 'Save the list to a file'
       OnClick = MenuItem1Click
     end
     object MenuItem2: TMenuItem
       Caption = '-'
     end
     object MenuItem3: TMenuItem
-      Caption = 'Скопировать позицию в буфер'
+      Caption = 'Copy the position to the buffer'
       OnClick = MenuItem3Click
     end
   end

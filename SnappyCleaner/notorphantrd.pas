@@ -89,10 +89,7 @@ begin
     Panel1.Enabled := True;
     Panel2.Enabled := True;
 
-    if LangBtn.Caption = 'EN' then
-      StaticText1.Caption := 'отметки пакетов расставлены...'
-    else
-      StaticText1.Caption := 'mark packages placed...';
+    StaticText1.Caption := SMarkPackagesPlaced;
   end;
 end;
 

@@ -190,7 +190,6 @@ begin
       ExProcess.Execute;
     end;
 
-
     //Удаление списка пакетов
     if (DelKernels <> '') or (DelOrphans <> '') then
     begin
@@ -215,126 +214,73 @@ end;
 //Показываю удаление временных файлов root
 procedure StartClear.ShowRootTMP;
 begin
-  if MainForm.LangBtn.Caption = 'EN' then
-    MainForm.StaticText1.Caption :=
-      'очищаю временные файлы root, ждите...'
-  else
-    MainForm.StaticText1.Caption :=
-      'clean the temporary root files, wait...';
+  MainForm.StaticText1.Caption := SCleanTMPRootFiles;
 end;
 
 //Показываю очистку корзины $USER
 procedure StartClear.ShowUserTrash;
 begin
-  if MainForm.LangBtn.Caption = 'EN' then
-    MainForm.StaticText1.Caption :=
-      'очищаю корзину пользователя ' +
-      ActUser[0] + ', ждите...'
-  else
-    MainForm.StaticText1.Caption :=
-      'clean the user recycle bin, wait...';
+  MainForm.StaticText1.Caption := SCleanUserRecycle;
 end;
 
 //Показываю очистку временных файлов $USER
 procedure StartClear.ShowUserTMP;
 begin
-  if MainForm.LangBtn.Caption = 'EN' then
-    MainForm.StaticText1.Caption :=
-      'очищаю временные файлы пользователя ' +
-      ActUser[0] + ', ждите...'
-  else
-    MainForm.StaticText1.Caption :=
-      'clean temporary user files, wait...';
+  MainForm.StaticText1.Caption := SCleanTMPUserFiles;
 end;
 
 //Показываю удаление RecentDocuments
 procedure StartClear.ShowRecentDocuments;
 begin
-  if MainForm.LangBtn.Caption = 'EN' then
-    MainForm.StaticText1.Caption :=
-      'очищаю RecentDocuments пользователя ' +
-      ActUser[0] + ', ждите...'
-  else
-    MainForm.StaticText1.Caption :=
-      'clean RecentDocuments user files, wait...';
+  MainForm.StaticText1.Caption := SCleanRecentDocuments;
 end;
 
 //Показываю ремонт базы данных RPM
 procedure StartClear.ShowRepairRPM;
 begin
-  if MainForm.LangBtn.Caption = 'EN' then
-    MainForm.StaticText1.Caption :=
-      'ремонтирую базу данных RPM, ждите...'
-  else
-    MainForm.StaticText1.Caption := 'repairing the RPM database, wait...';
+  MainForm.StaticText1.Caption := SRPMDBRepairing;
 end;
 
 //Показываю очистку кеша URPMI
 procedure StartClear.ShowURPMICache;
 begin
-  if MainForm.LangBtn.Caption = 'EN' then
-    MainForm.StaticText1.Caption := 'очищаю кеш URPMI, ждите...'
-  else
-    MainForm.StaticText1.Caption := 'clean URPMI cache, wait...';
+  MainForm.StaticText1.Caption := SCleanURPMICache;
 end;
 
 //Показываю удаление кеша Mozilla FireFox
 procedure StartClear.ShowFireFoxCache;
 begin
-  if MainForm.LangBtn.Caption = 'EN' then
-    MainForm.StaticText1.Caption := 'очищаю кеш Mozilla Firefox, ждите...'
-  else
-    MainForm.StaticText1.Caption := 'clean Mozilla Firefox cache, wait...';
+  MainForm.StaticText1.Caption := SCleanMozillaCache;
 end;
 
 //Показываю удаление кеша Google Chrome
 procedure StartClear.ShowChromeCache;
 begin
-  if MainForm.LangBtn.Caption = 'EN' then
-    MainForm.StaticText1.Caption :=
-      'очищаю кеш браузера Google Chrome, ждите...'
-  else
-    MainForm.StaticText1.Caption := 'clean Google Chrome cache, wait...';
+  MainForm.StaticText1.Caption := SCleanChromeCache;
 end;
 
 //Показываю удаление кеша Opera
 procedure StartClear.ShowOperaCache;
 begin
-  if MainForm.LangBtn.Caption = 'EN' then
-    MainForm.StaticText1.Caption :=
-      'очищаю кеш браузера Opera, ждите...'
-  else
-    MainForm.StaticText1.Caption := 'clean Opera browser cache, wait...';
+  MainForm.StaticText1.Caption := SCleanOperaCache;
 end;
 
 //Показываю удаление кеша Chromium
 procedure StartClear.ShowChromiumCache;
 begin
-  if MainForm.LangBtn.Caption = 'EN' then
-    MainForm.StaticText1.Caption :=
-      'очищаю кеш браузера Chromium, ждите...'
-  else
-    MainForm.StaticText1.Caption := 'clean Chromium browser cache, wait...';
+  MainForm.StaticText1.Caption := SCleanChromiumCache;
 end;
 
 //Показываю удаление кеша PaleMoon
 procedure StartClear.ShowPaleMoonCache;
 begin
-  if MainForm.LangBtn.Caption = 'EN' then
-    MainForm.StaticText1.Caption :=
-      'очищаю кеш браузера PaleMoon, ждите...'
-  else
-    MainForm.StaticText1.Caption := 'clean PaleMoon browser cache, wait...';
+  MainForm.StaticText1.Caption := SCleanPalemoonCache;
 end;
 
 //Показываю удаление пакетов (ядра и сироты)
 procedure StartClear.ShowDelPackages;
 begin
-  if MainForm.LangBtn.Caption = 'EN' then
-    MainForm.StaticText1.Caption :=
-      'удаляю выбранные пакеты, ждите...'
-  else
-    MainForm.StaticText1.Caption := 'remove the selected packages, wait...';
+  MainForm.StaticText1.Caption := SRemoveSelectedPackages;
 end;
 
 //Финал очистки

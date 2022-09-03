@@ -1,0 +1,407 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: taboutform.caption
+msgid "About"
+msgstr ""
+
+#: taboutform.label1.caption
+msgctxt "taboutform.label1.caption"
+msgid "SnappyCleaner"
+msgstr ""
+
+#: taboutform.label3.caption
+msgid ""
+"MgaRemix Cleaning Program\n"
+" \n"
+"License: GPLv3\n"
+"Compilation: Lazarus 2.2.0\n"
+"Author: alex_q_2000 (C) 2020\n"
+"Co - authorship: ingvaro\n"
+"Gratitude: algri14, AlexL,\n"
+"mozg1986, Zomby, TopE, kvv-vp\n"
+" \n"
+"Russian Linux Forum: https://linuxforum.ru"
+msgstr ""
+
+#: tdepsform.breakbtn.caption
+msgid "Cancel"
+msgstr ""
+
+#: tdepsform.caption
+msgid "DepsForm"
+msgstr ""
+
+#: tdepsform.label1.caption
+msgid "Required for this package:"
+msgstr ""
+
+#: tdepsform.label2.caption
+msgid "This package is required for:"
+msgstr ""
+
+#: tdepsform.panel3.caption
+msgid "Panel3"
+msgstr ""
+
+#: tdepsform.sedit.buttoncaption
+msgid "Search"
+msgstr ""
+
+#: tmainform.aboutbtn.caption
+msgid "?"
+msgstr ""
+
+#: tmainform.analyzebtn.caption
+msgid "Analyze"
+msgstr ""
+
+#: tmainform.cachechromecheck.caption
+msgid "Google Chrome cache:"
+msgstr ""
+
+#: tmainform.cachechromiumcheck.caption
+msgid "Chromium cache:"
+msgstr ""
+
+#: tmainform.cachemozillacheck.caption
+msgid "Mozilla Firefox cache:"
+msgstr ""
+
+#: tmainform.cacheoperacheck.caption
+msgid "Opera cache:"
+msgstr ""
+
+#: tmainform.cachepalemooncheck.caption
+msgid "PaleMoon cache:"
+msgstr ""
+
+#: tmainform.cacheurpmicheck.caption
+msgid "URPMI Cache:"
+msgstr ""
+
+#: tmainform.caption
+msgctxt "tmainform.caption"
+msgid "SnappyCleaner"
+msgstr ""
+
+#: tmainform.cleanbtn.caption
+msgid "Clean"
+msgstr ""
+
+#: tmainform.label1.caption
+msgctxt "tmainform.label1.caption"
+msgid "***"
+msgstr ""
+
+#: tmainform.label10.caption
+msgctxt "tmainform.label10.caption"
+msgid "***"
+msgstr ""
+
+#: tmainform.label11.caption
+msgid "Orphaned packages list:"
+msgstr ""
+
+#: tmainform.label12.caption
+msgctxt "tmainform.label12.caption"
+msgid "***"
+msgstr ""
+
+#: tmainform.label14.caption
+msgctxt "tmainform.label14.caption"
+msgid "***"
+msgstr ""
+
+#: tmainform.label16.caption
+msgctxt "tmainform.label16.caption"
+msgid "***"
+msgstr ""
+
+#: tmainform.label18.caption
+msgctxt "tmainform.label18.caption"
+msgid "***"
+msgstr ""
+
+#: tmainform.label2.caption
+msgctxt "tmainform.label2.caption"
+msgid "***"
+msgstr ""
+
+#: tmainform.label2.hint
+msgid "Загруженное сейчас"
+msgstr ""
+
+#: tmainform.label20.caption
+msgctxt "tmainform.label20.caption"
+msgid "***"
+msgstr ""
+
+#: tmainform.label22.caption
+msgctxt "tmainform.label22.caption"
+msgid "***"
+msgstr ""
+
+#: tmainform.label23.caption
+msgctxt "tmainform.label23.caption"
+msgid "***"
+msgstr ""
+
+#: tmainform.label24.caption
+msgctxt "tmainform.label24.caption"
+msgid "***"
+msgstr ""
+
+#: tmainform.label25.caption
+msgid "Using /home:"
+msgstr ""
+
+#: tmainform.label26.caption
+msgctxt "tmainform.label26.caption"
+msgid "***"
+msgstr ""
+
+#: tmainform.label27.caption
+msgctxt "tmainform.label27.caption"
+msgid "***"
+msgstr ""
+
+#: tmainform.label5.caption
+msgid "Old kernels list:"
+msgstr ""
+
+#: tmainform.label6.caption
+msgctxt "tmainform.label6.caption"
+msgid "***"
+msgstr ""
+
+#: tmainform.label7.caption
+msgid "User:"
+msgstr ""
+
+#: tmainform.label8.caption
+msgctxt "tmainform.label8.caption"
+msgid "***"
+msgstr ""
+
+#: tmainform.label9.caption
+msgid "New kernel:"
+msgstr ""
+
+#: tmainform.menuitem1.caption
+msgid "Save the list to a file"
+msgstr ""
+
+#: tmainform.menuitem3.caption
+msgid "Copy the position to the buffer"
+msgstr ""
+
+#: tmainform.notorphanbtn.caption
+msgid "v"
+msgstr ""
+
+#: tmainform.notorphanbtn.hint
+msgid "Mark as not orphaned"
+msgstr ""
+
+#: tmainform.oldkerneldepsbtn.caption
+msgctxt "tmainform.oldkerneldepsbtn.caption"
+msgid "<>"
+msgstr ""
+
+#: tmainform.oldkerneldepsbtn.hint
+msgctxt "tmainform.oldkerneldepsbtn.hint"
+msgid "Show dependencies"
+msgstr ""
+
+#: tmainform.oldresetselection.caption
+msgctxt "tmainform.oldresetselection.caption"
+msgid "-"
+msgstr ""
+
+#: tmainform.oldresetselection.hint
+msgctxt "tmainform.oldresetselection.hint"
+msgid "Reset selection"
+msgstr ""
+
+#: tmainform.oldselectallbtn.caption
+msgctxt "tmainform.oldselectallbtn.caption"
+msgid "+"
+msgstr ""
+
+#: tmainform.oldselectallbtn.hint
+msgctxt "tmainform.oldselectallbtn.hint"
+msgid "Select all"
+msgstr ""
+
+#: tmainform.orphansdepsbtn.caption
+msgctxt "tmainform.orphansdepsbtn.caption"
+msgid "<>"
+msgstr ""
+
+#: tmainform.orphansdepsbtn.hint
+msgctxt "tmainform.orphansdepsbtn.hint"
+msgid "Show dependencies"
+msgstr ""
+
+#: tmainform.orphansresetselection.caption
+msgctxt "tmainform.orphansresetselection.caption"
+msgid "-"
+msgstr ""
+
+#: tmainform.orphansresetselection.hint
+msgctxt "tmainform.orphansresetselection.hint"
+msgid "Reset selection"
+msgstr ""
+
+#: tmainform.orphansselectallbtn.caption
+msgctxt "tmainform.orphansselectallbtn.caption"
+msgid "+"
+msgstr ""
+
+#: tmainform.orphansselectallbtn.hint
+msgctxt "tmainform.orphansselectallbtn.hint"
+msgid "Select all"
+msgstr ""
+
+#: tmainform.panel1.hint
+msgid "Wipe options"
+msgstr ""
+
+#: tmainform.repairrpmcheck.caption
+msgid "Repair RPM DataBase"
+msgstr ""
+
+#: tmainform.roottmpcheck.caption
+msgid "Directory /root/tmp:"
+msgstr ""
+
+#: tmainform.selectallcheck.caption
+msgid "Select/Reset all"
+msgstr ""
+
+#: tmainform.statictext1.caption
+msgid "start analysis of system..."
+msgstr ""
+
+#: tmainform.userrecentcheck.caption
+msgid "RecentDocuments:"
+msgstr ""
+
+#: tmainform.usertmpcheck.caption
+msgid "User Temporary files:"
+msgstr ""
+
+#: tmainform.usertrashcheck.caption
+msgid "User Trash files:"
+msgstr ""
+
+#: unit1.sanalisescompleted
+msgctxt "unit1.sanalisescompleted"
+msgid "analysis completed..."
+msgstr ""
+
+#: unit1.sanalizepackagesdeps
+msgid "run analysis of the package dependencies, wait..."
+msgstr ""
+
+#: unit1.scleanchromecache
+msgid "clean Google Chrome cache, wait..."
+msgstr ""
+
+#: unit1.scleanchromiumcache
+msgid "clean Chromium browser cache, wait..."
+msgstr ""
+
+#: unit1.scleanmozillacache
+msgid "clean Mozilla Firefox cache, wait..."
+msgstr ""
+
+#: unit1.scleanoperacache
+msgid "clean Opera browser cache, wait..."
+msgstr ""
+
+#: unit1.scleanpalemooncache
+msgid "clean PaleMoon browser cache, wait..."
+msgstr ""
+
+#: unit1.scleanrecentdocuments
+msgid "clean RecentDocuments user files, wait..."
+msgstr ""
+
+#: unit1.scleantmprootfiles
+msgid "clean the temporary root files, wait..."
+msgstr ""
+
+#: unit1.scleantmpuserfiles
+msgid "clean temporary user files, wait..."
+msgstr ""
+
+#: unit1.scleanurpmicache
+msgid "clean URPMI cache, wait..."
+msgstr ""
+
+#: unit1.scleanuserrecycle
+msgid "clean the user recycle bin, wait..."
+msgstr ""
+
+#: unit1.sconfirmcleanup
+msgid "Confirm running the cleanup?"
+msgstr ""
+
+#: unit1.sdepsanalyzeend
+msgid "dependency analysis package is completed..."
+msgstr ""
+
+#: unit1.sempty
+msgid "empty"
+msgstr ""
+
+#: unit1.skerneltoremove
+msgid "The kernels selected for removal:"
+msgstr ""
+
+#: unit1.slaunchmarkprocess
+msgid "launched by the marking process, wait..."
+msgstr ""
+
+#: unit1.smarknotorphan
+msgid "Exclude the selected packages from the list of orphans?"
+msgstr ""
+
+#: unit1.smarkpackagesplaced
+msgid "mark packages placed"
+msgstr ""
+
+#: unit1.sno
+msgid "no"
+msgstr ""
+
+#: unit1.snotoclean
+msgid "Nothing is selected to clean!"
+msgstr ""
+
+#: unit1.spackage
+msgid "Package:"
+msgstr ""
+
+#: unit1.sprocessterminate
+msgid "process is terminated, wait..."
+msgstr ""
+
+#: unit1.sremoveselectedpackages
+msgid "remove the selected packages, wait..."
+msgstr ""
+
+#: unit1.srpmdbrepairing
+msgid "repairing the RPM database, wait..."
+msgstr ""
+
+#: unit1.ssearchdeps
+msgid "Search the packages dependencies"
+msgstr ""
+
+#: unit1.sstartanalyze
+msgid "run analysis of the system, wait..."
+msgstr ""
+

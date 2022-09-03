@@ -343,8 +343,8 @@ end;
 procedure StartAnalyze.ShowRootTMP;
 begin
   //Каталог /root/tmp
-  if (Result[0] = 'no') and (MainForm.LangBtn.Caption = 'EN') then
-    MainForm.Label24.Caption := 'нет'
+  if (Result[0] = 'no') then
+    MainForm.Label24.Caption := SNo
   else
     MainForm.Label24.Caption := Result[0];
 end;
@@ -352,8 +352,8 @@ end;
 procedure StartAnalyze.ShowUserTrash;
 begin
   //Показываем размер корзины
-  if (Result[0] = 'no') and (MainForm.LangBtn.Caption = 'EN') then
-    MainForm.Label10.Caption := 'нет'
+  if (Result[0] = 'no') then
+    MainForm.Label10.Caption := SNo
   else
     MainForm.Label10.Caption := Result[0];
 end;
@@ -361,8 +361,8 @@ end;
 procedure StartAnalyze.ShowUserTMP;
 begin
   //Показываем вес временных файлов:
-  if (Result[0] = 'no') and (MainForm.LangBtn.Caption = 'EN') then
-    MainForm.Label12.Caption := 'нет'
+  if (Result[0] = 'no') then
+    MainForm.Label12.Caption := SNo
   else
     MainForm.Label12.Caption := Result[0];
 end;
@@ -370,8 +370,8 @@ end;
 procedure StartAnalyze.ShowRecentDocuments;
 begin
   //Показываем размер RecentDocuments:
-  if (Result[0] = 'no') and (MainForm.LangBtn.Caption = 'EN') then
-    MainForm.Label14.Caption := 'нет'
+  if (Result[0] = 'no') then
+    MainForm.Label14.Caption := SNo
   else
     MainForm.Label14.Caption := Result[0];
 end;
@@ -385,8 +385,8 @@ end;
 procedure StartAnalyze.ShowMozillaCache;
 begin
   //Показываем размер кеша Mozilla
-  if (Result[0] = 'no') and (MainForm.LangBtn.Caption = 'EN') then
-    MainForm.Label18.Caption := 'нет'
+  if (Result[0] = 'no') then
+    MainForm.Label18.Caption := SNo
   else
     MainForm.Label18.Caption := Result[0];
 end;
@@ -394,8 +394,8 @@ end;
 procedure StartAnalyze.ShowChromeCache;
 begin
   //Показываем размер кеша Chrome
-  if (Result[0] = 'no') and (MainForm.LangBtn.Caption = 'EN') then
-    MainForm.Label20.Caption := 'нет'
+  if (Result[0] = 'no') then
+    MainForm.Label20.Caption := SNo
   else
     MainForm.Label20.Caption := Result[0];
 end;
@@ -403,8 +403,8 @@ end;
 procedure StartAnalyze.ShowOperaCache;
 begin
   //Показываем размер кеша Opera
-  if (Result[0] = 'no') and (MainForm.LangBtn.Caption = 'EN') then
-    MainForm.Label22.Caption := 'нет'
+  if (Result[0] = 'no') then
+    MainForm.Label22.Caption := SNo
   else
     MainForm.Label22.Caption := Result[0];
 end;
@@ -412,8 +412,8 @@ end;
 procedure StartAnalyze.ShowChromiumCache;
 begin
   //Показываем размер кеша Chromium
-  if (Result[0] = 'no') and (MainForm.LangBtn.Caption = 'EN') then
-    MainForm.Label23.Caption := 'нет'
+  if (Result[0] = 'no') then
+    MainForm.Label23.Caption := SNo
   else
     MainForm.Label23.Caption := Result[0];
 end;
@@ -421,8 +421,8 @@ end;
 procedure StartAnalyze.ShowPaleMoonCache;
 begin
   //Показываем размер кеша Chromium
-  if (Result[0] = 'no') and (MainForm.LangBtn.Caption = 'EN') then
-    MainForm.Label27.Caption := 'нет'
+  if (Result[0] = 'no') then
+    MainForm.Label27.Caption := SNo
   else
     MainForm.Label27.Caption := Result[0];
 end;
@@ -478,10 +478,7 @@ begin
     Panel2.Enabled := True;
     CleanBtn.Enabled := True;
 
-    if LangBtn.Caption = 'EN' then
-      StaticText1.Caption := 'анализ завершен...'
-    else
-      StaticText1.Caption := 'analysis completed...';
+    StaticText1.Caption := SAnalisesCompleted;
 
     AnalyzeBtn.SetFocus;
   end;

@@ -1,21 +1,21 @@
 object AboutForm: TAboutForm
-  Left = 447
-  Height = 257
-  Top = 197
-  Width = 360
+  Left = 379
+  Height = 261
+  Top = 139
+  Width = 411
   BorderIcons = [biSystemMenu]
-  Caption = 'О программе'
-  ClientHeight = 257
-  ClientWidth = 360
+  Caption = 'About'
+  ClientHeight = 261
+  ClientWidth = 411
   OnCreate = FormCreate
   Position = poMainFormCenter
   SessionProperties = 'Width;Height'
   LCLVersion = '2.2.0.4'
   object Bevel1: TBevel
     Left = 0
-    Height = 257
+    Height = 261
     Top = 0
-    Width = 360
+    Width = 411
     Align = alClient
     Anchors = [akTop, akLeft, akRight]
   end
@@ -1486,11 +1486,11 @@ object AboutForm: TAboutForm
   end
   object Label3: TLabel
     Left = 125
-    Height = 153
-    Top = 44
-    Width = 195
+    Height = 170
+    Top = 37
+    Width = 253
     Anchors = [akLeft]
-    Caption = 'Программа очистки MgaRemix'#10#10'Лицензия: GNU GPL'#10'Компиляция: Lazarus 2.2.0'#10'Автор: alex_q_2000 (C) 2020'#10'Соавторство: ingvaro'#10'Благодарности: algri14, AlexL,'#10'mozg1986, Zomby, TopE, kvv-vp'#10#10'Russian Linux Forum:'#10'https://linuxforum.ru'
+    Caption = 'MgaRemix Cleaning Program'#10' '#10'License: GPLv3'#10'Compilation: Lazarus 2.2.0'#10'Author: alex_q_2000 (C) 2020'#10'Co - authorship: ingvaro'#10'Gratitude: algri14, AlexL,'#10'mozg1986, Zomby, TopE, kvv-vp'#10' '#10'Russian Linux Forum: https://linuxforum.ru'
   end
   object Bevel2: TBevel
     AnchorSideLeft.Control = Bevel1
@@ -1500,8 +1500,8 @@ object AboutForm: TAboutForm
     AnchorSideRight.Side = asrBottom
     Left = 6
     Height = 17
-    Top = 206
-    Width = 348
+    Top = 216
+    Width = 399
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 6
     BorderSpacing.Top = 9
@@ -1510,12 +1510,12 @@ object AboutForm: TAboutForm
   end
   object BitBtn1: TBitBtn
     AnchorSideTop.Control = Bevel2
-    Left = 142
+    Left = 168
     Height = 31
-    Top = 215
+    Top = 224
     Width = 78
     Anchors = [akTop]
-    BorderSpacing.Top = 9
+    BorderSpacing.Top = 8
     Default = True
     DefaultCaption = True
     Kind = bkOK
@@ -1524,7 +1524,7 @@ object AboutForm: TAboutForm
   end
   object XMLPropStorage1: TXMLPropStorage
     StoredValues = <>
-    Left = 342
-    Top = 234
+    Left = 48
+    Top = 184
   end
 end

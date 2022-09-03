@@ -65,11 +65,7 @@ begin
   begin
     DeleteFile(ExtractFilePath(ParamStr(0)) + 'tmp/process');
     //Показываем статус завершения процесса
-    if MainForm.LangBtn.Caption = 'EN' then
-      MainForm.StaticText1.Caption :=
-        'процесс завершается, ждите...'
-    else
-      MainForm.StaticText1.Caption := 'process is terminated, wait...';
+    MainForm.StaticText1.Caption := SProcessTerminate;
   end;
 end;
 

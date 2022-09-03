@@ -13,7 +13,8 @@
       <Icon Value="0"/>
     </General>
     <i18n>
-      <EnableI18N LFM="False"/>
+      <EnableI18N Value="True"/>
+      <OutDir Value="languages"/>
     </i18n>
     <BuildModes Count="3">
       <Item1 Name="Default" Default="True"/>
