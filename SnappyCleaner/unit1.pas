@@ -684,7 +684,7 @@ procedure TMainForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
   ActUser.Free;
   //Останавливаем процесс зависимостей, если запущен
-  if FileExists(ExtractFilePath(ParamStr(0)) + '/tmp/process') then
+  if FileExists(ExtractFilePath(ParamStr(0)) + 'tmp/process') then
     DepsForm.BreakBtn.Click;
 end;
 
@@ -710,6 +710,7 @@ end;
 
 procedure TMainForm.FormShow(Sender: TObject);
 begin
+  MainForm.Caption := Application.Title;
   LangSetting;
 end;
 

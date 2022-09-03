@@ -4,7 +4,7 @@ object MainForm: TMainForm
   Top = 125
   Width = 907
   ActiveControl = Panel1
-  Caption = 'SnappyCleaner v1.7'
+  Caption = 'SnappyCleaner'
   ClientHeight = 666
   ClientWidth = 907
   OnClose = FormClose
