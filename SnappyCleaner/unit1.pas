@@ -109,11 +109,11 @@ type
 
 //Ресурсы перевода
 resourcestring
+  SNo = 'no';
+  SEmpty = 'empty';
   SMarkNotOrphan = 'Exclude the selected packages from the list of orphans?';
   SLaunchMarkProcess = 'launched by the marking process, wait...';
   SStartAnalyze = 'run analysis of the system, wait...';
-  SNo = 'no';
-  SEmpty = 'empty';
   SAnalisesCompleted = 'analysis completed...';
   SNoToClean = 'Nothing is selected to clean!';
   SConfirmCleanUP = 'Confirm running the cleanup?';

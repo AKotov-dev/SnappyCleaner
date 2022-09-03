@@ -219,7 +219,7 @@ msgstr ""
 
 #: tmainform.notorphanbtn.hint
 msgid "Mark as not orphaned"
-msgstr "Отметить как не осиротевшего"
+msgstr "Отметить как не осиротевший"
 
 #: tmainform.oldkerneldepsbtn.caption
 msgctxt "tmainform.oldkerneldepsbtn.caption"
@@ -229,7 +229,7 @@ msgstr ""
 #: tmainform.oldkerneldepsbtn.hint
 msgctxt "tmainform.oldkerneldepsbtn.hint"
 msgid "Show dependencies"
-msgstr "Смотреть зависимости"
+msgstr "Показать зависимости"
 
 #: tmainform.oldresetselection.caption
 msgctxt "tmainform.oldresetselection.caption"
@@ -249,7 +249,7 @@ msgstr ""
 #: tmainform.oldselectallbtn.hint
 msgctxt "tmainform.oldselectallbtn.hint"
 msgid "Select all"
-msgstr "Вебрать всё"
+msgstr "Выбрать все"
 
 #: tmainform.orphansdepsbtn.caption
 msgctxt "tmainform.orphansdepsbtn.caption"
@@ -259,7 +259,7 @@ msgstr ""
 #: tmainform.orphansdepsbtn.hint
 msgctxt "tmainform.orphansdepsbtn.hint"
 msgid "Show dependencies"
-msgstr "Смотреть зависимости"
+msgstr "Показать зависимости"
 
 #: tmainform.orphansresetselection.caption
 msgctxt "tmainform.orphansresetselection.caption"
@@ -279,7 +279,7 @@ msgstr ""
 #: tmainform.orphansselectallbtn.hint
 msgctxt "tmainform.orphansselectallbtn.hint"
 msgid "Select all"
-msgstr "Выбрать всё"
+msgstr "Выбрать все"
 
 #: tmainform.panel1.hint
 msgid "Wipe options"
@@ -287,7 +287,7 @@ msgstr "Опции очистки"
 
 #: tmainform.repairrpmcheck.caption
 msgid "Repair RPM DataBase"
-msgstr "Чинить базу данных RPM"
+msgstr "Ремонтировать RPM-DB"
 
 #: tmainform.roottmpcheck.caption
 msgid "Directory /root/tmp:"
@@ -421,4 +421,3 @@ msgstr "Поиск зависимостей пакетов"
 #: unit1.sstartanalyze
 msgid "run analysis of the system, wait..."
 msgstr "запущен анализ системы, ждите..."
-
