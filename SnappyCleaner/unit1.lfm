@@ -603,7 +603,6 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrCenter
       Left = 86
       Height = 17
-      Hint = 'Загруженное сейчас'
       Top = 59
       Width = 18
       BorderSpacing.Left = 4

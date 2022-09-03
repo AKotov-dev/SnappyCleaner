@@ -149,10 +149,6 @@ msgctxt "tmainform.label2.caption"
 msgid "***"
 msgstr ""
 
-#: tmainform.label2.hint
-msgid "Загруженное сейчас"
-msgstr ""
-
 #: tmainform.label20.caption
 msgctxt "tmainform.label20.caption"
 msgid "***"

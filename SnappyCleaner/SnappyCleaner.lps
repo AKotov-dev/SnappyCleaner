@@ -18,7 +18,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
-        <CursorPos X="71" Y="3"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="28" Y="4"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -36,7 +37,6 @@
         <Filename Value="cleartrd.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="ClearTRD"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="5"/>
         <CursorPos X="50" Y="4"/>
         <UsageCount Value="187"/>
@@ -53,7 +53,6 @@
         <CursorPos X="36" Y="4"/>
         <UsageCount Value="149"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit4>
       <Unit5>
         <Filename Value="depsunit.pas"/>
@@ -66,7 +65,6 @@
         <CursorPos X="49" Y="2"/>
         <UsageCount Value="132"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit5>
       <Unit6>
         <Filename Value="depstrd.pas"/>

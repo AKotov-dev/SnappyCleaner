@@ -33,7 +33,6 @@
 {"hash":84829242,"name":"tmainform.label5.caption","sourcebytes":[79,108,100,32,107,101,114,110,101,108,115,32,108,105,115,116,58],"value":"Old kernels list:"},
 {"hash":11466,"name":"tmainform.label6.caption","sourcebytes":[42,42,42],"value":"***"},
 {"hash":27099786,"name":"tmainform.label9.caption","sourcebytes":[78,101,119,32,107,101,114,110,101,108,58],"value":"New kernel:"},
-{"hash":257523025,"name":"tmainform.label2.hint","sourcebytes":[208,151,208,176,208,179,209,128,209,131,208,182,208,181,208,189,208,189,208,190,208,181,32,209,129,208,181,208,185,209,135,208,176,209,129],"value":"\u0417\u0430\u0433\u0440\u0443\u0436\u0435\u043D\u043D\u043E\u0435 \u0441\u0435\u0439\u0447\u0430\u0441"},
 {"hash":11466,"name":"tmainform.label2.caption","sourcebytes":[42,42,42],"value":"***"},
 {"hash":192712670,"name":"tmainform.oldresetselection.hint","sourcebytes":[82,101,115,101,116,32,115,101,108,101,99,116,105,111,110],"value":"Reset selection"},
 {"hash":45,"name":"tmainform.oldresetselection.caption","sourcebytes":[45],"value":"-"},
