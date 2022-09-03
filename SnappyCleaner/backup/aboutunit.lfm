@@ -8,6 +8,7 @@ object AboutForm: TAboutForm
   ClientHeight = 261
   ClientWidth = 411
   OnCreate = FormCreate
+  OnShow = FormShow
   Position = poMainFormCenter
   SessionProperties = 'Width;Height'
   LCLVersion = '2.2.0.4'
@@ -1524,7 +1525,7 @@ object AboutForm: TAboutForm
   end
   object XMLPropStorage1: TXMLPropStorage
     StoredValues = <>
-    Left = 342
-    Top = 234
+    Left = 48
+    Top = 184
   end
 end

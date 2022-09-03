@@ -21,6 +21,7 @@ type
     Label3: TLabel;
     XMLPropStorage1: TXMLPropStorage;
     procedure FormCreate(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { private declarations }
   public
@@ -39,6 +40,11 @@ implementation
 procedure TAboutForm.FormCreate(Sender: TObject);
 begin
   AboutForm.XMLPropStorage1.FileName := ExtractFilePath(ParamStr(0)) + 'tmp/fsettings';
+end;
+
+procedure TAboutForm.FormShow(Sender: TObject);
+begin
+  XMLPropStorage1.Restore;
 end;
 
 end.

@@ -7,7 +7,9 @@ object AboutForm: TAboutForm
   Caption = 'About'
   ClientHeight = 261
   ClientWidth = 411
+  OnClose = FormClose
   OnCreate = FormCreate
+  OnShow = FormShow
   Position = poMainFormCenter
   SessionProperties = 'Width;Height'
   LCLVersion = '2.2.0.4'

@@ -71,6 +71,8 @@ end;
 
 procedure TDepsForm.FormShow(Sender: TObject);
 begin
+  XMLPropStorage1.Restore;
+
   //Фокус на строку поиска
   SEdit.SetFocus;
 

@@ -471,6 +471,7 @@ end;
 
 procedure TMainForm.FormShow(Sender: TObject);
 begin
+  XMLPropStorage1.Restore;
   MainForm.Caption := Application.Title;
 end;
 

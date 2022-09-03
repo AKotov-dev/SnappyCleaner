@@ -1,7 +1,7 @@
 object DepsForm: TDepsForm
-  Left = 319
+  Left = 322
   Height = 534
-  Top = 160
+  Top = 195
   Width = 855
   Caption = 'DepsForm'
   ClientHeight = 534

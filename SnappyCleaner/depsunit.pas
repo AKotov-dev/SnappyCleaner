@@ -54,6 +54,7 @@ end;
 
 procedure TDepsForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
+  XMLPropStorage1.Save;
   //Останавливаем процесс зависимостей, если запущен
   BreakBtn.Click;
 end;
@@ -71,6 +72,8 @@ end;
 
 procedure TDepsForm.FormShow(Sender: TObject);
 begin
+  XMLPropStorage1.Restore;
+
   //Фокус на строку поиска
   SEdit.SetFocus;
 

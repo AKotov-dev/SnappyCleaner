@@ -3,7 +3,7 @@ object MainForm: TMainForm
   Height = 665
   Top = 124
   Width = 909
-  ActiveControl = Panel1
+  ActiveControl = AnalyzeBtn
   Caption = 'SnappyCleaner'
   ClientHeight = 665
   ClientWidth = 909
@@ -520,7 +520,7 @@ object MainForm: TMainForm
       Kind = bkRetry
       OnClick = AnalyzeBtnClick
       ParentFont = False
-      TabOrder = 0
+      TabOrder = 2
     end
     object CleanBtn: TBitBtn
       AnchorSideRight.Control = AnalyzeBtn
@@ -603,7 +603,6 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrCenter
       Left = 86
       Height = 17
-      Hint = 'Загруженное сейчас'
       Top = 59
       Width = 18
       BorderSpacing.Left = 4
@@ -661,7 +660,7 @@ object MainForm: TMainForm
       Caption = '?'
       OnClick = AboutBtnClick
       ParentFont = False
-      TabOrder = 2
+      TabOrder = 0
     end
     object AutoOrphansBox: TCheckListBox
       AnchorSideLeft.Control = Panel2
@@ -680,7 +679,7 @@ object MainForm: TMainForm
       ItemHeight = 0
       ParentFont = False
       PopupMenu = PopupMenu1
-      TabOrder = 3
+      TabOrder = 4
       TopIndex = -1
     end
     object Label1: TLabel
@@ -768,7 +767,7 @@ object MainForm: TMainForm
       ItemHeight = 0
       ParentFont = False
       PopupMenu = PopupMenu1
-      TabOrder = 4
+      TabOrder = 3
       TopIndex = -1
     end
     object OldKernelDepsBtn: TSpeedButton

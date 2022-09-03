@@ -3,7 +3,7 @@ object MainForm: TMainForm
   Height = 665
   Top = 124
   Width = 909
-  ActiveControl = Panel1
+  ActiveControl = AnalyzeBtn
   Caption = 'SnappyCleaner'
   ClientHeight = 665
   ClientWidth = 909
@@ -238,7 +238,7 @@ object MainForm: TMainForm
       Caption = 'Directory /root/tmp:'
       OnClick = SelectAllCheckClick
       ParentFont = False
-      TabOrder = 0
+      TabOrder = 3
     end
     object UserTrashCheck: TCheckBox
       AnchorSideLeft.Control = Panel1
@@ -251,7 +251,7 @@ object MainForm: TMainForm
       Caption = 'User Trash files:'
       OnClick = SelectAllCheckClick
       ParentFont = False
-      TabOrder = 1
+      TabOrder = 4
     end
     object UserTMPCheck: TCheckBox
       AnchorSideLeft.Control = Panel1
@@ -264,7 +264,7 @@ object MainForm: TMainForm
       Caption = 'User Temporary files:'
       OnClick = SelectAllCheckClick
       ParentFont = False
-      TabOrder = 2
+      TabOrder = 5
     end
     object UserRecentCheck: TCheckBox
       AnchorSideLeft.Control = Panel1
@@ -277,7 +277,7 @@ object MainForm: TMainForm
       Caption = 'RecentDocuments:'
       OnClick = SelectAllCheckClick
       ParentFont = False
-      TabOrder = 3
+      TabOrder = 6
     end
     object CacheURPMICheck: TCheckBox
       AnchorSideLeft.Control = Panel1
@@ -290,7 +290,7 @@ object MainForm: TMainForm
       Caption = 'URPMI Cache:'
       OnClick = SelectAllCheckClick
       ParentFont = False
-      TabOrder = 4
+      TabOrder = 7
     end
     object CacheMozillaCheck: TCheckBox
       AnchorSideLeft.Control = Panel1
@@ -303,7 +303,7 @@ object MainForm: TMainForm
       Caption = 'Mozilla Firefox cache:'
       OnClick = SelectAllCheckClick
       ParentFont = False
-      TabOrder = 5
+      TabOrder = 8
     end
     object CacheChromeCheck: TCheckBox
       AnchorSideLeft.Control = Panel1
@@ -316,7 +316,7 @@ object MainForm: TMainForm
       Caption = 'Google Chrome cache:'
       OnClick = SelectAllCheckClick
       ParentFont = False
-      TabOrder = 6
+      TabOrder = 9
     end
     object CacheOperaCheck: TCheckBox
       AnchorSideLeft.Control = Panel1
@@ -329,7 +329,7 @@ object MainForm: TMainForm
       Caption = 'Opera cache:'
       OnClick = SelectAllCheckClick
       ParentFont = False
-      TabOrder = 7
+      TabOrder = 10
     end
     object Bevel2: TBevel
       AnchorSideLeft.Control = Panel1
@@ -372,7 +372,7 @@ object MainForm: TMainForm
       ParentFont = False
       ParentShowHint = False
       Smooth = True
-      TabOrder = 8
+      TabOrder = 0
       Visible = False
     end
     object Bevel4: TBevel
@@ -398,7 +398,7 @@ object MainForm: TMainForm
       Caption = 'Select/Reset all'
       OnClick = SelectAllCheckClick
       ParentFont = False
-      TabOrder = 9
+      TabOrder = 1
     end
     object RepairRPMCheck: TCheckBox
       AnchorSideLeft.Control = Panel1
@@ -410,7 +410,7 @@ object MainForm: TMainForm
       Caption = 'Repair RPM DataBase'
       OnClick = SelectAllCheckClick
       ParentFont = False
-      TabOrder = 10
+      TabOrder = 2
     end
     object Bevel5: TBevel
       AnchorSideLeft.Control = Panel1
@@ -520,7 +520,7 @@ object MainForm: TMainForm
       Kind = bkRetry
       OnClick = AnalyzeBtnClick
       ParentFont = False
-      TabOrder = 0
+      TabOrder = 2
     end
     object CleanBtn: TBitBtn
       AnchorSideRight.Control = AnalyzeBtn
@@ -660,7 +660,7 @@ object MainForm: TMainForm
       Caption = '?'
       OnClick = AboutBtnClick
       ParentFont = False
-      TabOrder = 2
+      TabOrder = 0
     end
     object AutoOrphansBox: TCheckListBox
       AnchorSideLeft.Control = Panel2
@@ -679,7 +679,7 @@ object MainForm: TMainForm
       ItemHeight = 0
       ParentFont = False
       PopupMenu = PopupMenu1
-      TabOrder = 3
+      TabOrder = 4
       TopIndex = -1
     end
     object Label1: TLabel
@@ -767,7 +767,7 @@ object MainForm: TMainForm
       ItemHeight = 0
       ParentFont = False
       PopupMenu = PopupMenu1
-      TabOrder = 4
+      TabOrder = 3
       TopIndex = -1
     end
     object OldKernelDepsBtn: TSpeedButton
