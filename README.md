@@ -1,3 +1,5 @@
+**Note:** Starting from `v1.7`, the application has become multilingual. Send your translations based on `./SnappyCleaner/SnappyCleaner.pot`. It is convenient to use the `PoEdit` editor to create your translations.  
+  
 **SnappyCleaner** - program for comprehensive garbage clearing in the system
 
 Performs the following actions:
