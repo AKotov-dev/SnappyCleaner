@@ -1,12 +1,12 @@
 object AboutForm: TAboutForm
-  Left = 438
-  Height = 267
-  Top = 164
-  Width = 411
+  Left = 385
+  Height = 266
+  Top = 170
+  Width = 400
   BorderIcons = [biSystemMenu]
   Caption = 'About'
-  ClientHeight = 267
-  ClientWidth = 411
+  ClientHeight = 266
+  ClientWidth = 400
   OnShow = FormShow
   Position = poMainFormCenter
   LCLVersion = '2.2.0.4'
@@ -1487,9 +1487,9 @@ object AboutForm: TAboutForm
     AnchorSideTop.Side = asrBottom
     AnchorSideRight.Side = asrBottom
     Left = 6
-    Height = 17
+    Height = 10
     Top = 217
-    Width = 399
+    Width = 388
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 5
     BorderSpacing.Top = 10
@@ -1500,8 +1500,8 @@ object AboutForm: TAboutForm
     AnchorSideLeft.Control = Bevel2
     AnchorSideLeft.Side = asrCenter
     AnchorSideTop.Control = Bevel2
-    Left = 158
-    Height = 35
+    Left = 153
+    Height = 34
     Top = 225
     Width = 95
     BorderSpacing.Top = 8

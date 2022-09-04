@@ -25,7 +25,7 @@ object MainForm: TMainForm
     Font.Height = -11
     Font.Name = 'Sans'
     ParentFont = False
-    TabOrder = 0
+    TabOrder = 3
   end
   object Panel1: TPanel
     Left = 0
@@ -38,7 +38,7 @@ object MainForm: TMainForm
     ClientWidth = 236
     ParentFont = False
     ParentShowHint = False
-    TabOrder = 1
+    TabOrder = 0
     object Label7: TLabel
       AnchorSideLeft.Control = Panel1
       Left = 8
