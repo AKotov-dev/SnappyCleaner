@@ -6,21 +6,18 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls,
-  Graphics, Dialogs, ExtCtrls, StdCtrls, Buttons, XMLPropStorage;
+  Graphics, Dialogs, ExtCtrls, StdCtrls, Buttons;
 
 type
 
   { TAboutForm }
 
   TAboutForm = class(TForm)
-    Bevel1: TBevel;
     Bevel2: TBevel;
     BitBtn1: TBitBtn;
     Image1: TImage;
     Label1: TLabel;
     Label3: TLabel;
-    XMLPropStorage1: TXMLPropStorage;
-    procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private
     { private declarations }
@@ -37,14 +34,10 @@ implementation
 
 { TAboutForm }
 
-procedure TAboutForm.FormCreate(Sender: TObject);
-begin
-  AboutForm.XMLPropStorage1.FileName := ExtractFilePath(ParamStr(0)) + 'tmp/fsettings';
-end;
-
 procedure TAboutForm.FormShow(Sender: TObject);
 begin
-  XMLPropStorage1.Restore;
+  AboutForm.Width := Label3.Left + Label3.Width + 20;
+  AboutForm.Height := BitBtn1.Top + BitBtn1.Height + 10;
 end;
 
 end.
