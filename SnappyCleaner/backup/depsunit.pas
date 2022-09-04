@@ -54,6 +54,7 @@ end;
 
 procedure TDepsForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
+  XMLPropStorage1.Save;
   //Останавливаем процесс зависимостей, если запущен
   BreakBtn.Click;
 end;

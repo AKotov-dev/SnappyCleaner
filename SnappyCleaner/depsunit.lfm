@@ -1,11 +1,11 @@
 object DepsForm: TDepsForm
-  Left = 322
-  Height = 534
-  Top = 195
-  Width = 855
+  Left = 309
+  Height = 555
+  Top = 165
+  Width = 861
   Caption = 'DepsForm'
-  ClientHeight = 534
-  ClientWidth = 855
+  ClientHeight = 555
+  ClientWidth = 861
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
@@ -14,23 +14,29 @@ object DepsForm: TDepsForm
   LCLVersion = '2.2.0.4'
   object Panel1: TPanel
     Left = 0
-    Height = 534
+    Height = 555
     Top = 0
     Width = 268
     Align = alLeft
     Alignment = taLeftJustify
-    BevelInner = bvRaised
     BevelOuter = bvNone
-    ClientHeight = 534
+    ClientHeight = 555
     ClientWidth = 268
     TabOrder = 0
     object ListBox1: TListBox
-      Left = 1
-      Height = 501
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = Label1
+      AnchorSideTop.Side = asrBottom
+      AnchorSideBottom.Control = Panel1
+      Left = 4
+      Height = 519
       Top = 32
-      Width = 266
+      Width = 264
       Align = alBottom
       Anchors = [akTop, akLeft, akRight, akBottom]
+      BorderSpacing.Left = 4
+      BorderSpacing.Top = 2
+      BorderSpacing.Bottom = 4
       ItemHeight = 0
       PopupMenu = MainForm.PopupMenu1
       ScrollWidth = 253
@@ -38,14 +44,15 @@ object DepsForm: TDepsForm
       TopIndex = -1
     end
     object Label1: TLabel
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = Panel1
       AnchorSideBottom.Control = ListBox1
-      Left = 1
+      Left = 4
       Height = 17
       Top = 12
       Width = 155
-      Anchors = [akLeft, akBottom]
-      BorderSpacing.Left = 1
-      BorderSpacing.Top = 6
+      BorderSpacing.Left = 4
+      BorderSpacing.Top = 12
       BorderSpacing.Bottom = 3
       Caption = 'Required for this package:'
       Font.Color = clGreen
@@ -54,24 +61,32 @@ object DepsForm: TDepsForm
     end
   end
   object Panel3: TPanel
+    AnchorSideRight.Control = Panel1
     Left = 273
-    Height = 534
+    Height = 555
     Top = 0
-    Width = 582
+    Width = 585
     Align = alClient
-    BevelInner = bvRaised
+    BorderSpacing.Right = 3
     BevelOuter = bvNone
     Caption = 'Panel3'
-    ClientHeight = 534
-    ClientWidth = 582
+    ClientHeight = 555
+    ClientWidth = 585
     TabOrder = 1
     object ListBox2: TListBox
-      Left = 1
-      Height = 469
-      Top = 64
-      Width = 580
+      AnchorSideTop.Control = Label2
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Panel3
+      AnchorSideBottom.Control = Panel3
+      Left = 0
+      Height = 491
+      Top = 60
+      Width = 583
       Align = alBottom
       Anchors = [akTop, akLeft, akRight, akBottom]
+      BorderSpacing.Top = 2
+      BorderSpacing.Right = 2
+      BorderSpacing.Bottom = 4
       ItemHeight = 0
       PopupMenu = MainForm.PopupMenu1
       ScrollWidth = 553
@@ -79,12 +94,14 @@ object DepsForm: TDepsForm
       TopIndex = -1
     end
     object Label2: TLabel
-      AnchorSideBottom.Control = ListBox2
-      Left = 2
+      AnchorSideLeft.Control = Panel3
+      AnchorSideTop.Control = Panel2
+      AnchorSideTop.Side = asrBottom
+      Left = 0
       Height = 17
-      Top = 44
+      Top = 40
       Width = 167
-      Anchors = [akLeft, akBottom]
+      BorderSpacing.Top = 5
       BorderSpacing.Bottom = 3
       Caption = 'This package is required for:'
       Font.Color = clRed
@@ -95,20 +112,19 @@ object DepsForm: TDepsForm
       AnchorSideLeft.Control = Panel3
       AnchorSideRight.Control = Panel3
       AnchorSideRight.Side = asrBottom
-      Left = 1
+      Left = 0
       Height = 30
       Top = 5
-      Width = 580
+      Width = 585
       Anchors = [akTop, akLeft, akRight]
-      BevelInner = bvRaised
       BevelOuter = bvNone
       ClientHeight = 30
-      ClientWidth = 580
+      ClientWidth = 585
       TabOrder = 1
       object BreakBtn: TButton
-        Left = 496
-        Height = 28
-        Top = 1
+        Left = 502
+        Height = 30
+        Top = 0
         Width = 83
         Align = alRight
         Anchors = [akTop, akRight]
@@ -119,10 +135,10 @@ object DepsForm: TDepsForm
       object SEdit: TEditButton
         AnchorSideLeft.Control = Panel2
         AnchorSideRight.Control = BreakBtn
-        Left = 1
-        Height = 28
-        Top = 1
-        Width = 495
+        Left = 0
+        Height = 30
+        Top = 0
+        Width = 502
         AutoSelect = False
         Align = alLeft
         Anchors = [akLeft, akRight, akBottom]
@@ -140,7 +156,7 @@ object DepsForm: TDepsForm
   end
   object Splitter1: TSplitter
     Left = 268
-    Height = 534
+    Height = 555
     Top = 0
     Width = 5
   end
