@@ -5,7 +5,7 @@ name=scleaner
 version=1.7
 
 [RELEASE]
-release=0.mrx9
+release=1.mrx9
 
 [GROUP]
 group=Applications/System
@@ -74,7 +74,7 @@ devtool=Lazarus
 toolversion=2.2.0
 
 [INFO]
-0=v1.7
+0=v1.7-1
 1=+ Release for Mageia-9 and higher
 2=+ The packages is designed for Mageia-9 and higher
 3=+ Updated tags of the kernels  filtering format (rpm --qf)
