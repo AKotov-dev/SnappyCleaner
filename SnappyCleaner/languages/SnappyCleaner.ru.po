@@ -12,6 +12,10 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "X-Generator: Poedit 3.1.1\n"
 
+#: taboutform.bitbtn1.caption
+msgid "Оk"
+msgstr ""
+
 #: taboutform.caption
 msgid "About"
 msgstr "О программе"
@@ -68,10 +72,6 @@ msgstr ""
 #: tdepsform.sedit.buttoncaption
 msgid "Search"
 msgstr "Поиск"
-
-#: tmainform.aboutbtn.caption
-msgid "?"
-msgstr ""
 
 #: tmainform.analyzebtn.caption
 msgid "Analyze"
@@ -425,3 +425,4 @@ msgstr "Поиск зависимостей пакетов"
 #: unit1.sstartanalyze
 msgid "run analysis of the system, wait..."
 msgstr "запущен анализ системы, ждите..."
+

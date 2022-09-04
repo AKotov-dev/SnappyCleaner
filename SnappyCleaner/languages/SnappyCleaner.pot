@@ -1,6 +1,10 @@
 msgid ""
 msgstr "Content-Type: text/plain; charset=UTF-8"
 
+#: taboutform.bitbtn1.caption
+msgid "Оk"
+msgstr ""
+
 #: taboutform.caption
 msgid "About"
 msgstr ""
@@ -46,10 +50,6 @@ msgstr ""
 
 #: tdepsform.sedit.buttoncaption
 msgid "Search"
-msgstr ""
-
-#: tmainform.aboutbtn.caption
-msgid "?"
 msgstr ""
 
 #: tmainform.analyzebtn.caption

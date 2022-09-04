@@ -18,6 +18,7 @@ type
     Image1: TImage;
     Label1: TLabel;
     Label3: TLabel;
+    procedure BitBtn1Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private
     { private declarations }
@@ -38,6 +39,11 @@ procedure TAboutForm.FormShow(Sender: TObject);
 begin
   AboutForm.Width := Label3.Left + Label3.Width + 20;
   AboutForm.Height := BitBtn1.Top + BitBtn1.Height + 8;
+end;
+
+procedure TAboutForm.BitBtn1Click(Sender: TObject);
+begin
+  AboutForm.Close;
 end;
 
 end.

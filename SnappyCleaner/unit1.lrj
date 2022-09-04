@@ -38,7 +38,6 @@
 {"hash":45,"name":"tmainform.oldresetselection.caption","sourcebytes":[45],"value":"-"},
 {"hash":195296268,"name":"tmainform.oldselectallbtn.hint","sourcebytes":[83,101,108,101,99,116,32,97,108,108],"value":"Select all"},
 {"hash":43,"name":"tmainform.oldselectallbtn.caption","sourcebytes":[43],"value":"+"},
-{"hash":63,"name":"tmainform.aboutbtn.caption","sourcebytes":[63],"value":"?"},
 {"hash":11466,"name":"tmainform.label1.caption","sourcebytes":[42,42,42],"value":"***"},
 {"hash":185566778,"name":"tmainform.label11.caption","sourcebytes":[79,114,112,104,97,110,101,100,32,112,97,99,107,97,103,101,115,32,108,105,115,116,58],"value":"Orphaned packages list:"},
 {"hash":192712670,"name":"tmainform.orphansresetselection.hint","sourcebytes":[82,101,115,101,116,32,115,101,108,101,99,116,105,111,110],"value":"Reset selection"},
