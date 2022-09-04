@@ -38,9 +38,7 @@
       <Unit0>
         <Filename Value="SnappyCleaner.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="7"/>
-        <TopLine Value="18"/>
         <CursorPos X="21" Y="34"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
@@ -52,6 +50,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
+        <IsVisibleTab Value="True"/>
         <TopLine Value="121"/>
         <CursorPos X="8" Y="139"/>
         <UsageCount Value="200"/>
