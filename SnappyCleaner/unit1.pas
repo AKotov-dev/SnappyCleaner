@@ -136,7 +136,7 @@ resourcestring
   SProcessTerminate = 'process is terminated, wait...';
   SMarkPackagesPlaced = 'mark packages placed';
   SSearchDeps = 'Search the packages dependencies';
-
+  SAlredyRunning = 'The application is alredy running!';
 
 var
   MainForm: TMainForm;

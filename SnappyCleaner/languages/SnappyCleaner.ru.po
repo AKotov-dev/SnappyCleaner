@@ -313,6 +313,10 @@ msgstr "Временные файлы:"
 msgid "User Trash files:"
 msgstr "Корзина юзера:"
 
+#: unit1.salredyrunning
+msgid "The application is alredy running!"
+msgstr "Приложение уже запущено!"
+
 #: unit1.sanalisescompleted
 msgctxt "unit1.sanalisescompleted"
 msgid "analysis completed..."

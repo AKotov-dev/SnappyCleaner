@@ -25,5 +25,6 @@
 {"hash":262038190,"name":"unit1.sdepsanalyzeend","sourcebytes":[100,101,112,101,110,100,101,110,99,121,32,97,110,97,108,121,115,105,115,32,112,97,99,107,97,103,101,32,105,115,32,99,111,109,112,108,101,116,101,100,46,46,46],"value":"dependency analysis package is completed..."},
 {"hash":36862862,"name":"unit1.sprocessterminate","sourcebytes":[112,114,111,99,101,115,115,32,105,115,32,116,101,114,109,105,110,97,116,101,100,44,32,119,97,105,116,46,46,46],"value":"process is terminated, wait..."},
 {"hash":101242020,"name":"unit1.smarkpackagesplaced","sourcebytes":[109,97,114,107,32,112,97,99,107,97,103,101,115,32,112,108,97,99,101,100],"value":"mark packages placed"},
-{"hash":91275331,"name":"unit1.ssearchdeps","sourcebytes":[83,101,97,114,99,104,32,116,104,101,32,112,97,99,107,97,103,101,115,32,100,101,112,101,110,100,101,110,99,105,101,115],"value":"Search the packages dependencies"}
+{"hash":91275331,"name":"unit1.ssearchdeps","sourcebytes":[83,101,97,114,99,104,32,116,104,101,32,112,97,99,107,97,103,101,115,32,100,101,112,101,110,100,101,110,99,105,101,115],"value":"Search the packages dependencies"},
+{"hash":184692145,"name":"unit1.salredyrunning","sourcebytes":[84,104,101,32,97,112,112,108,105,99,97,116,105,111,110,32,105,115,32,97,108,114,101,100,121,32,114,117,110,110,105,110,103,33],"value":"The application is alredy running!"}
 ]}

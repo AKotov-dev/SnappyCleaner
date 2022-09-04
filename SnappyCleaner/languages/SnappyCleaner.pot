@@ -292,6 +292,10 @@ msgstr ""
 msgid "User Trash files:"
 msgstr ""
 
+#: unit1.salredyrunning
+msgid "The application is alredy running!"
+msgstr ""
+
 #: unit1.sanalisescompleted
 msgctxt "unit1.sanalisescompleted"
 msgid "analysis completed..."
