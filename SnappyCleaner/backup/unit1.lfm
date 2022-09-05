@@ -506,12 +506,12 @@ object MainForm: TMainForm
     ClientHeight = 646
     ClientWidth = 668
     ParentFont = False
-    TabOrder = 2
+    TabOrder = 1
     object AnalyzeBtn: TBitBtn
       AnchorSideRight.Control = Panel2
       AnchorSideRight.Side = asrBottom
       Left = 540
-      Height = 35
+      Height = 34
       Top = 8
       Width = 120
       Anchors = [akTop, akRight]
@@ -560,7 +560,7 @@ object MainForm: TMainForm
     object CleanBtn: TBitBtn
       AnchorSideRight.Control = AnalyzeBtn
       Left = 420
-      Height = 35
+      Height = 34
       Top = 8
       Width = 120
       Anchors = [akTop, akRight]
@@ -723,9 +723,9 @@ object MainForm: TMainForm
     object AboutBtn: TBitBtn
       AnchorSideLeft.Control = Panel2
       Left = 11
-      Height = 35
+      Height = 34
       Top = 8
-      Width = 35
+      Width = 34
       BorderSpacing.Left = 10
       Glyph.Data = {
         36040000424D3604000000000000360000002800000010000000100000000100

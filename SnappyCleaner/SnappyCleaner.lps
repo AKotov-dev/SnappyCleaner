@@ -39,7 +39,7 @@
         <Filename Value="SnappyCleaner.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="7"/>
-        <CursorPos X="21" Y="34"/>
+        <CursorPos X="41" Y="6"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
       </Unit0>
@@ -50,8 +50,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
-        <TopLine Value="121"/>
-        <CursorPos X="8" Y="139"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="14" Y="5"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -61,7 +61,7 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="AnalyzeTRD"/>
         <EditorIndex Value="2"/>
-        <CursorPos X="33" Y="4"/>
+        <CursorPos X="35" Y="3"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
       </Unit2>
@@ -81,10 +81,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="AboutUnit"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="17"/>
-        <CursorPos X="26" Y="32"/>
+        <CursorPos X="28" Y="3"/>
         <UsageCount Value="150"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>

@@ -10,8 +10,8 @@ object MainForm: TMainForm
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  Position = poDesktopCenter
-  SessionProperties = 'CacheChromeCheck.Checked;CacheChromiumCheck.Checked;CacheMozillaCheck.Checked;CacheOperaCheck.Checked;CachePaleMoonCheck.Checked;CacheURPMICheck.Checked;Height;LangBtn.Caption;Panel1.Width;RepairRPMCheck.Checked;RootTmpCheck.Checked;SelectAllCheck.Checked;UserRecentCheck.Checked;UserTMPCheck.Checked;UserTrashCheck.Checked;Width'
+  Position = poDefault
+  SessionProperties = 'CacheChromeCheck.Checked;CacheChromiumCheck.Checked;CacheMozillaCheck.Checked;CacheOperaCheck.Checked;CachePaleMoonCheck.Checked;CacheURPMICheck.Checked;Height;LangBtn.Caption;Panel1.Width;RepairRPMCheck.Checked;RootTmpCheck.Checked;SelectAllCheck.Checked;UserRecentCheck.Checked;UserTMPCheck.Checked;UserTrashCheck.Checked;Width;Top;Left'
   LCLVersion = '2.2.0.4'
   object StaticText1: TStaticText
     Left = 0

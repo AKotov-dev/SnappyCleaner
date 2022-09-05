@@ -2,8 +2,9 @@ program SnappyCleaner;
 
 {$mode objfpc}{$H+}
 
-uses {$IFDEF UNIX}
-  cthreads, {$ENDIF}
+uses
+ {$IFDEF UNIX}
+  cthreads,   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
   Forms,
   Unit1,
@@ -30,7 +31,7 @@ begin
   //Проверяем, нет ли в системе объекта с таким ID
   if MyProg.IsRunInstance then
   begin
-    MessageDlg('The application is alredy running!', mtWarning, [mbOK], 0);
+    MessageDlg(SAlredyRunning, mtWarning, [mbOK], 0);
     MyProg.Free;
     Halt(1);
   end
@@ -38,8 +39,8 @@ begin
     MyProg.RunListen;
 
   RequireDerivedFormResource := True;
-  Application.Scaled:=True;
-  Application.Title:='SnappyCleaner v1.7';
+  Application.Scaled := True;
+  Application.Title := 'SnappyCleaner v1.7';
   Application.Initialize;
   Application.CreateForm(TMainForm, MainForm);
   Application.CreateForm(TAboutForm, AboutForm);

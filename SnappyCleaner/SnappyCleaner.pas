@@ -4,7 +4,7 @@ program SnappyCleaner;
 
 uses
  {$IFDEF UNIX}
-  cthreads,   {$ENDIF}
+  cthreads,    {$ENDIF}
   Interfaces, // this includes the LCL widgetset
   Forms,
   Unit1,
