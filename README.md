@@ -21,4 +21,4 @@ After installation, SnappyCleaner goes to the `Utilities-System` menu and starts
 
 Developed and tested only on Mageia Linux-7/8/9.
 
-![](https://github.com/AKotov-dev/SnappyCleaner/blob/main/ScreenShot.png)
+![](https://github.com/AKotov-dev/SnappyCleaner/blob/main/ScreenShot1.png)
