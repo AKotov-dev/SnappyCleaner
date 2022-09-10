@@ -17,7 +17,7 @@
 {"hash":258768042,"name":"tmainform.roottmpcheck.caption","sourcebytes":[68,105,114,101,99,116,111,114,121,32,47,114,111,111,116,47,116,109,112,58],"value":"Directory /root/tmp:"},
 {"hash":53229962,"name":"tmainform.usertrashcheck.caption","sourcebytes":[85,115,101,114,32,84,114,97,115,104,32,102,105,108,101,115,58],"value":"User Trash files:"},
 {"hash":233004298,"name":"tmainform.usertmpcheck.caption","sourcebytes":[85,115,101,114,32,84,101,109,112,111,114,97,114,121,32,102,105,108,101,115,58],"value":"User Temporary files:"},
-{"hash":140993882,"name":"tmainform.userrecentcheck.caption","sourcebytes":[82,101,99,101,110,116,68,111,99,117,109,101,110,116,115,58],"value":"RecentDocuments:"},
+{"hash":252213002,"name":"tmainform.userrecentcheck.caption","sourcebytes":[82,101,99,101,110,116,32,68,111,99,117,109,101,110,116,115,58],"value":"Recent Documents:"},
 {"hash":19975994,"name":"tmainform.cacheurpmicheck.caption","sourcebytes":[85,82,80,77,73,32,67,97,99,104,101,58],"value":"URPMI Cache:"},
 {"hash":103504842,"name":"tmainform.cachemozillacheck.caption","sourcebytes":[77,111,122,105,108,108,97,32,70,105,114,101,102,111,120,32,99,97,99,104,101,58],"value":"Mozilla Firefox cache:"},
 {"hash":154148442,"name":"tmainform.cachechromecheck.caption","sourcebytes":[71,111,111,103,108,101,32,67,104,114,111,109,101,32,99,97,99,104,101,58],"value":"Google Chrome cache:"},

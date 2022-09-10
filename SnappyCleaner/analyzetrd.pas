@@ -69,8 +69,8 @@ begin
     ExProcess.Parameters.Clear;
     ExProcess.Parameters.Add('-c');
     ExProcess.Parameters.Add('if [ -d "/root/tmp" ]; then ' +
-      'roottmp=$(/usr/bin/du -csh /root/tmp/* /root/tmp/.[!.]* | tail -n 1 | awk ' +
-      '''{ ' + 'print $1' + ' }''' + '); else roottmp="no"; fi; echo $roottmp');
+      'roottmp=$(/usr/bin/du -csh /root/tmp/* /root/tmp/.[!.]* | tail -n1 | cut -f1' +
+      '); else roottmp="no"; fi; echo $roottmp');
     ExProcess.Execute;
     Result.LoadFromStream(ExProcess.Output);
     //Показываем размер /root/tmp
@@ -96,8 +96,7 @@ begin
       ActUser[0] + '/.local/share/Trash/files/* /home/' + ActUser[0] +
       '/.local/share/Trash/files/.[!.]* ' + '/home/' + ActUser[0] +
       '/.local/share/Trash/info/* /home/' + ActUser[0] +
-      '/.local/share/Trash/info/.[!.]* $flash | tail -n 1 | awk ' +
-      '''{ ' + 'print $1' + ' }''' +
+      '/.local/share/Trash/info/.[!.]* $flash | tail -n1 | cut -f1' +
       '); else trash="0"; fi; else trash="no"; fi; echo $trash');
 
     ExProcess.Execute;
@@ -110,32 +109,31 @@ begin
     ExProcess.Parameters.Add('-c');
     ExProcess.Parameters.Add('if [ -d "/home/' + ActUser[0] +
       '/tmp" ]; then ' + 'usertmp=$(/usr/bin/du -csh /home/' + ActUser[0] +
-      '/tmp/* /home/' + ActUser[0] + '/tmp/.[!.]* | tail -n 1 | awk ' +
-      '''{ ' + 'print $1' + ' }''' + '); else usertmp="no"; fi; echo $usertmp');
+      '/tmp/* /home/' + ActUser[0] + '/tmp/.[!.]* | tail -n1 | cut -f1' +
+      '); else usertmp="no"; fi; echo $usertmp');
     ExProcess.Execute;
     Result.LoadFromStream(ExProcess.Output);
     //Показываем размер временных файлов пользователя
     Synchronize(@ShowUserTMP);
 
-    //Каталог RecentDocuments
+    //Каталог RecentDocuments and recent*.xbel
     ExProcess.Parameters.Clear;
     ExProcess.Parameters.Add('-c');
-    ExProcess.Parameters.Add('if [ -d "/home/' + ActUser[0] +
-      '/.local/share/RecentDocuments" ]; then ' + 'userrdoc=$(/usr/bin/du -csh /home/' +
+    ExProcess.Parameters.Add('userrdoc=$(/usr/bin/du -csh /home/' +
       ActUser[0] + '/.local/share/RecentDocuments/* /home/' +
-      ActUser[0] + '/.local/share/RecentDocuments/.[!.]* | tail -n 1 | awk ' +
-      '''{ ' + 'print $1' + ' }''' + '); else userrdoc="no"; fi; echo $userrdoc');
+      ActUser[0] + '/.local/share/RecentDocuments/.[!.]* /home/' +
+      ActUser[0] + '/.local/share/recent*.xbel | tail -n1 | cut -f1); echo $userrdoc');
     ExProcess.Execute;
     Result.LoadFromStream(ExProcess.Output);
-    //Показываем размер RecentDocuments
+    //Показываем размер RecentDocuments and recent*.xbel
     Synchronize(@ShowRecentDocuments);
 
     //Каталог кеш-URPMI
     ExProcess.Parameters.Clear;
     ExProcess.Parameters.Add('-c');
     ExProcess.Parameters.Add('if [ -d "/var/cache/urpmi" ]; then ' +
-      'urpmicache=$(/usr/bin/du -csh /var/cache/urpmi/* /var/cache/urpmi/.[!.]* | tail -n 1 | awk '
-      + '''{ ' + 'print $1' + ' }''' + '); else urpmicache="no"; fi; echo $urpmicache');
+      'urpmicache=$(/usr/bin/du -csh /var/cache/urpmi/* /var/cache/urpmi/.[!.]* | tail -n1 | cut -f1'
+      + '); else urpmicache="no"; fi; echo $urpmicache');
     ExProcess.Execute;
     Result.LoadFromStream(ExProcess.Output);
     //Показываем размер кеша URPMI
@@ -147,8 +145,7 @@ begin
     ExProcess.Parameters.Add('if [ -d "/home/' + ActUser[0] +
       '/.cache/mozilla" ]; then ' + 'mozcache=$(/usr/bin/du -csh /home/' +
       ActUser[0] + '/.cache/mozilla/* /home/' + ActUser[0] +
-      '/.cache/mozilla/.[!.]* | tail -n 1 | awk ' + '''{ ' + 'print $1' +
-      ' }''' + '); else mozcache="no"; fi; echo $mozcache');
+      '/.cache/mozilla/.[!.]* | tail -n1 | cut -f1); else mozcache="no"; fi; echo $mozcache');
     ExProcess.Execute;
     Result.LoadFromStream(ExProcess.Output);
     //Показываем размер кеша Mozilla
@@ -160,8 +157,7 @@ begin
     ExProcess.Parameters.Add('if [ -d "/home/' + ActUser[0] +
       '/.cache/google-chrome" ]; then ' + 'chromecache=$(/usr/bin/du -csh /home/' +
       ActUser[0] + '/.cache/google-chrome/* /home/' + ActUser[0] +
-      '/.cache/google-chrome/.[!.]* | tail -n 1 | awk ' + '''{ ' +
-      'print $1' + ' }''' + '); else chromecache="no"; fi; echo $chromecache');
+      '/.cache/google-chrome/.[!.]* | tail -n1 | cut -f1); else chromecache="no"; fi; echo $chromecache');
     ExProcess.Execute;
     Result.LoadFromStream(ExProcess.Output);
     //Показываем размер кеша Chrome
@@ -173,8 +169,7 @@ begin
     ExProcess.Parameters.Add('if [ -d "/home/' + ActUser[0] +
       '/.cache/opera" ]; then ' + 'operacache=$(/usr/bin/du -csh /home/' +
       ActUser[0] + '/.cache/opera/* /home/' + ActUser[0] +
-      '/.cache/opera/.[!.]* | tail -n 1 | awk ' + '''{ ' + 'print $1' +
-      ' }''' + '); else operacache="no"; fi; echo $operacache');
+      '/.cache/opera/.[!.]* | tail -n1 | cut -f1); else operacache="no"; fi; echo $operacache');
     ExProcess.Execute;
     Result.LoadFromStream(ExProcess.Output);
     //Показываем размер кеша Opera
@@ -186,8 +181,7 @@ begin
     ExProcess.Parameters.Add('if [ -d "/home/' + ActUser[0] +
       '/.cache/chromium" ]; then ' + 'chromiumcache=$(/usr/bin/du -csh /home/' +
       ActUser[0] + '/.cache/chromium/* /home/' + ActUser[0] +
-      '/.cache/chromium/.[!.]* | tail -n 1 | awk ' + '''{ ' +
-      'print $1' + ' }''' + '); else chromiumcache="no"; fi; echo $chromiumcache');
+      '/.cache/chromium/.[!.]* | tail -n1 | cut -f1); else chromiumcache="no"; fi; echo $chromiumcache');
     ExProcess.Execute;
     Result.LoadFromStream(ExProcess.Output);
     //Показываем размер кеша Chromium
@@ -200,9 +194,7 @@ begin
       '/.cache/moonchild productions" ]; then ' +
       'palemooncache=$(/usr/bin/du -csh "/home/' + ActUser[0] +
       '/.cache/moonchild productions/"* "/home/' + ActUser[0] +
-      '/.cache/moonchild productions/.[!.]"* | tail -n 1 | awk ' +
-      '''{ ' + 'print $1' + ' }''' +
-      '); else palemooncache="no"; fi; echo $palemooncache');
+      '/.cache/moonchild productions/.[!.]"* | tail -n1 | cut -f1); else palemooncache="no"; fi; echo $palemooncache');
     ExProcess.Execute;
     Result.LoadFromStream(ExProcess.Output);
     //Показываем размер кеша Palemoon
@@ -213,7 +205,7 @@ begin
     ExProcess.Parameters.Clear;
     ExProcess.Parameters.Add('-c');
     ExProcess.Parameters.Add(
-      '/usr/bin/df /home/ --output=pcent | tail -n 1 | cut -d% -f1');
+      '/usr/bin/df /home/ --output=pcent | tail -n1 | cut -d% -f1');
     ExProcess.Execute;
     Result.LoadFromStream(ExProcess.Output);
     //Показываем использование /home
@@ -369,7 +361,7 @@ end;
 
 procedure StartAnalyze.ShowRecentDocuments;
 begin
-  //Показываем размер RecentDocuments:
+  //Показываем размер RecentDocuments and recent*.xbel
   if (Result[0] = 'no') then
     MainForm.Label14.Caption := SNo
   else

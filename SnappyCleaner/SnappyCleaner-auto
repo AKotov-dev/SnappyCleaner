@@ -4,7 +4,7 @@ clear
 
 #Сбрасываем и определяем цвет выделения
 tput sgr 0;
-rcolor='\e[31m'; ncolor='\e[0m';
+rcolor='\e[32m'; ncolor='\e[0m';
 
 echo -e "\e[1mSnappyCleaner\e[0m"
 echo -e "------------------------------------------------"
@@ -26,9 +26,10 @@ if [[ $LANG == "ru_RU.UTF-8" ]]; then
   rm -rf /home/$(logname)/tmp/*
   echo -e "${rcolor}завершено${ncolor}\n"
 
-#Очищаю временные файлы пользователя RecentDocuments
-  echo -en "Очищаю файлы пользователя RecentDocuments... "
+#Очищаю временные файлы пользователя RecentDocuments и recent*.xbel
+  echo -en "Очищаю Последние Документы... "
   rm -rf /home/$(logname)/.local/share/RecentDocuments/*
+  rm -rf /home/$(logname)/.local/share/recent*.xbel
   echo -e "${rcolor}завершено${ncolor}\n"
 
 #Ремонтирую базу данных RPM
@@ -88,9 +89,10 @@ fi;
   rm -rf /home/$(logname)/tmp/*
   echo -e "${rcolor}completed${ncolor}\n"
 
-#Очищаю временные файлы пользователя RecentDocuments
-  echo -en "Clean RecentDocuments... "
+#Очищаю временные файлы пользователя RecentDocuments и recent*.xbel
+  echo -en "Clean Recent Documents... "
   rm -rf /home/$(logname)/.local/share/RecentDocuments/*
+  rm -rf /home/$(logname)/.local/share/recent*.xbel
   echo -e "${rcolor}completed${ncolor}\n"
 
 #Ремонтирую базу данных RPM

@@ -50,7 +50,6 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
-        <IsVisibleTab Value="True"/>
         <CursorPos X="14" Y="5"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
@@ -60,8 +59,9 @@
         <Filename Value="analyzetrd.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="AnalyzeTRD"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <CursorPos X="35" Y="3"/>
+        <CursorPos X="44" Y="353"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
       </Unit2>
@@ -70,8 +70,8 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="ClearTRD"/>
         <EditorIndex Value="3"/>
-        <CursorPos X="37" Y="4"/>
-        <UsageCount Value="188"/>
+        <CursorPos X="29" Y="5"/>
+        <UsageCount Value="189"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
@@ -83,7 +83,7 @@
         <UnitName Value="AboutUnit"/>
         <EditorIndex Value="1"/>
         <CursorPos X="28" Y="3"/>
-        <UsageCount Value="150"/>
+        <UsageCount Value="151"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit4>
@@ -96,7 +96,7 @@
         <UnitName Value="DepsUnit"/>
         <EditorIndex Value="5"/>
         <CursorPos X="38" Y="4"/>
-        <UsageCount Value="133"/>
+        <UsageCount Value="134"/>
         <Loaded Value="True"/>
       </Unit5>
       <Unit6>
@@ -105,7 +105,7 @@
         <UnitName Value="DepsTRD"/>
         <EditorIndex Value="4"/>
         <CursorPos X="45" Y="4"/>
-        <UsageCount Value="132"/>
+        <UsageCount Value="133"/>
         <Loaded Value="True"/>
       </Unit6>
       <Unit7>
@@ -114,7 +114,7 @@
         <UnitName Value="NotOrphanTRD"/>
         <EditorIndex Value="6"/>
         <CursorPos X="37" Y="4"/>
-        <UsageCount Value="121"/>
+        <UsageCount Value="122"/>
         <Loaded Value="True"/>
       </Unit7>
       <Unit8>
@@ -125,11 +125,15 @@
         <UsageCount Value="6"/>
       </Unit8>
     </Units>
-    <JumpHistory Count="1">
+    <JumpHistory Count="2" HistoryIndex="1">
       <Position1>
         <Filename Value="aboutunit.pas"/>
         <Caret Line="13" Column="24" TopLine="11"/>
       </Position1>
+      <Position2>
+        <Filename Value="analyzetrd.pas"/>
+        <Caret Line="126" Column="76" TopLine="109"/>
+      </Position2>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

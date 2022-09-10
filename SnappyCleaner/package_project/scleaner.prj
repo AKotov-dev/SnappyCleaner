@@ -2,10 +2,10 @@
 name=scleaner
 
 [VERSION]
-version=1.7
+version=1.8
 
 [RELEASE]
-release=1.mrx9
+release=0.mrx9
 
 [GROUP]
 group=Applications/System
@@ -74,20 +74,25 @@ devtool=Lazarus
 toolversion=2.2.0
 
 [INFO]
-0=v1.7-1
+0=v1.8-0
 1=+ Release for Mageia-9 and higher
-2=+ Updated tags of the kernels  filtering format (rpm --qf)
-3=+ Added gtk2 dependency
-4=+ Recompilation in Lazarus 2.2.0
-5=+ Improving interactive cleaning: scleaner --auto
-6=+ Usage indicator /home (%)
-7=+ Multilingual support
-8=+ Plasma: LCL Scaling (Hi-DPI) and selective launch via kdesu
-9=
-10=v1.6-1
-11=+ Lazarus-2.0.10 rebuild
-12=+ Mageia-8 rebuild
-13=
-14=v1.6-0
-15=Fixed calculation of the weight of the packages, old kernels
-16=Fixed counting the weight of orphaned packages when removing the orphanhood attribute
+2=+ Improved cleaning of Recent Documents
+3=+ Definition of DE when starting from root
+4=
+5=v1.7-1
+6=+ Release for Mageia-9 and higher
+7=+ Updated tags of the kernels  filtering format (rpm --qf)
+8=+ Added gtk2 dependency
+9=+ Recompilation in Lazarus 2.2.0
+10=+ Improving interactive cleaning: scleaner --auto
+11=+ Usage indicator /home (%)
+12=+ Multilingual support
+13=+ Plasma: LCL Scaling (Hi-DPI) and selective launch via kdesu
+14=
+15=v1.6-1
+16=+ Lazarus-2.0.10 rebuild
+17=+ Mageia-8 rebuild
+18=
+19=v1.6-0
+20=Fixed calculation of the weight of the packages, old kernels
+21=Fixed counting the weight of orphaned packages when removing the orphanhood attribute

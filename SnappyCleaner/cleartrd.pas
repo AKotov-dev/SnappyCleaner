@@ -94,7 +94,7 @@ begin
       ExProcess.Execute;
     end;
 
-    //RecentDocuments
+    //RecentDocuments and recent*.xbel
     if MainForm.UserRecentCheck.Checked then
     begin
       Synchronize(@ShowRecentDocuments);
@@ -103,7 +103,8 @@ begin
       ExProcess.Parameters.Add('if [ -d "/home/' + ActUser[0] +
         '/.local/share/RecentDocuments" ]; then /usr/bin/rm -rf /home/' +
         ActUser[0] + '/.local/share/RecentDocuments/* ' + '/home/' +
-        ActUser[0] + '/.local/share/RecentDocuments/.*; fi;');
+        ActUser[0] + '/.local/share/RecentDocuments/.*; fi; ' +
+        'rm -f /home/' + ActUser[0] + '/.local/share/recent*.xbel');
       ExProcess.Execute;
     end;
 
@@ -229,7 +230,7 @@ begin
   MainForm.StaticText1.Caption := SCleanTMPUserFiles;
 end;
 
-//Показываю удаление RecentDocuments
+//Показываю удаление RecentDocuments and recent*.xbel
 procedure StartClear.ShowRecentDocuments;
 begin
   MainForm.StaticText1.Caption := SCleanRecentDocuments;

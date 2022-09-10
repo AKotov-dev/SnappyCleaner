@@ -271,10 +271,10 @@ object MainForm: TMainForm
       Left = 5
       Height = 32
       Top = 277
-      Width = 146
+      Width = 149
       Anchors = [akLeft]
       BorderSpacing.Left = 4
-      Caption = 'RecentDocuments:'
+      Caption = 'Recent Documents:'
       OnClick = SelectAllCheckClick
       ParentFont = False
       TabOrder = 6

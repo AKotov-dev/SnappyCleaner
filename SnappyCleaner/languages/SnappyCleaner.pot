@@ -281,7 +281,7 @@ msgid "start analysis of system..."
 msgstr ""
 
 #: tmainform.userrecentcheck.caption
-msgid "RecentDocuments:"
+msgid "Recent Documents:"
 msgstr ""
 
 #: tmainform.usertmpcheck.caption

@@ -94,7 +94,7 @@ begin
       ExProcess.Execute;
     end;
 
-    //RecentDocuments
+    //RecentDocuments and recent*.xbel
     if MainForm.UserRecentCheck.Checked then
     begin
       Synchronize(@ShowRecentDocuments);
@@ -103,7 +103,8 @@ begin
       ExProcess.Parameters.Add('if [ -d "/home/' + ActUser[0] +
         '/.local/share/RecentDocuments" ]; then /usr/bin/rm -rf /home/' +
         ActUser[0] + '/.local/share/RecentDocuments/* ' + '/home/' +
-        ActUser[0] + '/.local/share/RecentDocuments/.*; fi;');
+        ActUser[0] + '/.local/share/RecentDocuments/.*; fi; ' +
+        'rm -f /home/' + ActUser[0] + '/.local/share/recent*.xbel');
       ExProcess.Execute;
     end;
 
@@ -190,7 +191,6 @@ begin
       ExProcess.Execute;
     end;
 
-
     //Удаление списка пакетов
     if (DelKernels <> '') or (DelOrphans <> '') then
     begin
@@ -215,29 +215,25 @@ end;
 //Показываю удаление временных файлов root
 procedure StartClear.ShowRootTMP;
 begin
-  MainForm.StaticText1.Caption :=
-    SCleanTMPRootFiles;
+  MainForm.StaticText1.Caption := SCleanTMPRootFiles;
 end;
 
 //Показываю очистку корзины $USER
 procedure StartClear.ShowUserTrash;
 begin
-  MainForm.StaticText1.Caption :=
-    SCleanUserRecycle;
+  MainForm.StaticText1.Caption := SCleanUserRecycle;
 end;
 
 //Показываю очистку временных файлов $USER
 procedure StartClear.ShowUserTMP;
 begin
-  MainForm.StaticText1.Caption :=
-    SCleanTMPUserFiles;
+  MainForm.StaticText1.Caption := SCleanTMPUserFiles;
 end;
 
 //Показываю удаление RecentDocuments
 procedure StartClear.ShowRecentDocuments;
 begin
-  MainForm.StaticText1.Caption :=
-    SCleanRecentDocuments;
+  MainForm.StaticText1.Caption := SCleanRecentDocuments;
 end;
 
 //Показываю ремонт базы данных RPM
@@ -273,19 +269,19 @@ end;
 //Показываю удаление кеша Chromium
 procedure StartClear.ShowChromiumCache;
 begin
-    MainForm.StaticText1.Caption := SCleanChromiumCache;
+  MainForm.StaticText1.Caption := SCleanChromiumCache;
 end;
 
 //Показываю удаление кеша PaleMoon
 procedure StartClear.ShowPaleMoonCache;
 begin
-    MainForm.StaticText1.Caption := SCleanPalemoonCache;
+  MainForm.StaticText1.Caption := SCleanPalemoonCache;
 end;
 
 //Показываю удаление пакетов (ядра и сироты)
 procedure StartClear.ShowDelPackages;
 begin
-    MainForm.StaticText1.Caption := SRemoveSelectedPackages;
+  MainForm.StaticText1.Caption := SRemoveSelectedPackages;
 end;
 
 //Финал очистки

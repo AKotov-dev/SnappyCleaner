@@ -302,8 +302,8 @@ msgid "start analysis of system..."
 msgstr "запустите анализ системы..."
 
 #: tmainform.userrecentcheck.caption
-msgid "RecentDocuments:"
-msgstr "RecentDocuments:"
+msgid "Recent Documents:"
+msgstr "Последние документы:"
 
 #: tmainform.usertmpcheck.caption
 msgid "User Temporary files:"
@@ -425,4 +425,3 @@ msgstr "Поиск зависимостей пакетов"
 #: unit1.sstartanalyze
 msgid "run analysis of the system, wait..."
 msgstr "запущен анализ системы, ждите..."
-

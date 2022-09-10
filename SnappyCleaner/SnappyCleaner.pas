@@ -40,7 +40,7 @@ begin
 
   RequireDerivedFormResource := True;
   Application.Scaled:=True;
-  Application.Title:='SnappyCleaner v1.7';
+  Application.Title:='SnappyCleaner v1.8';
   Application.Initialize;
   Application.CreateForm(TMainForm, MainForm);
   Application.CreateForm(TAboutForm, AboutForm);
