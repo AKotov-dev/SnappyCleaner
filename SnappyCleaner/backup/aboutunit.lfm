@@ -1,11 +1,11 @@
 object AboutForm: TAboutForm
-  Left = 387
-  Height = 266
-  Top = 207
+  Left = 427
+  Height = 278
+  Top = 154
   Width = 400
   BorderIcons = [biSystemMenu]
   Caption = 'About'
-  ClientHeight = 266
+  ClientHeight = 278
   ClientWidth = 400
   OnShow = FormShow
   Position = poMainFormCenter
@@ -1477,10 +1477,10 @@ object AboutForm: TAboutForm
   end
   object Label3: TLabel
     Left = 125
-    Height = 170
+    Height = 187
     Top = 37
     Width = 253
-    Caption = 'MgaRemix Cleaning Program'#10' '#10'License: GPLv3'#10'Compilation: Lazarus 2.2.0'#10'Author: alex_q_2000 (C) 2020'#10'Co - authorship: ingvaro'#10'Gratitude: algri14, AlexL,'#10'mozg1986, Zomby, TopE, kvv-vp'#10' '#10'Russian Linux Forum: https://linuxforum.ru'
+    Caption = 'MgaRemix Cleaning Program'#10' '#10'License: GPLv3'#10'Compilation: Lazarus 2.2.0'#10'Author: alex_q_2000 (C) 2020'#10'Co - authorship: ingvaro'#10'Gratitude: algri14, AlexL,'#10'mozg1986, Zomby, TopE, kvv-vp'#10' '#10'Russian Linux Forum: https://linuxforum.ru'#10' '
   end
   object Bevel2: TBevel
     AnchorSideTop.Control = Label3
@@ -1488,9 +1488,9 @@ object AboutForm: TAboutForm
     AnchorSideRight.Side = asrBottom
     Left = 6
     Height = 10
-    Top = 217
+    Top = 227
     Width = 388
-    Anchors = [akTop, akLeft, akRight]
+    Anchors = [akLeft, akRight]
     BorderSpacing.Left = 5
     BorderSpacing.Top = 10
     BorderSpacing.Right = 5
@@ -1502,7 +1502,7 @@ object AboutForm: TAboutForm
     AnchorSideTop.Control = Bevel2
     Left = 153
     Height = 34
-    Top = 225
+    Top = 235
     Width = 95
     BorderSpacing.Top = 8
     Caption = 'Оk'

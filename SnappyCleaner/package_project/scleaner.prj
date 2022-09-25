@@ -2,7 +2,7 @@
 name=scleaner
 
 [VERSION]
-version=1.8
+version=1.9
 
 [RELEASE]
 release=0.mrx9
@@ -74,25 +74,30 @@ devtool=Lazarus
 toolversion=2.2.0
 
 [INFO]
-0=v1.8-0
-1=+ Release for Mageia-9 and higher
-2=+ Improved cleaning of Recent Documents
-3=+ Definition of DE when starting from root
+0=v1.9
+1=+ Work relative to the Active kernel
+2=+ All kernels except the Active are in the list for deletion
+3=+ Binding to the installation time of any kernel is excluded
 4=
-5=v1.7-1
+5=v1.8-0
 6=+ Release for Mageia-9 and higher
-7=+ Updated tags of the kernels  filtering format (rpm --qf)
-8=+ Added gtk2 dependency
-9=+ Recompilation in Lazarus 2.2.0
-10=+ Improving interactive cleaning: scleaner --auto
-11=+ Usage indicator /home (%)
-12=+ Multilingual support
-13=+ Plasma: LCL Scaling (Hi-DPI) and selective launch via kdesu
-14=
-15=v1.6-1
-16=+ Lazarus-2.0.10 rebuild
-17=+ Mageia-8 rebuild
-18=
-19=v1.6-0
-20=Fixed calculation of the weight of the packages, old kernels
-21=Fixed counting the weight of orphaned packages when removing the orphanhood attribute
+7=+ Improved cleaning of Recent Documents
+8=+ Definition of DE when starting from root
+9=
+10=v1.7-1
+11=+ Release for Mageia-9 and higher
+12=+ Updated tags of the kernels  filtering format (rpm --qf)
+13=+ Added gtk2 dependency
+14=+ Recompilation in Lazarus 2.2.0
+15=+ Improving interactive cleaning: scleaner --auto
+16=+ Usage indicator /home (%)
+17=+ Multilingual support
+18=+ Plasma: LCL Scaling (Hi-DPI) and selective launch via kdesu
+19=
+20=v1.6-1
+21=+ Lazarus-2.0.10 rebuild
+22=+ Mageia-8 rebuild
+23=
+24=v1.6-0
+25=Fixed calculation of the weight of the packages, old kernels
+26=Fixed counting the weight of orphaned packages when removing the orphanhood attribute

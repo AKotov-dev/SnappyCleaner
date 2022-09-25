@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 291
+  Left = 299
   Height = 665
-  Top = 124
+  Top = 123
   Width = 909
   ActiveControl = AnalyzeBtn
   Caption = 'SnappyCleaner'
@@ -32,10 +32,10 @@ object MainForm: TMainForm
     Height = 646
     Hint = 'Wipe options'
     Top = 0
-    Width = 236
+    Width = 240
     Align = alLeft
     ClientHeight = 646
-    ClientWidth = 236
+    ClientWidth = 240
     ParentFont = False
     ParentShowHint = False
     TabOrder = 0
@@ -74,7 +74,7 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = RootTmpCheck
       AnchorSideBottom.Side = asrCenter
-      Left = 209
+      Left = 213
       Height = 17
       Top = 159
       Width = 18
@@ -90,7 +90,7 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = UserTrashCheck
       AnchorSideBottom.Side = asrCenter
-      Left = 209
+      Left = 213
       Height = 17
       Top = 201
       Width = 18
@@ -106,7 +106,7 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = UserTMPCheck
       AnchorSideBottom.Side = asrCenter
-      Left = 209
+      Left = 213
       Height = 17
       Top = 242
       Width = 18
@@ -122,7 +122,7 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = UserRecentCheck
       AnchorSideBottom.Side = asrCenter
-      Left = 209
+      Left = 213
       Height = 17
       Top = 284
       Width = 18
@@ -138,7 +138,7 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = CacheURPMICheck
       AnchorSideBottom.Side = asrCenter
-      Left = 209
+      Left = 213
       Height = 17
       Top = 325
       Width = 18
@@ -154,7 +154,7 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = CacheMozillaCheck
       AnchorSideBottom.Side = asrCenter
-      Left = 209
+      Left = 213
       Height = 17
       Top = 398
       Width = 18
@@ -170,7 +170,7 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = CacheChromeCheck
       AnchorSideBottom.Side = asrCenter
-      Left = 209
+      Left = 213
       Height = 17
       Top = 440
       Width = 18
@@ -186,7 +186,7 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = CacheOperaCheck
       AnchorSideBottom.Side = asrCenter
-      Left = 209
+      Left = 213
       Height = 17
       Top = 482
       Width = 18
@@ -216,7 +216,7 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = Label25
       AnchorSideBottom.Side = asrBottom
-      Left = 209
+      Left = 213
       Height = 17
       Top = 616
       Width = 18
@@ -338,7 +338,7 @@ object MainForm: TMainForm
       Left = 7
       Height = 10
       Top = 49
-      Width = 222
+      Width = 226
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Left = 6
       BorderSpacing.Right = 6
@@ -351,7 +351,7 @@ object MainForm: TMainForm
       Left = 7
       Height = 10
       Top = 600
-      Width = 222
+      Width = 226
       Anchors = [akLeft, akRight]
       BorderSpacing.Left = 6
       BorderSpacing.Right = 6
@@ -364,7 +364,7 @@ object MainForm: TMainForm
       Left = 8
       Height = 6
       Top = 34
-      Width = 219
+      Width = 223
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Left = 7
       BorderSpacing.Right = 8
@@ -382,7 +382,7 @@ object MainForm: TMainForm
       Left = 7
       Height = 10
       Top = 92
-      Width = 222
+      Width = 226
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Left = 6
       BorderSpacing.Right = 6
@@ -419,7 +419,7 @@ object MainForm: TMainForm
       Left = 7
       Height = 10
       Top = 367
-      Width = 222
+      Width = 226
       Anchors = [akLeft, akRight]
       BorderSpacing.Left = 6
       BorderSpacing.Right = 6
@@ -432,7 +432,7 @@ object MainForm: TMainForm
       Left = 7
       Height = 10
       Top = 135
-      Width = 222
+      Width = 226
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Left = 6
       BorderSpacing.Right = 6
@@ -443,7 +443,7 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = CacheChromiumCheck
       AnchorSideBottom.Side = asrCenter
-      Left = 209
+      Left = 213
       Height = 17
       Top = 523
       Width = 18
@@ -485,7 +485,7 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = CachePaleMoonCheck
       AnchorSideBottom.Side = asrCenter
-      Left = 209
+      Left = 213
       Height = 17
       Top = 565
       Width = 18
@@ -498,19 +498,19 @@ object MainForm: TMainForm
     end
   end
   object Panel2: TPanel
-    Left = 241
+    Left = 245
     Height = 646
     Top = 0
-    Width = 668
+    Width = 664
     Align = alClient
     ClientHeight = 646
-    ClientWidth = 668
+    ClientWidth = 664
     ParentFont = False
     TabOrder = 1
     object AnalyzeBtn: TBitBtn
       AnchorSideRight.Control = Panel2
       AnchorSideRight.Side = asrBottom
-      Left = 540
+      Left = 536
       Height = 34
       Top = 8
       Width = 120
@@ -559,7 +559,7 @@ object MainForm: TMainForm
     end
     object CleanBtn: TBitBtn
       AnchorSideRight.Control = AnalyzeBtn
-      Left = 420
+      Left = 416
       Height = 34
       Top = 8
       Width = 120
@@ -614,11 +614,11 @@ object MainForm: TMainForm
       Left = 11
       Height = 17
       Top = 91
-      Width = 93
+      Width = 144
       Anchors = [akLeft, akBottom]
       BorderSpacing.Left = 10
       BorderSpacing.Bottom = 3
-      Caption = 'Old kernels list:'
+      Caption = 'List of kernels to delete:'
       Font.Color = clBlue
       Font.Style = [fsUnderline]
       ParentFont = False
@@ -627,7 +627,7 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Label5
       AnchorSideLeft.Side = asrBottom
       AnchorSideBottom.Control = RemKernelBox
-      Left = 108
+      Left = 159
       Height = 17
       Top = 91
       Width = 18
@@ -646,7 +646,7 @@ object MainForm: TMainForm
       Left = 11
       Height = 10
       Top = 49
-      Width = 649
+      Width = 645
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Left = 10
       BorderSpacing.Right = 7
@@ -657,9 +657,9 @@ object MainForm: TMainForm
       Left = 11
       Height = 17
       Top = 59
-      Width = 71
+      Width = 79
       BorderSpacing.Left = 10
-      Caption = 'New kernel:'
+      Caption = 'Active kernel:'
       Font.Color = clBlue
       Font.Style = [fsUnderline]
       ParentFont = False
@@ -671,7 +671,7 @@ object MainForm: TMainForm
       AnchorSideRight.Control = Label9
       AnchorSideBottom.Control = Label9
       AnchorSideBottom.Side = asrCenter
-      Left = 86
+      Left = 94
       Height = 17
       Top = 59
       Width = 18
@@ -686,7 +686,7 @@ object MainForm: TMainForm
       AnchorSideLeft.Side = asrBottom
       AnchorSideRight.Control = OldSelectAllBtn
       AnchorSideBottom.Control = RemKernelBox
-      Left = 586
+      Left = 582
       Height = 25
       Hint = 'Reset selection'
       Top = 83
@@ -704,7 +704,7 @@ object MainForm: TMainForm
       AnchorSideRight.Control = Panel2
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = RemKernelBox
-      Left = 623
+      Left = 619
       Height = 25
       Hint = 'Select all'
       Top = 83
@@ -776,7 +776,7 @@ object MainForm: TMainForm
       Left = 11
       Height = 388
       Top = 250
-      Width = 649
+      Width = 645
       Anchors = [akTop, akLeft, akRight, akBottom]
       BorderSpacing.Left = 10
       BorderSpacing.Right = 7
@@ -822,7 +822,7 @@ object MainForm: TMainForm
       AnchorSideLeft.Side = asrBottom
       AnchorSideRight.Control = OrphansSelectAllBtn
       AnchorSideBottom.Control = AutoOrphansBox
-      Left = 586
+      Left = 582
       Height = 25
       Hint = 'Reset selection'
       Top = 222
@@ -840,7 +840,7 @@ object MainForm: TMainForm
       AnchorSideRight.Control = Panel2
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = AutoOrphansBox
-      Left = 623
+      Left = 619
       Height = 25
       Hint = 'Select all'
       Top = 222
@@ -864,7 +864,7 @@ object MainForm: TMainForm
       Left = 11
       Height = 106
       Top = 111
-      Width = 649
+      Width = 645
       Anchors = [akLeft, akRight, akBottom]
       BorderSpacing.Left = 10
       BorderSpacing.Right = 7
@@ -878,7 +878,7 @@ object MainForm: TMainForm
     object OldKernelDepsBtn: TSpeedButton
       AnchorSideRight.Control = OldResetSelection
       AnchorSideBottom.Control = RemKernelBox
-      Left = 549
+      Left = 545
       Height = 25
       Hint = 'Show dependencies'
       Top = 83
@@ -894,7 +894,7 @@ object MainForm: TMainForm
     object OrphansDepsBtn: TSpeedButton
       AnchorSideRight.Control = NotOrphanBtn
       AnchorSideBottom.Control = AutoOrphansBox
-      Left = 512
+      Left = 508
       Height = 25
       Hint = 'Show dependencies'
       Top = 222
@@ -910,7 +910,7 @@ object MainForm: TMainForm
     object NotOrphanBtn: TSpeedButton
       AnchorSideRight.Control = OrphansResetSelection
       AnchorSideBottom.Control = AutoOrphansBox
-      Left = 549
+      Left = 545
       Height = 25
       Hint = 'Mark as not orphaned'
       Top = 222
@@ -925,7 +925,7 @@ object MainForm: TMainForm
     end
   end
   object Splitter1: TSplitter
-    Left = 236
+    Left = 240
     Height = 646
     Top = 0
     Width = 5

@@ -389,7 +389,7 @@ begin
   //Начитываем выделеные ядра в переменную
   for i := 0 to RemKernelBox.Count - 1 do
     if RemKernelBox.Checked[i] then
-      DelKernels := DelKernels + RemKernelBox.Items[i] + #13#10;
+      DelKernels := DelKernels + RemKernelBox.Items[i] + sLineBreak;
 
   //Начитываем выделеные сироты в переменную
   for i := 0 to AutoOrphansBox.Count - 1 do
@@ -411,10 +411,10 @@ begin
   //Если ядра отмечены - подтверждение очистки с ядрами
   if DelKernels <> '' then
   begin
-    if MessageDlg(SKernelToRemove + ' ' + #13#10 + #13#10 + DelKernels +
-      #13#10 + 'Confirm running the cleanup?', mtConfirmation, [mbYes, mbNo], 0) =
+    if MessageDlg(SKernelToRemove + ' ' + sLineBreak + sLineBreak +
+      DelKernels + sLineBreak + SConfirmCleanUP, mtConfirmation, [mbYes, mbNo], 0) =
       mrYes then
-      DelKernels := StringReplace(DelKernels, #13#10, ' ', [rfReplaceAll])
+      DelKernels := StringReplace(DelKernels, sLineBreak, ' ', [rfReplaceAll])
     else
       Exit;
   end

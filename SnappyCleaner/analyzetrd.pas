@@ -200,7 +200,6 @@ begin
     //Показываем размер кеша Palemoon
     Synchronize(@ShowPaleMoonCache);
 
-
     //Использование /home
     ExProcess.Parameters.Clear;
     ExProcess.Parameters.Add('-c');
@@ -218,33 +217,38 @@ begin
     ExProcess.Parameters.Clear;
     ExProcess.Parameters.Add('-c');
     ExProcess.Parameters.Add('for ktype in "server" "desktop" "linus"; do ' +
-      'if [ -n "$(echo $(uname -r) | grep $ktype)" ]; then break; fi; done; echo $ktype');
+      'if [ -n "$(uname -r | grep $ktype)" ]; then break; fi; done; echo $ktype');
     ExProcess.Execute;
     Result.LoadFromStream(ExProcess.Output); //Result[0] - тип ядра
+
 
     //Начитываем список всех ядер
     ExProcess.Parameters.Clear;
     ExProcess.Parameters.Add('-c');
-    ExProcess.Parameters.Add('allkernel=$(rpm -qa kernel-' + Result[0] +
-      '* --qf ' + '''%{name}-%{version}-%{release} %{installtime}\n''' +
-      ' | ' + 'grep -v "latest" | sort -rnk 2 | awk ' + '''{ print $1 }''' +
-      '); echo "$allkernel"');
+
+    //Начиная с M9 теги фильтрации отличаются (Mageia-Bug 24403)
+    ExProcess.Parameters.Add('if [[ $(uname -r | rev | cut -c1) -lt "9" ]]; then ' +
+      'allkernel=$(rpm -qa kernel-' + Result[0] + '* --qf ' +
+      '''%{name}\n''' + ' | ' + 'grep -v "latest" | sort -V); echo "$allkernel"; else ' +
+      'allkernel=$(rpm -qa kernel-' + Result[0] + '* --qf ' +
+      '''%{name}-%{version}-%{release}\n''' + ' | ' +
+      'grep -v "latest" | sort -V); echo "$allkernel"; fi');
+
     ExProcess.Execute;
     Result.LoadFromStream(ExProcess.Output);
     //Выгружаем в файл, готовимся оставить только ядра на удаление
     Result.SaveToFile(ExtractFilePath(ParamStr(0)) + 'tmp/remkernel');
 
-    //Выделяем новое ядро
+    //Выделяем активное ядро
     ExProcess.Parameters.Clear;
     ExProcess.Parameters.Add('-c');
-    ExProcess.Parameters.Add('actkernel=$(echo "' + Trim(Result.Text) +
-      '" | grep -v "devel" | head -n 1); echo "$actkernel"');
+    ExProcess.Parameters.Add('actkernel=$(uname -r); echo "$actkernel"');
     ExProcess.Execute;
     Result.LoadFromStream(ExProcess.Output);
-    //Показываем новое ядро
+    //Показываем активное ядро
     Synchronize(@ShowNewKernel);
 
-    //Вычислем сигнатуру нового ядра
+    //Вычислем сигнатуру активного ядра
     ExProcess.Parameters.Clear;
     ExProcess.Parameters.Add('-c');
     ExProcess.Parameters.Add('signature=$(echo ' + Result[0] +
@@ -252,11 +256,11 @@ begin
     ExProcess.Execute;
     Result.LoadFromStream(ExProcess.Output);
 
-    //Удаляем из списка имена ядер, если сигнатура >= сигнатуре нового ядра (-ge)
+    //Удаляем из списка имена ядер, если сигнатура = сигнатуре активного ядра
     ExProcess.Parameters.Clear;
     ExProcess.Parameters.Add('-c');
     ExProcess.Parameters.Add('while read LINE; do ' + 'if [[ $(echo "$LINE" | sed ' +
-      '''s/[^0-9]/' + '/g''' + ') -ge "' + Result[0] + '" ]]; then ' +
+      '''s/[^0-9]/' + '/g''' + ') -eq "' + Result[0] + '" ]]; then ' +
       'sed -i "/$LINE/d" "' + ExtractFilePath(ParamStr(0)) +
       'tmp/remkernel"; ' + 'fi; done < "' + ExtractFilePath(ParamStr(0)) +
       'tmp/remkernel"');
@@ -421,7 +425,7 @@ end;
 
 procedure StartAnalyze.ShowHomeUsage;
 begin
-  //Показываем использование диска
+  //Показываем использование /home
   MainForm.Label26.Caption := Trim(Result[0]) + '%';
 end;
 

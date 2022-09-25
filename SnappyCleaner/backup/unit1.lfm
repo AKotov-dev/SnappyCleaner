@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 291
+  Left = 299
   Height = 665
-  Top = 124
+  Top = 123
   Width = 909
   ActiveControl = AnalyzeBtn
   Caption = 'SnappyCleaner'
@@ -271,10 +271,10 @@ object MainForm: TMainForm
       Left = 5
       Height = 32
       Top = 277
-      Width = 146
+      Width = 149
       Anchors = [akLeft]
       BorderSpacing.Left = 4
-      Caption = 'RecentDocuments:'
+      Caption = 'Recent Documents:'
       OnClick = SelectAllCheckClick
       ParentFont = False
       TabOrder = 6
@@ -614,11 +614,11 @@ object MainForm: TMainForm
       Left = 11
       Height = 17
       Top = 91
-      Width = 93
+      Width = 144
       Anchors = [akLeft, akBottom]
       BorderSpacing.Left = 10
       BorderSpacing.Bottom = 3
-      Caption = 'Old kernels list:'
+      Caption = 'List of kernels to delete:'
       Font.Color = clBlue
       Font.Style = [fsUnderline]
       ParentFont = False
@@ -627,7 +627,7 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Label5
       AnchorSideLeft.Side = asrBottom
       AnchorSideBottom.Control = RemKernelBox
-      Left = 108
+      Left = 159
       Height = 17
       Top = 91
       Width = 18
@@ -657,9 +657,9 @@ object MainForm: TMainForm
       Left = 11
       Height = 17
       Top = 59
-      Width = 71
+      Width = 79
       BorderSpacing.Left = 10
-      Caption = 'New kernel:'
+      Caption = 'Active kernel:'
       Font.Color = clBlue
       Font.Style = [fsUnderline]
       ParentFont = False
@@ -671,7 +671,7 @@ object MainForm: TMainForm
       AnchorSideRight.Control = Label9
       AnchorSideBottom.Control = Label9
       AnchorSideBottom.Side = asrCenter
-      Left = 86
+      Left = 94
       Height = 17
       Top = 59
       Width = 18
