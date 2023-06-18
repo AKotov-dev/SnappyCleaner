@@ -1488,11 +1488,10 @@ object AboutForm: TAboutForm
     AnchorSideRight.Side = asrBottom
     Left = 6
     Height = 10
-    Top = 227
+    Top = 224
     Width = 388
-    Anchors = [akLeft, akRight]
+    Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 5
-    BorderSpacing.Top = 10
     BorderSpacing.Right = 5
     Shape = bsTopLine
   end
@@ -1502,7 +1501,7 @@ object AboutForm: TAboutForm
     AnchorSideTop.Control = Bevel2
     Left = 153
     Height = 34
-    Top = 235
+    Top = 232
     Width = 95
     BorderSpacing.Top = 8
     Caption = 'Оk'
