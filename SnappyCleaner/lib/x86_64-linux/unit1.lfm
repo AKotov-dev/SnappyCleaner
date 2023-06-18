@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 299
+  Left = 283
   Height = 665
-  Top = 123
+  Top = 127
   Width = 909
   ActiveControl = AnalyzeBtn
   Caption = 'SnappyCleaner'
@@ -11,8 +11,8 @@ object MainForm: TMainForm
   OnCreate = FormCreate
   OnShow = FormShow
   Position = poDefault
-  SessionProperties = 'CacheChromeCheck.Checked;CacheChromiumCheck.Checked;CacheMozillaCheck.Checked;CacheOperaCheck.Checked;CachePaleMoonCheck.Checked;CacheURPMICheck.Checked;Height;LangBtn.Caption;Panel1.Width;RepairRPMCheck.Checked;RootTmpCheck.Checked;SelectAllCheck.Checked;UserRecentCheck.Checked;UserTMPCheck.Checked;UserTrashCheck.Checked;Width;Top;Left'
-  LCLVersion = '2.2.0.4'
+  SessionProperties = 'CacheChromeCheck.Checked;CacheChromiumCheck.Checked;CacheMozillaCheck.Checked;CacheOperaCheck.Checked;CachePaleMoonCheck.Checked;CacheURPMICheck.Checked;Height;LangBtn.Caption;Left;Panel1.Width;RepairRPMCheck.Checked;RootTmpCheck.Checked;SelectAllCheck.Checked;Top;UserRecentCheck.Checked;UserTMPCheck.Checked;UserTrashCheck.Checked;Width;CacheDNFCheck.Checked'
+  LCLVersion = '2.2.4.0'
   object StaticText1: TStaticText
     Left = 0
     Height = 18
@@ -32,10 +32,10 @@ object MainForm: TMainForm
     Height = 646
     Hint = 'Wipe options'
     Top = 0
-    Width = 240
+    Width = 261
     Align = alLeft
     ClientHeight = 646
-    ClientWidth = 240
+    ClientWidth = 261
     ParentFont = False
     ParentShowHint = False
     TabOrder = 0
@@ -49,6 +49,7 @@ object MainForm: TMainForm
       Caption = 'User:'
       Font.Color = clBlue
       Font.Style = [fsUnderline]
+      ParentColor = False
       ParentFont = False
       ParentShowHint = False
     end
@@ -66,6 +67,7 @@ object MainForm: TMainForm
       Caption = '***'
       Font.Color = clFuchsia
       Font.Style = [fsUnderline]
+      ParentColor = False
       ParentFont = False
       ParentShowHint = False
     end
@@ -74,14 +76,15 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = RootTmpCheck
       AnchorSideBottom.Side = asrCenter
-      Left = 213
+      Left = 234
       Height = 17
-      Top = 159
+      Top = 150
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
       Caption = '***'
       Font.Style = [fsUnderline]
+      ParentColor = False
       ParentFont = False
       OnChangeBounds = Label24ChangeBounds
     end
@@ -90,14 +93,15 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = UserTrashCheck
       AnchorSideBottom.Side = asrCenter
-      Left = 213
+      Left = 234
       Height = 17
-      Top = 201
+      Top = 192
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
       Caption = '***'
       Font.Style = [fsUnderline]
+      ParentColor = False
       ParentFont = False
       OnChangeBounds = Label24ChangeBounds
     end
@@ -106,14 +110,15 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = UserTMPCheck
       AnchorSideBottom.Side = asrCenter
-      Left = 213
+      Left = 234
       Height = 17
-      Top = 242
+      Top = 234
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
       Caption = '***'
       Font.Style = [fsUnderline]
+      ParentColor = False
       ParentFont = False
       OnChangeBounds = Label24ChangeBounds
     end
@@ -122,14 +127,15 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = UserRecentCheck
       AnchorSideBottom.Side = asrCenter
-      Left = 213
+      Left = 234
       Height = 17
-      Top = 284
+      Top = 276
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
       Caption = '***'
       Font.Style = [fsUnderline]
+      ParentColor = False
       ParentFont = False
       OnChangeBounds = Label24ChangeBounds
     end
@@ -138,15 +144,16 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = CacheURPMICheck
       AnchorSideBottom.Side = asrCenter
-      Left = 213
+      Left = 234
       Height = 17
-      Top = 325
+      Top = 318
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
       Caption = '***'
       Font.Color = clInactiveCaption
       Font.Style = [fsUnderline]
+      ParentColor = False
       ParentFont = False
     end
     object Label18: TLabel
@@ -154,14 +161,15 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = CacheMozillaCheck
       AnchorSideBottom.Side = asrCenter
-      Left = 213
+      Left = 234
       Height = 17
-      Top = 398
+      Top = 402
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
       Caption = '***'
       Font.Style = [fsUnderline]
+      ParentColor = False
       ParentFont = False
       OnChangeBounds = Label24ChangeBounds
     end
@@ -170,14 +178,15 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = CacheChromeCheck
       AnchorSideBottom.Side = asrCenter
-      Left = 213
+      Left = 234
       Height = 17
-      Top = 440
+      Top = 444
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
       Caption = '***'
       Font.Style = [fsUnderline]
+      ParentColor = False
       ParentFont = False
       OnChangeBounds = Label24ChangeBounds
     end
@@ -186,14 +195,15 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = CacheOperaCheck
       AnchorSideBottom.Side = asrCenter
-      Left = 213
+      Left = 234
       Height = 17
-      Top = 482
+      Top = 486
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
       Caption = '***'
       Font.Style = [fsUnderline]
+      ParentColor = False
       ParentFont = False
       OnChangeBounds = Label24ChangeBounds
     end
@@ -209,6 +219,7 @@ object MainForm: TMainForm
       Caption = 'Using /home:'
       Font.Color = clBlue
       Font.Style = [fsUnderline]
+      ParentColor = False
       ParentFont = False
     end
     object Label26: TLabel
@@ -216,7 +227,7 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = Label25
       AnchorSideBottom.Side = asrBottom
-      Left = 213
+      Left = 234
       Height = 17
       Top = 616
       Width = 18
@@ -225,13 +236,14 @@ object MainForm: TMainForm
       Caption = '***'
       Font.Color = clFuchsia
       Font.Style = [fsUnderline]
+      ParentColor = False
       ParentFont = False
     end
     object RootTmpCheck: TCheckBox
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 152
+      Top = 143
       Width = 155
       Anchors = [akLeft]
       BorderSpacing.Left = 4
@@ -244,7 +256,7 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 194
+      Top = 185
       Width = 129
       Anchors = [akLeft]
       BorderSpacing.Left = 4
@@ -257,7 +269,7 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 235
+      Top = 227
       Width = 161
       Anchors = [akLeft]
       BorderSpacing.Left = 4
@@ -270,7 +282,7 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 277
+      Top = 269
       Width = 149
       Anchors = [akLeft]
       BorderSpacing.Left = 4
@@ -283,7 +295,7 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 318
+      Top = 311
       Width = 117
       Anchors = [akLeft]
       BorderSpacing.Left = 4
@@ -296,40 +308,40 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 391
+      Top = 395
       Width = 162
       Anchors = [akLeft]
       BorderSpacing.Left = 4
       Caption = 'Mozilla Firefox cache:'
       OnClick = SelectAllCheckClick
       ParentFont = False
-      TabOrder = 8
+      TabOrder = 9
     end
     object CacheChromeCheck: TCheckBox
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 433
+      Top = 437
       Width = 171
       Anchors = [akLeft]
       BorderSpacing.Left = 4
       Caption = 'Google Chrome cache:'
       OnClick = SelectAllCheckClick
       ParentFont = False
-      TabOrder = 9
+      TabOrder = 10
     end
     object CacheOperaCheck: TCheckBox
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 475
+      Top = 479
       Width = 111
       Anchors = [akLeft]
       BorderSpacing.Left = 4
       Caption = 'Opera cache:'
       OnClick = SelectAllCheckClick
       ParentFont = False
-      TabOrder = 10
+      TabOrder = 11
     end
     object Bevel2: TBevel
       AnchorSideLeft.Control = Panel1
@@ -338,7 +350,7 @@ object MainForm: TMainForm
       Left = 7
       Height = 10
       Top = 49
-      Width = 226
+      Width = 247
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Left = 6
       BorderSpacing.Right = 6
@@ -350,8 +362,8 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       Left = 7
       Height = 10
-      Top = 600
-      Width = 226
+      Top = 605
+      Width = 247
       Anchors = [akLeft, akRight]
       BorderSpacing.Left = 6
       BorderSpacing.Right = 6
@@ -364,7 +376,7 @@ object MainForm: TMainForm
       Left = 8
       Height = 6
       Top = 34
-      Width = 223
+      Width = 244
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Left = 7
       BorderSpacing.Right = 8
@@ -381,8 +393,8 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       Left = 7
       Height = 10
-      Top = 92
-      Width = 226
+      Top = 95
+      Width = 247
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Left = 6
       BorderSpacing.Right = 6
@@ -404,7 +416,7 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 102
+      Top = 101
       Width = 161
       BorderSpacing.Left = 4
       Caption = 'Repair RPM DataBase'
@@ -418,22 +430,9 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       Left = 7
       Height = 10
-      Top = 367
-      Width = 226
+      Top = 389
+      Width = 247
       Anchors = [akLeft, akRight]
-      BorderSpacing.Left = 6
-      BorderSpacing.Right = 6
-      Shape = bsTopLine
-    end
-    object Bevel6: TBevel
-      AnchorSideLeft.Control = Panel1
-      AnchorSideRight.Control = Panel1
-      AnchorSideRight.Side = asrBottom
-      Left = 7
-      Height = 10
-      Top = 135
-      Width = 226
-      Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Left = 6
       BorderSpacing.Right = 6
       Shape = bsTopLine
@@ -443,14 +442,15 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = CacheChromiumCheck
       AnchorSideBottom.Side = asrCenter
-      Left = 213
+      Left = 234
       Height = 17
-      Top = 523
+      Top = 528
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
       Caption = '***'
       Font.Style = [fsUnderline]
+      ParentColor = False
       ParentFont = False
       OnChangeBounds = Label24ChangeBounds
     end
@@ -458,59 +458,103 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 516
+      Top = 521
       Width = 138
       Anchors = [akLeft]
       BorderSpacing.Left = 4
       Caption = 'Chromium cache:'
       OnClick = SelectAllCheckClick
       ParentFont = False
-      TabOrder = 11
+      TabOrder = 12
     end
     object CachePaleMoonCheck: TCheckBox
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 558
+      Top = 563
       Width = 135
       Anchors = [akLeft]
       BorderSpacing.Left = 4
       Caption = 'PaleMoon cache:'
       OnClick = SelectAllCheckClick
       ParentFont = False
-      TabOrder = 12
+      TabOrder = 13
     end
     object Label27: TLabel
       AnchorSideRight.Control = Panel1
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = CachePaleMoonCheck
       AnchorSideBottom.Side = asrCenter
-      Left = 213
+      Left = 234
       Height = 17
-      Top = 565
+      Top = 570
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
       Caption = '***'
       Font.Style = [fsUnderline]
+      ParentColor = False
       ParentFont = False
       OnChangeBounds = Label24ChangeBounds
     end
+    object CacheDNFCheck: TCheckBox
+      AnchorSideLeft.Control = Panel1
+      Left = 5
+      Height = 32
+      Top = 353
+      Width = 104
+      Anchors = [akLeft]
+      BorderSpacing.Left = 4
+      Caption = 'DNF Cache:'
+      OnClick = SelectAllCheckClick
+      ParentFont = False
+      TabOrder = 8
+    end
+    object Label17: TLabel
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = CacheDNFCheck
+      AnchorSideBottom.Side = asrCenter
+      Left = 234
+      Height = 17
+      Top = 360
+      Width = 18
+      Anchors = [akRight, akBottom]
+      BorderSpacing.Right = 8
+      Caption = '***'
+      Font.Color = clInactiveCaption
+      Font.Style = [fsUnderline]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Bevel6: TBevel
+      AnchorSideLeft.Control = Panel1
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      Left = 7
+      Height = 10
+      Top = 137
+      Width = 247
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 6
+      BorderSpacing.Right = 6
+      Shape = bsTopLine
+    end
   end
   object Panel2: TPanel
-    Left = 245
+    Left = 266
     Height = 646
     Top = 0
-    Width = 664
+    Width = 643
     Align = alClient
     ClientHeight = 646
-    ClientWidth = 664
+    ClientWidth = 643
     ParentFont = False
     TabOrder = 1
     object AnalyzeBtn: TBitBtn
       AnchorSideRight.Control = Panel2
       AnchorSideRight.Side = asrBottom
-      Left = 536
+      Left = 515
       Height = 34
       Top = 8
       Width = 120
@@ -559,7 +603,7 @@ object MainForm: TMainForm
     end
     object CleanBtn: TBitBtn
       AnchorSideRight.Control = AnalyzeBtn
-      Left = 416
+      Left = 395
       Height = 34
       Top = 8
       Width = 120
@@ -621,6 +665,7 @@ object MainForm: TMainForm
       Caption = 'List of kernels to delete:'
       Font.Color = clBlue
       Font.Style = [fsUnderline]
+      ParentColor = False
       ParentFont = False
     end
     object Label6: TLabel
@@ -636,6 +681,7 @@ object MainForm: TMainForm
       BorderSpacing.Bottom = 3
       Caption = '***'
       Font.Style = [fsUnderline]
+      ParentColor = False
       ParentFont = False
       OnChangeBounds = Label24ChangeBounds
     end
@@ -646,7 +692,7 @@ object MainForm: TMainForm
       Left = 11
       Height = 10
       Top = 49
-      Width = 645
+      Width = 624
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Left = 10
       BorderSpacing.Right = 7
@@ -662,6 +708,7 @@ object MainForm: TMainForm
       Caption = 'Active kernel:'
       Font.Color = clBlue
       Font.Style = [fsUnderline]
+      ParentColor = False
       ParentFont = False
       ParentShowHint = False
     end
@@ -679,6 +726,7 @@ object MainForm: TMainForm
       Caption = '***'
       Font.Color = clFuchsia
       Font.Style = [fsUnderline]
+      ParentColor = False
       ParentFont = False
       ParentShowHint = False
     end
@@ -686,10 +734,10 @@ object MainForm: TMainForm
       AnchorSideLeft.Side = asrBottom
       AnchorSideRight.Control = OldSelectAllBtn
       AnchorSideBottom.Control = RemKernelBox
-      Left = 582
-      Height = 25
+      Left = 561
+      Height = 27
       Hint = 'Reset selection'
-      Top = 83
+      Top = 81
       Width = 37
       Anchors = [akRight, akBottom]
       BorderSpacing.Bottom = 3
@@ -704,10 +752,10 @@ object MainForm: TMainForm
       AnchorSideRight.Control = Panel2
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = RemKernelBox
-      Left = 619
-      Height = 25
+      Left = 598
+      Height = 27
       Hint = 'Select all'
-      Top = 83
+      Top = 81
       Width = 37
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 7
@@ -776,7 +824,7 @@ object MainForm: TMainForm
       Left = 11
       Height = 388
       Top = 250
-      Width = 645
+      Width = 624
       Anchors = [akTop, akLeft, akRight, akBottom]
       BorderSpacing.Left = 10
       BorderSpacing.Right = 7
@@ -800,6 +848,7 @@ object MainForm: TMainForm
       BorderSpacing.Bottom = 3
       Caption = '***'
       Font.Style = [fsUnderline]
+      ParentColor = False
       ParentFont = False
       OnChangeBounds = Label24ChangeBounds
     end
@@ -816,16 +865,17 @@ object MainForm: TMainForm
       Caption = 'Orphaned packages list:'
       Font.Color = clBlue
       Font.Style = [fsUnderline]
+      ParentColor = False
       ParentFont = False
     end
     object OrphansResetSelection: TSpeedButton
       AnchorSideLeft.Side = asrBottom
       AnchorSideRight.Control = OrphansSelectAllBtn
       AnchorSideBottom.Control = AutoOrphansBox
-      Left = 582
-      Height = 25
+      Left = 561
+      Height = 27
       Hint = 'Reset selection'
-      Top = 222
+      Top = 220
       Width = 37
       Anchors = [akRight, akBottom]
       BorderSpacing.Bottom = 3
@@ -840,10 +890,10 @@ object MainForm: TMainForm
       AnchorSideRight.Control = Panel2
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = AutoOrphansBox
-      Left = 619
-      Height = 25
+      Left = 598
+      Height = 27
       Hint = 'Select all'
-      Top = 222
+      Top = 220
       Width = 37
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 7
@@ -864,7 +914,7 @@ object MainForm: TMainForm
       Left = 11
       Height = 106
       Top = 111
-      Width = 645
+      Width = 624
       Anchors = [akLeft, akRight, akBottom]
       BorderSpacing.Left = 10
       BorderSpacing.Right = 7
@@ -878,10 +928,10 @@ object MainForm: TMainForm
     object OldKernelDepsBtn: TSpeedButton
       AnchorSideRight.Control = OldResetSelection
       AnchorSideBottom.Control = RemKernelBox
-      Left = 545
-      Height = 25
+      Left = 524
+      Height = 27
       Hint = 'Show dependencies'
-      Top = 83
+      Top = 81
       Width = 37
       Anchors = [akRight, akBottom]
       BorderSpacing.Bottom = 3
@@ -894,10 +944,10 @@ object MainForm: TMainForm
     object OrphansDepsBtn: TSpeedButton
       AnchorSideRight.Control = NotOrphanBtn
       AnchorSideBottom.Control = AutoOrphansBox
-      Left = 508
-      Height = 25
+      Left = 487
+      Height = 27
       Hint = 'Show dependencies'
-      Top = 222
+      Top = 220
       Width = 37
       Anchors = [akRight, akBottom]
       BorderSpacing.Bottom = 3
@@ -910,10 +960,10 @@ object MainForm: TMainForm
     object NotOrphanBtn: TSpeedButton
       AnchorSideRight.Control = OrphansResetSelection
       AnchorSideBottom.Control = AutoOrphansBox
-      Left = 545
-      Height = 25
+      Left = 524
+      Height = 27
       Hint = 'Mark as not orphaned'
-      Top = 222
+      Top = 220
       Width = 37
       Anchors = [akRight, akBottom]
       BorderSpacing.Bottom = 3
@@ -925,7 +975,7 @@ object MainForm: TMainForm
     end
   end
   object Splitter1: TSplitter
-    Left = 240
+    Left = 261
     Height = 646
     Top = 0
     Width = 5

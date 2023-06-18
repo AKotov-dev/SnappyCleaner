@@ -25,6 +25,8 @@ type
     Bevel6: TBevel;
     CacheChromiumCheck: TCheckBox;
     CachePaleMoonCheck: TCheckBox;
+    CacheDNFCheck: TCheckBox;
+    Label17: TLabel;
     Label23: TLabel;
     Label27: TLabel;
     MenuItem1: TMenuItem;
@@ -124,6 +126,7 @@ resourcestring
   SCleanRecentDocuments = 'clean RecentDocuments user files, wait...';
   SRPMDBRepairing = 'repairing the RPM database, wait...';
   SCleanURPMICache = 'clean URPMI cache, wait...';
+  SCleanDNFCache = 'clean DNF cache, wait...';
   SCleanMozillaCache = 'clean Mozilla Firefox cache, wait...';
   SCleanChromeCache = 'clean Google Chrome cache, wait...';
   SCleanOperaCache = 'clean Opera browser cache, wait...';
@@ -347,6 +350,7 @@ begin
     UserTmpCheck.State := SelectAllCheck.State;
     UserRecentCheck.State := SelectAllCheck.State;
     CacheURPMICheck.State := SelectAllCheck.State;
+    CacheDNFCheck.State := SelectAllCheck.State;
     CacheMozillaCheck.State := SelectAllCheck.State;
     CacheChromeCheck.State := SelectAllCheck.State;
     CacheOperaCheck.State := SelectAllCheck.State;
@@ -358,8 +362,9 @@ begin
     if (RepairRPMCheck.State = cbChecked) and (RootTmpCheck.State = cbChecked) and
       (UserTrashCheck.State = cbChecked) and (UserTmpCheck.State = cbChecked) and
       (UserRecentCheck.State = cbChecked) and (CacheURPMICheck.State = cbChecked) and
-      (CacheMozillaCheck.State = cbChecked) and (CacheChromeCheck.State = cbChecked) and
-      (CacheOperaCheck.State = cbChecked) and (CachePaleMoonCheck.State = cbChecked) and
+      (CacheDNFCheck.State = cbChecked) and (CacheMozillaCheck.State = cbChecked) and
+      (CacheChromeCheck.State = cbChecked) and (CacheOperaCheck.State = cbChecked) and
+      (CachePaleMoonCheck.State = cbChecked) and
       (CacheChromiumCheck.State = cbChecked) then
       SelectAllCheck.State := cbChecked
     else

@@ -65,6 +65,10 @@ msgstr ""
 msgid "Chromium cache:"
 msgstr ""
 
+#: tmainform.cachednfcheck.caption
+msgid "DNF Cache:"
+msgstr ""
+
 #: tmainform.cachemozillacheck.caption
 msgid "Mozilla Firefox cache:"
 msgstr ""
@@ -116,6 +120,11 @@ msgstr ""
 
 #: tmainform.label16.caption
 msgctxt "tmainform.label16.caption"
+msgid "***"
+msgstr ""
+
+#: tmainform.label17.caption
+msgctxt "tmainform.label17.caption"
 msgid "***"
 msgstr ""
 
@@ -312,6 +321,10 @@ msgstr ""
 
 #: unit1.scleanchromiumcache
 msgid "clean Chromium browser cache, wait..."
+msgstr ""
+
+#: unit1.scleandnfcache
+msgid "clean DNF cache, wait..."
 msgstr ""
 
 #: unit1.scleanmozillacache

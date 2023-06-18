@@ -7,6 +7,7 @@ Performs the following actions:
 - Temporary user files
 - Recent User Documents
 - Directory-URPMI cache
+- Directory-DNF cache
 - Mozilla FireFox cache
 - Google Chrome Cache
 - Opera Browser Cache

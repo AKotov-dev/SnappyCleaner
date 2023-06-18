@@ -24,6 +24,7 @@ type
     procedure ShowUserTMP;
     procedure ShowRecentDocuments;
     procedure ShowURPMICache;
+    procedure ShowDNFCache;
     procedure ShowMozillaCache;
     procedure ShowChromeCache;
     procedure ShowOperaCache;
@@ -138,6 +139,17 @@ begin
     Result.LoadFromStream(ExProcess.Output);
     //Показываем размер кеша URPMI
     Synchronize(@ShowURPMICache);
+
+    //Каталог кеш-DNF
+    ExProcess.Parameters.Clear;
+    ExProcess.Parameters.Add('-c');
+    ExProcess.Parameters.Add('if [ -d "/var/cache/dnf" ]; then ' +
+      'dnfcache=$(/usr/bin/du -csh /var/cache/dnf/* /var/cache/dnf/.[!.]* | tail -n1 | cut -f1'
+      + '); else dnfcache="no"; fi; echo $dnfcache');
+    ExProcess.Execute;
+    Result.LoadFromStream(ExProcess.Output);
+    //Показываем размер кеша DNF
+    Synchronize(@ShowDNFCache);
 
     //Кеш Mozilla Firefox
     ExProcess.Parameters.Clear;
@@ -376,6 +388,12 @@ procedure StartAnalyze.ShowURPMICache;
 begin
   //Показываем размер кеша URPMI
   MainForm.Label16.Caption := Result[0];
+end;
+
+procedure StartAnalyze.ShowDNFCache;
+begin
+  //Показываем размер кеша DNF
+  MainForm.Label17.Caption := Result[0];
 end;
 
 procedure StartAnalyze.ShowMozillaCache;

@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: taboutform.bitbtn1.caption
 msgid "Оk"
@@ -87,6 +87,10 @@ msgstr "Кеш Google Chrome:"
 msgid "Chromium cache:"
 msgstr "Кеш Chromium:"
 
+#: tmainform.cachednfcheck.caption
+msgid "DNF Cache:"
+msgstr "Кеш DNF:"
+
 #: tmainform.cachemozillacheck.caption
 msgid "Mozilla Firefox cache:"
 msgstr "Кеш Mozilla Firefox:"
@@ -138,6 +142,11 @@ msgstr ""
 
 #: tmainform.label16.caption
 msgctxt "tmainform.label16.caption"
+msgid "***"
+msgstr ""
+
+#: tmainform.label17.caption
+msgctxt "tmainform.label17.caption"
 msgid "***"
 msgstr ""
 
@@ -335,6 +344,10 @@ msgstr "очистка кеша Google Chrome, ждите..."
 #: unit1.scleanchromiumcache
 msgid "clean Chromium browser cache, wait..."
 msgstr "очистка кеша браузера Chromium, ждите..."
+
+#: unit1.scleandnfcache
+msgid "clean DNF cache, wait..."
+msgstr "очистка кеша DNF, ждите..."
 
 #: unit1.scleanmozillacache
 msgid "clean Mozilla Firefox cache, wait..."

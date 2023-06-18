@@ -230,7 +230,7 @@ begin
   MainForm.StaticText1.Caption := SCleanTMPUserFiles;
 end;
 
-//Показываю удаление RecentDocuments
+//Показываю удаление RecentDocuments and recent*.xbel
 procedure StartClear.ShowRecentDocuments;
 begin
   MainForm.StaticText1.Caption := SCleanRecentDocuments;

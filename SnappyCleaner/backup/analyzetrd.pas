@@ -139,6 +139,17 @@ begin
     //Показываем размер кеша URPMI
     Synchronize(@ShowURPMICache);
 
+    //Каталог кеш-DNF
+    ExProcess.Parameters.Clear;
+    ExProcess.Parameters.Add('-c');
+    ExProcess.Parameters.Add('if [ -d "/var/cache/dnf" ]; then ' +
+      'dnfcache=$(/usr/bin/du -csh /var/cache/dnf/* /var/cache/dnf/.[!.]* | tail -n1 | cut -f1'
+      + '); else dnfcache="no"; fi; echo $dnfcache');
+    ExProcess.Execute;
+    Result.LoadFromStream(ExProcess.Output);
+    //Показываем размер кеша DNF
+    Synchronize(@ShowDNFCache);
+
     //Кеш Mozilla Firefox
     ExProcess.Parameters.Clear;
     ExProcess.Parameters.Add('-c');
@@ -217,9 +228,10 @@ begin
     ExProcess.Parameters.Clear;
     ExProcess.Parameters.Add('-c');
     ExProcess.Parameters.Add('for ktype in "server" "desktop" "linus"; do ' +
-      'if [ -n "$(echo $(uname -r) | grep $ktype)" ]; then break; fi; done; echo $ktype');
+      'if [ -n "$(uname -r | grep $ktype)" ]; then break; fi; done; echo $ktype');
     ExProcess.Execute;
     Result.LoadFromStream(ExProcess.Output); //Result[0] - тип ядра
+
 
     //Начитываем список всех ядер
     ExProcess.Parameters.Clear;

@@ -19,6 +19,7 @@ type
     procedure ShowUserTMP;
     procedure ShowRecentDocuments;
     procedure ShowURPMICache;
+    procedure ShowDNFCache;
     procedure ShowFireFoxCache;
     procedure ShowChromeCache;
     procedure ShowOperaCache;
@@ -126,6 +127,16 @@ begin
       ExProcess.Parameters.Clear;
       ExProcess.Parameters.Add('-c');
       ExProcess.Parameters.Add('/usr/sbin/urpmi --clean');
+      ExProcess.Execute;
+    end;
+
+    //Кеш DNF
+    if MainForm.CacheDNFCheck.Checked then
+    begin
+      Synchronize(@ShowDNFCache);
+      ExProcess.Parameters.Clear;
+      ExProcess.Parameters.Add('-c');
+      ExProcess.Parameters.Add('/usr/bin/dnf clean all');
       ExProcess.Execute;
     end;
 
@@ -246,6 +257,12 @@ end;
 procedure StartClear.ShowURPMICache;
 begin
   MainForm.StaticText1.Caption := SCleanURPMICache;
+end;
+
+//Показываю очистку кеша DNF
+procedure StartClear.ShowDNFCache;
+begin
+  MainForm.StaticText1.Caption := SCleanDNFCache;
 end;
 
 //Показываю удаление кеша Mozilla FireFox

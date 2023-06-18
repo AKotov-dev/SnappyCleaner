@@ -42,6 +42,11 @@ if [[ $LANG == "ru_RU.UTF-8" ]]; then
   /usr/sbin/urpmi --clean;
   echo -e "${rcolor}завершено${ncolor}\n"
 
+#Очищаю кеш dnf
+  echo -en "Очищаю кеш DNF... "
+  /usr/bin/dnf clean all 2>&1 >/dev/null;
+  echo -e "${rcolor}завершено${ncolor}\n"
+
 #Очищаю кеш Mozilla Firefox
   echo -en "Очищаю кеш браузера Mozilla Firefox... "
   rm -rf /home/$(logname)/.cache/mozilla/*
@@ -103,6 +108,11 @@ fi;
 #Очищаю кеш urpmi
   echo -en "Clean URPMI cache... "
   /usr/sbin/urpmi --clean;
+  echo -e "${rcolor}completed${ncolor}\n"
+
+#Очищаю кеш dnf
+  echo -en "Clean DNF cache... "
+  /usr/bin/dnf clean all 2>&1 >/dev/null;
   echo -e "${rcolor}completed${ncolor}\n"
 
 #Очищаю кеш Mozilla Firefox

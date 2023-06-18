@@ -2,10 +2,10 @@
 name=scleaner
 
 [VERSION]
-version=1.9
+version=2.0
 
 [RELEASE]
-release=1.mrx9
+release=0.mrx9
 
 [GROUP]
 group=Applications/System
@@ -38,9 +38,6 @@ meta=0
 [NOARCH]
 noarch=0
 
-[SIGN]
-sign=0
-
 [DEB]
 deb=0
 
@@ -53,16 +50,18 @@ deb=0
 5=/usr/share/doc/scleaner/
 
 [AFTERINSTALL]
-0=chmod -R 777 /usr/share/SnappyCleaner/tmp
+0=#!/bin/bash
+1=
+2=mkdir -p /usr/share/SnappyCleaner/tmp
+3=chmod -R 777 /usr/share/SnappyCleaner/tmp
 
 [AFTERREMOVE]
-0=if [ $1 -eq 0 ]; then rm -rf /usr/share/SnappyCleaner; fi
+0=#!/bin/bash
+1=
+2=if [ $1 -eq 0 ]; then rm -rf /usr/share/SnappyCleaner; fi
 
 [URL32]
 url32=https://github.com/AKotov-dev/SnappyCleaner
-
-[URL64]
-url64=
 
 [PROGRAMNAME]
 programname=SnappyCleaner
@@ -71,34 +70,38 @@ programname=SnappyCleaner
 devtool=Lazarus
 
 [TOOLVERSION]
-toolversion=2.2.0
+toolversion=2.2.4
 
 [INFO]
-0=v1.9
-1=+ Work relative to the Active kernel
-2=+ All kernels except the Active are in the list for deletion
-3=+ Binding to the installation time of any kernel is excluded
-4=+ Unification of the source code for Mageia-8/9
-5=
-6=v1.8-0
-7=+ Release for Mageia-9 and higher
-8=+ Improved cleaning of Recent Documents
-9=+ Definition of DE when starting from root
-10=
-11=v1.7-1
-12=+ Release for Mageia-9 and higher
-13=+ Updated tags of the kernels  filtering format (rpm --qf)
-14=+ Added gtk2 dependency
-15=+ Recompilation in Lazarus 2.2.0
-16=+ Improving interactive cleaning: scleaner --auto
-17=+ Usage indicator /home (%)
-18=+ Multilingual support
-19=+ Plasma: LCL Scaling (Hi-DPI) and selective launch via kdesu
-20=
-21=v1.6-1
-22=+ Lazarus-2.0.10 rebuild
-23=+ Mageia-8 rebuild
+0=v2.0
+1=+ Added DNF cache cleanup
+2=+ RPM packages for Mageia-8/9
+3=
+4=v1.9
+5=+ Work relative to the Active kernel
+6=+ All kernels except the Active are in the list for deletion
+7=+ Binding to the installation time of any kernel is excluded
+8=+ Unification of the source code for Mageia-8/9
+9=
+10=v1.8-0
+11=+ Release for Mageia-9 and higher
+12=+ Improved cleaning of Recent Documents
+13=+ Definition of DE when starting from root
+14=
+15=v1.7-1
+16=+ Release for Mageia-9 and higher
+17=+ Updated tags of the kernels  filtering format (rpm --qf)
+18=+ Added gtk2 dependency
+19=+ Recompilation in Lazarus 2.2.0
+20=+ Improving interactive cleaning: scleaner --auto
+21=+ Usage indicator /home (%)
+22=+ Multilingual support
+23=+ Plasma: LCL Scaling (Hi-DPI) and selective launch via kdesu
 24=
-25=v1.6-0
-26=Fixed calculation of the weight of the packages, old kernels
-27=Fixed counting the weight of orphaned packages when removing the orphanhood attribute
+25=v1.6-1
+26=+ Lazarus-2.0.10 rebuild
+27=+ Mageia-8 rebuild
+28=
+29=v1.6-0
+30=Fixed calculation of the weight of the packages, old kernels
+31=Fixed counting the weight of orphaned packages when removing the orphanhood attribute
