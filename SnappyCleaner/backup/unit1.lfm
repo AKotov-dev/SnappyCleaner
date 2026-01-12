@@ -1,18 +1,18 @@
 object MainForm: TMainForm
-  Left = 283
+  Left = 304
   Height = 665
-  Top = 127
+  Top = 126
   Width = 909
   ActiveControl = AnalyzeBtn
   Caption = 'SnappyCleaner'
   ClientHeight = 665
   ClientWidth = 909
+  Position = poDefault
+  SessionProperties = 'CacheChromeCheck.Checked;CacheChromiumCheck.Checked;CacheDNFCheck.Checked;CacheMozillaCheck.Checked;CacheOperaCheck.Checked;CachePaleMoonCheck.Checked;CacheURPMICheck.Checked;Height;LangBtn.Caption;Left;Panel1.Width;RepairRPMCheck.Checked;RootTmpCheck.Checked;SelectAllCheck.Checked;Top;UserRecentCheck.Checked;UserTMPCheck.Checked;UserTrashCheck.Checked;Width;CacheBraveCheck.Checked'
+  LCLVersion = '4.4.0.0'
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  Position = poDefault
-  SessionProperties = 'CacheChromeCheck.Checked;CacheChromiumCheck.Checked;CacheMozillaCheck.Checked;CacheOperaCheck.Checked;CachePaleMoonCheck.Checked;CacheURPMICheck.Checked;Height;LangBtn.Caption;Left;Panel1.Width;RepairRPMCheck.Checked;RootTmpCheck.Checked;SelectAllCheck.Checked;Top;UserRecentCheck.Checked;UserTMPCheck.Checked;UserTrashCheck.Checked;Width;CacheDNFCheck.Checked'
-  LCLVersion = '2.2.4.0'
   object StaticText1: TStaticText
     Left = 0
     Height = 18
@@ -78,7 +78,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrCenter
       Left = 234
       Height = 17
-      Top = 150
+      Top = 143
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -95,7 +95,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrCenter
       Left = 234
       Height = 17
-      Top = 192
+      Top = 183
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -112,7 +112,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrCenter
       Left = 234
       Height = 17
-      Top = 234
+      Top = 223
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -129,7 +129,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrCenter
       Left = 234
       Height = 17
-      Top = 276
+      Top = 263
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -146,7 +146,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrCenter
       Left = 234
       Height = 17
-      Top = 318
+      Top = 303
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -163,7 +163,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrCenter
       Left = 234
       Height = 17
-      Top = 402
+      Top = 383
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -180,7 +180,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrCenter
       Left = 234
       Height = 17
-      Top = 444
+      Top = 423
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -197,7 +197,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrCenter
       Left = 234
       Height = 17
-      Top = 486
+      Top = 463
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -212,7 +212,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Control = Label26
       Left = 8
       Height = 17
-      Top = 616
+      Top = 620
       Width = 80
       Anchors = [akLeft]
       BorderSpacing.Left = 7
@@ -229,7 +229,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrBottom
       Left = 234
       Height = 17
-      Top = 616
+      Top = 620
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -243,12 +243,11 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 143
+      Top = 136
       Width = 155
       Anchors = [akLeft]
       BorderSpacing.Left = 4
       Caption = 'Directory /root/tmp:'
-      OnClick = SelectAllCheckClick
       ParentFont = False
       TabOrder = 3
     end
@@ -256,12 +255,11 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 185
+      Top = 176
       Width = 129
       Anchors = [akLeft]
       BorderSpacing.Left = 4
       Caption = 'User Trash files:'
-      OnClick = SelectAllCheckClick
       ParentFont = False
       TabOrder = 4
     end
@@ -269,12 +267,11 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 227
+      Top = 216
       Width = 161
       Anchors = [akLeft]
       BorderSpacing.Left = 4
       Caption = 'User Temporary files:'
-      OnClick = SelectAllCheckClick
       ParentFont = False
       TabOrder = 5
     end
@@ -282,12 +279,11 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 269
+      Top = 256
       Width = 149
       Anchors = [akLeft]
       BorderSpacing.Left = 4
       Caption = 'Recent Documents:'
-      OnClick = SelectAllCheckClick
       ParentFont = False
       TabOrder = 6
     end
@@ -295,12 +291,11 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 311
+      Top = 296
       Width = 117
       Anchors = [akLeft]
       BorderSpacing.Left = 4
       Caption = 'URPMI Cache:'
-      OnClick = SelectAllCheckClick
       ParentFont = False
       TabOrder = 7
     end
@@ -308,12 +303,11 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 395
+      Top = 376
       Width = 162
       Anchors = [akLeft]
       BorderSpacing.Left = 4
       Caption = 'Mozilla Firefox cache:'
-      OnClick = SelectAllCheckClick
       ParentFont = False
       TabOrder = 9
     end
@@ -321,12 +315,11 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 437
+      Top = 416
       Width = 171
       Anchors = [akLeft]
       BorderSpacing.Left = 4
       Caption = 'Google Chrome cache:'
-      OnClick = SelectAllCheckClick
       ParentFont = False
       TabOrder = 10
     end
@@ -334,12 +327,11 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 479
+      Top = 456
       Width = 111
       Anchors = [akLeft]
       BorderSpacing.Left = 4
       Caption = 'Opera cache:'
-      OnClick = SelectAllCheckClick
       ParentFont = False
       TabOrder = 11
     end
@@ -362,7 +354,7 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       Left = 7
       Height = 10
-      Top = 605
+      Top = 612
       Width = 247
       Anchors = [akLeft, akRight]
       BorderSpacing.Left = 6
@@ -393,7 +385,7 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       Left = 7
       Height = 10
-      Top = 95
+      Top = 89
       Width = 247
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Left = 6
@@ -404,23 +396,22 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 59
+      Top = 56
       Width = 126
       BorderSpacing.Left = 4
       Caption = 'Select/Reset all'
-      OnClick = SelectAllCheckClick
       ParentFont = False
       TabOrder = 1
+      OnChange = SelectAllCheckChange
     end
     object RepairRPMCheck: TCheckBox
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 101
+      Top = 96
       Width = 161
       BorderSpacing.Left = 4
       Caption = 'Repair RPM DataBase'
-      OnClick = SelectAllCheckClick
       ParentFont = False
       TabOrder = 2
     end
@@ -430,7 +421,7 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       Left = 7
       Height = 10
-      Top = 397
+      Top = 372
       Width = 247
       Anchors = [akLeft, akRight]
       BorderSpacing.Left = 6
@@ -444,7 +435,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrCenter
       Left = 234
       Height = 17
-      Top = 528
+      Top = 503
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -458,12 +449,11 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 521
+      Top = 496
       Width = 138
       Anchors = [akLeft]
       BorderSpacing.Left = 4
       Caption = 'Chromium cache:'
-      OnClick = SelectAllCheckClick
       ParentFont = False
       TabOrder = 12
     end
@@ -471,12 +461,11 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 563
+      Top = 536
       Width = 135
       Anchors = [akLeft]
       BorderSpacing.Left = 4
       Caption = 'PaleMoon cache:'
-      OnClick = SelectAllCheckClick
       ParentFont = False
       TabOrder = 13
     end
@@ -487,7 +476,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrCenter
       Left = 234
       Height = 17
-      Top = 570
+      Top = 543
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -501,12 +490,11 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 353
+      Top = 336
       Width = 104
       Anchors = [akLeft]
       BorderSpacing.Left = 4
       Caption = 'DNF Cache:'
-      OnClick = SelectAllCheckClick
       ParentFont = False
       TabOrder = 8
     end
@@ -517,7 +505,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrCenter
       Left = 234
       Height = 17
-      Top = 360
+      Top = 343
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -533,12 +521,41 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       Left = 7
       Height = 10
-      Top = 137
+      Top = 129
       Width = 247
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Left = 6
       BorderSpacing.Right = 6
       Shape = bsTopLine
+    end
+    object CacheBraveCheck: TCheckBox
+      AnchorSideLeft.Control = Panel1
+      Left = 5
+      Height = 32
+      Top = 576
+      Width = 159
+      Anchors = [akLeft]
+      BorderSpacing.Left = 4
+      Caption = 'Brave browser cache:'
+      ParentFont = False
+      TabOrder = 14
+    end
+    object Label28: TLabel
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = CacheBraveCheck
+      AnchorSideBottom.Side = asrCenter
+      Left = 234
+      Height = 17
+      Top = 583
+      Width = 18
+      Anchors = [akRight, akBottom]
+      BorderSpacing.Right = 8
+      Caption = '***'
+      Font.Style = [fsUnderline]
+      ParentColor = False
+      ParentFont = False
+      OnChangeBounds = Label24ChangeBounds
     end
   end
   object Panel2: TPanel
@@ -597,9 +614,9 @@ object MainForm: TMainForm
         FF00808000025F493369614D38BA66533FEF66523EE9614C37B15F483459FFFF
         FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
       }
-      OnClick = AnalyzeBtnClick
       ParentFont = False
       TabOrder = 2
+      OnClick = AnalyzeBtnClick
     end
     object CleanBtn: TBitBtn
       AnchorSideRight.Control = AnalyzeBtn
@@ -647,9 +664,9 @@ object MainForm: TMainForm
         0000000000000000000000000000000000008C8062FF8C8062FF8C8062FF8C80
         62FF000000000000000000000000000000000000000000000000
       }
-      OnClick = CleanBtnClick
       ParentFont = False
       TabOrder = 1
+      OnClick = CleanBtnClick
     end
     object Label5: TLabel
       AnchorSideLeft.Control = Panel2
@@ -742,10 +759,10 @@ object MainForm: TMainForm
       Anchors = [akRight, akBottom]
       BorderSpacing.Bottom = 3
       Caption = '-'
-      OnClick = OldResetSelectionClick
       ShowHint = True
       ParentFont = False
       ParentShowHint = False
+      OnClick = OldResetSelectionClick
     end
     object OldSelectAllBtn: TSpeedButton
       AnchorSideLeft.Side = asrBottom
@@ -763,10 +780,10 @@ object MainForm: TMainForm
       Caption = '+'
       Font.Height = -14
       Font.Name = 'Sans'
-      OnClick = OldSelectAllBtnClick
       ShowHint = True
       ParentFont = False
       ParentShowHint = False
+      OnClick = OldSelectAllBtnClick
     end
     object AboutBtn: TBitBtn
       AnchorSideLeft.Control = Panel2
@@ -811,9 +828,9 @@ object MainForm: TMainForm
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000
       }
-      OnClick = AboutBtnClick
       ParentFont = False
       TabOrder = 0
+      OnClick = AboutBtnClick
     end
     object AutoOrphansBox: TCheckListBox
       AnchorSideLeft.Control = Panel2
@@ -880,10 +897,10 @@ object MainForm: TMainForm
       Anchors = [akRight, akBottom]
       BorderSpacing.Bottom = 3
       Caption = '-'
-      OnClick = OrphansResetSelectionClick
       ShowHint = True
       ParentFont = False
       ParentShowHint = False
+      OnClick = OrphansResetSelectionClick
     end
     object OrphansSelectAllBtn: TSpeedButton
       AnchorSideLeft.Side = asrBottom
@@ -901,10 +918,10 @@ object MainForm: TMainForm
       Caption = '+'
       Font.Height = -14
       Font.Name = 'Sans'
-      OnClick = OrphansSelectAllBtnClick
       ShowHint = True
       ParentFont = False
       ParentShowHint = False
+      OnClick = OrphansSelectAllBtnClick
     end
     object RemKernelBox: TCheckListBox
       AnchorSideLeft.Control = Panel2
@@ -936,10 +953,10 @@ object MainForm: TMainForm
       Anchors = [akRight, akBottom]
       BorderSpacing.Bottom = 3
       Caption = '<>'
-      OnClick = OldKernelDepsBtnClick
       ShowHint = True
       ParentFont = False
       ParentShowHint = False
+      OnClick = OldKernelDepsBtnClick
     end
     object OrphansDepsBtn: TSpeedButton
       AnchorSideRight.Control = NotOrphanBtn
@@ -952,10 +969,10 @@ object MainForm: TMainForm
       Anchors = [akRight, akBottom]
       BorderSpacing.Bottom = 3
       Caption = '<>'
-      OnClick = OrphansDepsBtnClick
       ShowHint = True
       ParentFont = False
       ParentShowHint = False
+      OnClick = OrphansDepsBtnClick
     end
     object NotOrphanBtn: TSpeedButton
       AnchorSideRight.Control = OrphansResetSelection
@@ -968,10 +985,10 @@ object MainForm: TMainForm
       Anchors = [akRight, akBottom]
       BorderSpacing.Bottom = 3
       Caption = 'v'
-      OnClick = NotOrphanBtnClick
       ShowHint = True
       ParentFont = False
       ParentShowHint = False
+      OnClick = NotOrphanBtnClick
     end
   end
   object Splitter1: TSplitter

@@ -3,7 +3,7 @@ program SnappyCleaner;
 {$mode objfpc}{$H+}
 
 uses
- {$IFDEF UNIX}
+  {$IFDEF UNIX}
   cthreads,       {$ENDIF}
   Interfaces, // this includes the LCL widgetset
   Forms,
@@ -22,7 +22,7 @@ uses
 var
   MyProg: TUniqueInstance;
 
-{$R *.res}
+  {$R *.res}
 
 begin
   //Создаём объект с уникальным идентификатором
@@ -40,7 +40,7 @@ begin
 
   RequireDerivedFormResource := True;
   Application.Scaled := True;
-  Application.Title := 'SnappyCleaner v2.0';
+  Application.Title := 'SnappyCleaner v2.1';
   Application.Initialize;
   Application.CreateForm(TMainForm, MainForm);
   Application.CreateForm(TAboutForm, AboutForm);

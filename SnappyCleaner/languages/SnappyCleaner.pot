@@ -19,7 +19,7 @@ msgid ""
 "MgaRemix Cleaning Program\n"
 " \n"
 "License: GPLv3\n"
-"Compilation: Lazarus 2.2.4\n"
+"Compilation: Lazarus 4.4\n"
 "Author: alex_q_2000 (C) 2020\n"
 "Co - authorship: ingvaro\n"
 "Gratitude: algri14, AlexL,\n"
@@ -55,6 +55,11 @@ msgstr ""
 
 #: tmainform.analyzebtn.caption
 msgid "Analyze"
+msgstr ""
+
+#: tmainform.cachebravecheck.caption
+msgctxt "tmainform.cachebravecheck.caption"
+msgid "Brave browser cache:"
 msgstr ""
 
 #: tmainform.cachechromecheck.caption
@@ -169,6 +174,11 @@ msgstr ""
 
 #: tmainform.label27.caption
 msgctxt "tmainform.label27.caption"
+msgid "***"
+msgstr ""
+
+#: tmainform.label28.caption
+msgctxt "tmainform.label28.caption"
 msgid "***"
 msgstr ""
 
@@ -313,6 +323,10 @@ msgstr ""
 
 #: unit1.sanalizepackagesdeps
 msgid "run analysis of the package dependencies, wait..."
+msgstr ""
+
+#: unit1.scleanbravecache
+msgid "clean Brave browser cache, wait..."
 msgstr ""
 
 #: unit1.scleanchromecache

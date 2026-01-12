@@ -30,6 +30,8 @@
 {"hash":11466,"name":"tmainform.label27.caption","sourcebytes":[42,42,42],"value":"***"},
 {"hash":76745738,"name":"tmainform.cachednfcheck.caption","sourcebytes":[68,78,70,32,67,97,99,104,101,58],"value":"DNF Cache:"},
 {"hash":11466,"name":"tmainform.label17.caption","sourcebytes":[42,42,42],"value":"***"},
+{"hash":125137098,"name":"tmainform.cachebravecheck.caption","sourcebytes":[66,114,97,118,101,32,98,114,111,119,115,101,114,32,99,97,99,104,101,58],"value":"Brave browser cache:"},
+{"hash":11466,"name":"tmainform.label28.caption","sourcebytes":[42,42,42],"value":"***"},
 {"hash":138953029,"name":"tmainform.analyzebtn.caption","sourcebytes":[65,110,97,108,121,122,101],"value":"Analyze"},
 {"hash":4860798,"name":"tmainform.cleanbtn.caption","sourcebytes":[67,108,101,97,110],"value":"Clean"},
 {"hash":242122746,"name":"tmainform.label5.caption","sourcebytes":[76,105,115,116,32,111,102,32,107,101,114,110,101,108,115,32,116,111,32,100,101,108,101,116,101,58],"value":"List of kernels to delete:"},

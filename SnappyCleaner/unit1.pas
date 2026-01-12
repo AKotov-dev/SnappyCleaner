@@ -26,9 +26,11 @@ type
     CacheChromiumCheck: TCheckBox;
     CachePaleMoonCheck: TCheckBox;
     CacheDNFCheck: TCheckBox;
+    CacheBraveCheck: TCheckBox;
     Label17: TLabel;
     Label23: TLabel;
     Label27: TLabel;
+    Label28: TLabel;
     MenuItem1: TMenuItem;
     MenuItem2: TMenuItem;
     MenuItem3: TMenuItem;
@@ -95,7 +97,7 @@ type
     procedure OrphansResetSelectionClick(Sender: TObject);
     procedure OrphansSelectAllBtnClick(Sender: TObject);
     procedure PopupMenu1Popup(Sender: TObject);
-    procedure SelectAllCheckClick(Sender: TObject);
+    procedure SelectAllCheckChange(Sender: TObject);
     procedure Timer1StartTimer(Sender: TObject);
     procedure Timer1StopTimer(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
@@ -109,7 +111,7 @@ type
   end;
 
 
-//Ресурсы перевода
+  //Ресурсы перевода
 resourcestring
   SNo = 'no';
   SEmpty = 'empty';
@@ -132,6 +134,7 @@ resourcestring
   SCleanOperaCache = 'clean Opera browser cache, wait...';
   SCleanChromiumCache = 'clean Chromium browser cache, wait...';
   SCleanPalemoonCache = 'clean PaleMoon browser cache, wait...';
+  SCleanBraveCache = 'clean Brave browser cache, wait...';
   SRemoveSelectedPackages = 'remove the selected packages, wait...';
   SPackage = 'Package:';
   SAnalizePackagesDeps = 'run analysis of the package dependencies, wait...';
@@ -150,7 +153,7 @@ implementation
 
 uses AnalyzeTRD, ClearTRD, AboutUnit, DepsUnit, DepsTRD, NotOrphanTRD;
 
-{$R *.lfm}
+  {$R *.lfm}
 
 //Общая процедура запуска команд
 procedure TMainForm.StartProcess;
@@ -222,6 +225,7 @@ begin
   Label1.Caption := '...';
   Label23.Caption := '...';
   Label27.Caption := '...';
+  Label28.Caption := '...';
 
   AutoOrphansBox.Clear;
   RemKernelBox.Clear;
@@ -340,7 +344,8 @@ begin
   end;
 end;
 
-procedure TMainForm.SelectAllCheckClick(Sender: TObject);
+//Выделить все
+procedure TMainForm.SelectAllCheckChange(Sender: TObject);
 begin
   if Sender = SelectAllCheck then
   begin
@@ -356,6 +361,7 @@ begin
     CacheOperaCheck.State := SelectAllCheck.State;
     CacheChromiumCheck.State := SelectAllCheck.State;
     CachePaleMoonCheck.State := SelectAllCheck.State;
+    CacheBraveCheck.State := SelectAllCheck.State;
   end
   else
   begin
@@ -364,7 +370,7 @@ begin
       (UserRecentCheck.State = cbChecked) and (CacheURPMICheck.State = cbChecked) and
       (CacheDNFCheck.State = cbChecked) and (CacheMozillaCheck.State = cbChecked) and
       (CacheChromeCheck.State = cbChecked) and (CacheOperaCheck.State = cbChecked) and
-      (CachePaleMoonCheck.State = cbChecked) and
+      (CachePaleMoonCheck.State = cbChecked) and (CacheBraveCheck.State = cbChecked) and
       (CacheChromiumCheck.State = cbChecked) then
       SelectAllCheck.State := cbChecked
     else
@@ -407,7 +413,7 @@ begin
     CacheURPMICheck.Checked or CacheMozillaCheck.Checked or
     CacheChromeCheck.Checked or CacheOperaCheck.Checked or
     CacheChromiumCheck.Checked or CachePaleMoonCheck.Checked or
-    (DelKernels <> '') or (DelOrphans <> '')) then
+    CacheBraveCheck.Checked or (DelKernels <> '') or (DelOrphans <> '')) then
   begin
     MessageDlg(SNoToClean, mtWarning, [mbOK], 0);
     Exit;

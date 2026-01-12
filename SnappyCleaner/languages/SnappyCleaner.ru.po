@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: taboutform.bitbtn1.caption
 msgid "Оk"
@@ -30,7 +30,7 @@ msgid ""
 "MgaRemix Cleaning Program\n"
 " \n"
 "License: GPLv3\n"
-"Compilation: Lazarus 2.2.4\n"
+"Compilation: Lazarus 4.4\n"
 "Author: alex_q_2000 (C) 2020\n"
 "Co - authorship: ingvaro\n"
 "Gratitude: algri14, AlexL,\n"
@@ -42,7 +42,7 @@ msgstr ""
 "Программа очистки MgaRemix\n"
 " \n"
 "Лицензия: GPLv3\n"
-"Компиляция: Lazarus 2.2.4\n"
+"Компиляция: Lazarus 4.4\n"
 "Автор: alex_q_2000 (C) 2020\n"
 "Соавторство: ingvaro\n"
 "Благодарность: algri14, AlexL,\n"
@@ -78,6 +78,11 @@ msgstr "Поиск"
 #: tmainform.analyzebtn.caption
 msgid "Analyze"
 msgstr "Анализ"
+
+#: tmainform.cachebravecheck.caption
+msgctxt "tmainform.cachebravecheck.caption"
+msgid "Brave browser cache:"
+msgstr "Кеш браузера Brave:"
 
 #: tmainform.cachechromecheck.caption
 msgid "Google Chrome cache:"
@@ -191,6 +196,11 @@ msgstr ""
 
 #: tmainform.label27.caption
 msgctxt "tmainform.label27.caption"
+msgid "***"
+msgstr ""
+
+#: tmainform.label28.caption
+msgctxt "tmainform.label28.caption"
 msgid "***"
 msgstr ""
 
@@ -336,6 +346,10 @@ msgstr "анализ завершен..."
 #: unit1.sanalizepackagesdeps
 msgid "run analysis of the package dependencies, wait..."
 msgstr "запущен анализ зависимостей пакета, ждите..."
+
+#: unit1.scleanbravecache
+msgid "clean Brave browser cache, wait..."
+msgstr "очистка кеша браузера Brave, ждите..."
 
 #: unit1.scleanchromecache
 msgid "clean Google Chrome cache, wait..."

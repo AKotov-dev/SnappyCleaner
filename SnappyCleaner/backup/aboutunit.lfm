@@ -9,7 +9,7 @@ object AboutForm: TAboutForm
   ClientWidth = 400
   OnShow = FormShow
   Position = poMainFormCenter
-  LCLVersion = '2.2.0.4'
+  LCLVersion = '2.2.4.0'
   object Image1: TImage
     Left = 8
     Height = 94
@@ -1473,6 +1473,7 @@ object AboutForm: TAboutForm
     Font.Height = -20
     Font.Name = 'Sans'
     Font.Style = [fsBold]
+    ParentColor = False
     ParentFont = False
   end
   object Label3: TLabel
@@ -1480,7 +1481,8 @@ object AboutForm: TAboutForm
     Height = 187
     Top = 37
     Width = 253
-    Caption = 'MgaRemix Cleaning Program'#10' '#10'License: GPLv3'#10'Compilation: Lazarus 2.2.0'#10'Author: alex_q_2000 (C) 2020'#10'Co - authorship: ingvaro'#10'Gratitude: algri14, AlexL,'#10'mozg1986, Zomby, TopE, kvv-vp'#10' '#10'Russian Linux Forum: https://linuxforum.ru'#10' '
+    Caption = 'MgaRemix Cleaning Program'#10' '#10'License: GPLv3'#10'Compilation: Lazarus 2.2.4'#10'Author: alex_q_2000 (C) 2020'#10'Co - authorship: ingvaro'#10'Gratitude: algri14, AlexL,'#10'mozg1986, Zomby, TopE, kvv-vp'#10' '#10'Russian Linux Forum: https://linuxforum.ru'#10' '
+    ParentColor = False
   end
   object Bevel2: TBevel
     AnchorSideTop.Control = Label3

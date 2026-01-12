@@ -24,11 +24,13 @@ type
     procedure ShowUserTMP;
     procedure ShowRecentDocuments;
     procedure ShowURPMICache;
+    procedure ShowDNFCache;
     procedure ShowMozillaCache;
     procedure ShowChromeCache;
     procedure ShowOperaCache;
     procedure ShowChromiumCache;
     procedure ShowPaleMoonCache;
+    procedure ShowBraveCache;
     procedure ShowHomeUsage;
 
     procedure ShowNewKernel;
@@ -211,6 +213,18 @@ begin
     //Показываем размер кеша Palemoon
     Synchronize(@ShowPaleMoonCache);
 
+    //Кеш Brave
+    ExProcess.Parameters.Clear;
+    ExProcess.Parameters.Add('-c');
+    ExProcess.Parameters.Add('if [ -d "/home/' + ActUser[0] +
+      '/.cache/BraveSoftware/Brave-Browser/Default/Cache/Cache_Data" ]; then ' + 'bravecache=$(/usr/bin/du -csh /home/' +
+      ActUser[0] + '/.cache/BraveSoftware/Brave-Browser/Default/Cache/Cache_Data/* /home/' + ActUser[0] +
+      '/.cache/BraveSoftware/Brave-Browser/Default/Cache/Cache_Data/.[!.]* | tail -n1 | cut -f1); else bravecache="no"; fi; echo $bravecache');
+    ExProcess.Execute;
+    Result.LoadFromStream(ExProcess.Output);
+    //Показываем размер кеша Brave
+    Synchronize(@ShowBraveCache);
+
     //Использование /home
     ExProcess.Parameters.Clear;
     ExProcess.Parameters.Add('-c');
@@ -389,6 +403,12 @@ begin
   MainForm.Label16.Caption := Result[0];
 end;
 
+procedure StartAnalyze.ShowDNFCache;
+begin
+  //Показываем размер кеша DNF
+  MainForm.Label17.Caption := Result[0];
+end;
+
 procedure StartAnalyze.ShowMozillaCache;
 begin
   //Показываем размер кеша Mozilla
@@ -427,11 +447,20 @@ end;
 
 procedure StartAnalyze.ShowPaleMoonCache;
 begin
-  //Показываем размер кеша Chromium
+  //Показываем размер кеша PaleMoon
   if (Result[0] = 'no') then
     MainForm.Label27.Caption := SNo
   else
     MainForm.Label27.Caption := Result[0];
+end;
+
+procedure StartAnalyze.ShowBraveCache;
+begin
+  //Показываем размер кеша Brave
+  if (Result[0] = 'no') then
+    MainForm.Label28.Caption := SNo
+  else
+    MainForm.Label28.Caption := Result[0];
 end;
 
 procedure StartAnalyze.ShowHomeUsage;

@@ -30,6 +30,7 @@ type
     procedure ShowOperaCache;
     procedure ShowChromiumCache;
     procedure ShowPaleMoonCache;
+    procedure ShowBraveCache;
     procedure ShowHomeUsage;
 
     procedure ShowNewKernel;
@@ -48,7 +49,7 @@ implementation
 
 uses Unit1;
 
-{ TRD }
+  { TRD }
 
 procedure StartAnalyze.Execute;
 var
@@ -211,6 +212,20 @@ begin
     Result.LoadFromStream(ExProcess.Output);
     //Показываем размер кеша Palemoon
     Synchronize(@ShowPaleMoonCache);
+
+    //Кеш Brave
+    ExProcess.Parameters.Clear;
+    ExProcess.Parameters.Add('-c');
+    ExProcess.Parameters.Add('if [ -d "/home/' + ActUser[0] +
+      '/.cache/BraveSoftware/Brave-Browser/Default/Cache/Cache_Data" ]; then ' +
+      'bravecache=$(/usr/bin/du -csh /home/' + ActUser[0] +
+      '/.cache/BraveSoftware/Brave-Browser/Default/Cache/Cache_Data/* /home/' +
+      ActUser[0] +
+      '/.cache/BraveSoftware/Brave-Browser/Default/Cache/Cache_Data/.[!.]* | tail -n1 | cut -f1); else bravecache="no"; fi; echo $bravecache');
+    ExProcess.Execute;
+    Result.LoadFromStream(ExProcess.Output);
+    //Показываем размер кеша Brave
+    Synchronize(@ShowBraveCache);
 
     //Использование /home
     ExProcess.Parameters.Clear;
@@ -434,11 +449,20 @@ end;
 
 procedure StartAnalyze.ShowPaleMoonCache;
 begin
-  //Показываем размер кеша Chromium
+  //Показываем размер кеша PaleMoon
   if (Result[0] = 'no') then
     MainForm.Label27.Caption := SNo
   else
     MainForm.Label27.Caption := Result[0];
+end;
+
+procedure StartAnalyze.ShowBraveCache;
+begin
+  //Показываем размер кеша Brave
+  if (Result[0] = 'no') then
+    MainForm.Label28.Caption := SNo
+  else
+    MainForm.Label28.Caption := Result[0];
 end;
 
 procedure StartAnalyze.ShowHomeUsage;

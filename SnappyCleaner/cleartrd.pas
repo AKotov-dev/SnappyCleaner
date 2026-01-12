@@ -25,6 +25,7 @@ type
     procedure ShowOperaCache;
     procedure ShowChromiumCache;
     procedure ShowPaleMoonCache;
+    procedure ShowBraveCache;
     procedure ClearFinal;
     procedure ShowDelPackages;
     procedure ShowRepairRPM;
@@ -34,7 +35,7 @@ implementation
 
 uses Unit1;
 
-{ TRD }
+  { TRD }
 
 procedure StartClear.Execute;
 var
@@ -202,6 +203,21 @@ begin
       ExProcess.Execute;
     end;
 
+    //Кеш Brave
+    if MainForm.CacheBraveCheck.Checked then
+    begin
+      Synchronize(@ShowBraveCache);
+      ExProcess.Parameters.Clear;
+      ExProcess.Parameters.Add('-c');
+      ExProcess.Parameters.Add('if [ -d "/home/' + ActUser[0] +
+        '/.cache/BraveSoftware/Brave-Browser/Default/Cache/Cache_Data" ]; then /usr/bin/rm -rf "/home/'
+        +
+        ActUser[0] + '/.cache/BraveSoftware/Brave-Browser/Default/Cache/Cache_Data/"* "/home/'
+        + ActUser[0] +
+        '/.cache/BraveSoftware/Brave-Browser/Default/Cache/Cache_Data/."*; fi;');
+      ExProcess.Execute;
+    end;
+
     //Удаление списка пакетов
     if (DelKernels <> '') or (DelOrphans <> '') then
     begin
@@ -293,6 +309,12 @@ end;
 procedure StartClear.ShowPaleMoonCache;
 begin
   MainForm.StaticText1.Caption := SCleanPalemoonCache;
+end;
+
+//Показываю удаление кеша Brave
+procedure StartClear.ShowBraveCache;
+begin
+  MainForm.StaticText1.Caption := SCleanBraveCache;
 end;
 
 //Показываю удаление пакетов (ядра и сироты)

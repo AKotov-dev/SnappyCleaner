@@ -2,10 +2,10 @@
 name=scleaner
 
 [VERSION]
-version=2.0
+version=2.1
 
 [RELEASE]
-release=0.mrx9
+release=0.mrx10
 
 [GROUP]
 group=Applications/System
@@ -70,38 +70,43 @@ programname=SnappyCleaner
 devtool=Lazarus
 
 [TOOLVERSION]
-toolversion=2.2.4
+toolversion=4.4
 
 [INFO]
-0=v2.0
-1=+ Added DNF cache cleanup
-2=+ RPM packages for Mageia-8/9
-3=
-4=v1.9
-5=+ Work relative to the Active kernel
-6=+ All kernels except the Active are in the list for deletion
-7=+ Binding to the installation time of any kernel is excluded
-8=+ Unification of the source code for Mageia-8/9
-9=
-10=v1.8-0
-11=+ Release for Mageia-9 and higher
-12=+ Improved cleaning of Recent Documents
-13=+ Definition of DE when starting from root
+0=v2.1
+1=+ Recompiled with Lazarus-4.4
+2=+ Clearing the Brave Browser Cache
+3=+ RPM packages for Mageia-9/10
+4=
+5=v2.0
+6=+ Added DNF cache cleanup
+7=+ RPM packages for Mageia-8/9
+8=
+9=v1.9
+10=+ Work relative to the Active kernel
+11=+ All kernels except the Active are in the list for deletion
+12=+ Binding to the installation time of any kernel is excluded
+13=+ Unification of the source code for Mageia-8/9
 14=
-15=v1.7-1
+15=v1.8-0
 16=+ Release for Mageia-9 and higher
-17=+ Updated tags of the kernels  filtering format (rpm --qf)
-18=+ Added gtk2 dependency
-19=+ Recompilation in Lazarus 2.2.0
-20=+ Improving interactive cleaning: scleaner --auto
-21=+ Usage indicator /home (%)
-22=+ Multilingual support
-23=+ Plasma: LCL Scaling (Hi-DPI) and selective launch via kdesu
-24=
-25=v1.6-1
-26=+ Lazarus-2.0.10 rebuild
-27=+ Mageia-8 rebuild
-28=
-29=v1.6-0
-30=Fixed calculation of the weight of the packages, old kernels
-31=Fixed counting the weight of orphaned packages when removing the orphanhood attribute
+17=+ Improved cleaning of Recent Documents
+18=+ Definition of DE when starting from root
+19=
+20=v1.7-1
+21=+ Release for Mageia-9 and higher
+22=+ Updated tags of the kernels  filtering format (rpm --qf)
+23=+ Added gtk2 dependency
+24=+ Recompilation in Lazarus 2.2.0
+25=+ Improving interactive cleaning: scleaner --auto
+26=+ Usage indicator /home (%)
+27=+ Multilingual support
+28=+ Plasma: LCL Scaling (Hi-DPI) and selective launch via kdesu
+29=
+30=v1.6-1
+31=+ Lazarus-2.0.10 rebuild
+32=+ Mageia-8 rebuild
+33=
+34=v1.6-0
+35=Fixed calculation of the weight of the packages, old kernels
+36=Fixed counting the weight of orphaned packages when removing the orphanhood attribute

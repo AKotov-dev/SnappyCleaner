@@ -72,6 +72,11 @@ if [[ $LANG == "ru_RU.UTF-8" ]]; then
   rm -rf "/home/$(logname)/.cache/moonchild productions/"*
   echo -e "${rcolor}завершено${ncolor}\n"
 
+#Очищаю кеш Brave
+  echo -en "Очищаю кеш браузера Brave... "
+  rm -rf /home/$(logname)/.cache/BraveSoftware/Brave-Browser/Default/Cache/Cache_Data/*
+  echo -e "${rcolor}завершено${ncolor}\n"
+
 #Завершаю очистку
   echo "------------------------------------------------"
   echo -e ${rcolor}"Очистка завершена${ncolor}\n"
@@ -139,6 +144,12 @@ fi;
   echo -en "Clean PaleMoon cache... "
   rm -rf "/home/$(logname)/.cache/moonchild productions/"*
   echo -e "${rcolor}completed${ncolor}\n"
+
+#Очищаю кеш Brave
+  echo -en "Cleab Brave browser cache... "
+  rm -rf /home/$(logname)/.cache/BraveSoftware/Brave-Browser/Default/Cache/Cache_Data/*
+  echo -e "${rcolor}completed${ncolor}\n"
+
 
 #Завершаю очистку
   echo "------------------------------------------------"
