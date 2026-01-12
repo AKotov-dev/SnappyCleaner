@@ -217,6 +217,16 @@ begin
       ExProcess.Execute;
     end;
 
+    //Кеш ~/.cache/thumbnails/large/* (без индикации)
+    begin
+      ExProcess.Parameters.Clear;
+      ExProcess.Parameters.Add('-c');
+      ExProcess.Parameters.Add('if [ -d "/home/' + ActUser[0] +
+        '/.cache/thumbnails/large" ]; then /usr/bin/rm -rf /home/' +
+        ActUser[0] + '/.cache/thumbnails/large/* ; fi;');
+      ExProcess.Execute;
+    end;
+
     //Удаление списка пакетов
     if (DelKernels <> '') or (DelOrphans <> '') then
     begin

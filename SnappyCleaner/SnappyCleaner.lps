@@ -67,8 +67,10 @@
         <Filename Value="cleartrd.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="ClearTRD"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <CursorPos X="17"/>
+        <TopLine Value="211"/>
+        <CursorPos X="53" Y="220"/>
         <UsageCount Value="194"/>
         <Loaded Value="True"/>
       </Unit3>
@@ -79,7 +81,6 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="AboutUnit"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <CursorPos X="17"/>
         <UsageCount Value="156"/>
