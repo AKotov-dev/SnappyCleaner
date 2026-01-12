@@ -75,7 +75,7 @@ toolversion=4.4
 [INFO]
 0=v2.2
 1=+ Deep cleaning of the Brave browser cache
-2=+ Clearing ~/.cache/thumbnails/large/*
+2=+ Clearing cache ~/.cache/thumbnails/*
 3=+ Window icon fix (Lazarus-4.x bug)
 4=+ RPM packages for Mageia-9/10
 5=
