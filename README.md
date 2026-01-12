@@ -13,6 +13,7 @@ Performs the following actions:
 - Opera Browser Cache
 - Chromium browser Cache
 - PaleMoon Browser Cache
+- Brave Browser Cache
 - Orphaned packages (optional)
 - Search for orphans of arbitrary packages
 - scleaner --auto (clean up without kernels and orphans)
