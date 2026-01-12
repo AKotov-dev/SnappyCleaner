@@ -46,7 +46,7 @@ begin
     FreeOnTerminate := True;
 
     ExProcess := TProcess.Create(nil);
-    ExProcess.Executable := '/usr/bin/sh';
+    ExProcess.Executable := 'bash';
     ExProcess.Options := ExProcess.Options + [poUsePipes, poWaitOnExit];
     ExProcess.Parameters.Add('-c');
 
@@ -103,8 +103,8 @@ begin
     ProgressBar1.Visible := True;
     Timer1.Enabled := True;
 
-      DepsForm.Caption := SPackage + ' ' + Package;
-      StaticText1.Caption := SAnalizePackagesDeps;
+    DepsForm.Caption := SPackage + ' ' + Package;
+    StaticText1.Caption := SAnalizePackagesDeps;
   end;
 end;
 

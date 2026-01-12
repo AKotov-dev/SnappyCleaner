@@ -30,6 +30,7 @@ type
     procedure FormShow(Sender: TObject);
     procedure SEditButtonClick(Sender: TObject);
     procedure SEditKeyUp(Sender: TObject; var Key: word; Shift: TShiftState);
+
   private
     { private declarations }
   public
@@ -43,9 +44,9 @@ implementation
 
 uses  Unit1, DepsTRD;
 
-{$R *.lfm}
+  {$R *.lfm}
 
-{ TDepsForm }
+  { TDepsForm }
 
 procedure TDepsForm.FormCreate(Sender: TObject);
 begin
@@ -65,6 +66,7 @@ begin
   if FileExists(ExtractFilePath(ParamStr(0)) + 'tmp/process') then
   begin
     DeleteFile(ExtractFilePath(ParamStr(0)) + 'tmp/process');
+
     //Показываем статус завершения процесса
     MainForm.StaticText1.Caption := SProcessTerminate;
   end;

@@ -28,7 +28,7 @@ implementation
 
 uses Unit1, DepsUnit;
 
-{ TRD }
+  { TRD }
 
 procedure StartShowDeps.Execute;
 var
@@ -46,7 +46,7 @@ begin
     FreeOnTerminate := True;
 
     ExProcess := TProcess.Create(nil);
-    ExProcess.Executable := '/usr/bin/sh';
+    ExProcess.Executable := 'bash';
     ExProcess.Options := ExProcess.Options + [poUsePipes, poWaitOnExit];
     ExProcess.Parameters.Add('-c');
 

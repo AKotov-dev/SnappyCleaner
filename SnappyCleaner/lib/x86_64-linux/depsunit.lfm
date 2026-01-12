@@ -1,17 +1,17 @@
 object DepsForm: TDepsForm
-  Left = 309
+  Left = 325
   Height = 555
-  Top = 165
-  Width = 861
+  Top = 155
+  Width = 823
   Caption = 'DepsForm'
   ClientHeight = 555
-  ClientWidth = 861
+  ClientWidth = 823
+  Position = poMainFormCenter
+  SessionProperties = 'Height;Width;Panel1.Width'
+  LCLVersion = '4.4.0.0'
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  Position = poMainFormCenter
-  SessionProperties = 'Height;Width;Panel1.Width'
-  LCLVersion = '2.2.0.4'
   object Panel1: TPanel
     Left = 0
     Height = 555
@@ -65,13 +65,13 @@ object DepsForm: TDepsForm
     Left = 273
     Height = 555
     Top = 0
-    Width = 585
+    Width = 547
     Align = alClient
     BorderSpacing.Right = 3
     BevelOuter = bvNone
     Caption = 'Panel3'
     ClientHeight = 555
-    ClientWidth = 585
+    ClientWidth = 547
     TabOrder = 1
     object ListBox2: TListBox
       AnchorSideTop.Control = Label2
@@ -81,7 +81,7 @@ object DepsForm: TDepsForm
       Left = 0
       Height = 491
       Top = 60
-      Width = 583
+      Width = 545
       Align = alBottom
       Anchors = [akTop, akLeft, akRight, akBottom]
       BorderSpacing.Top = 2
@@ -115,22 +115,22 @@ object DepsForm: TDepsForm
       Left = 0
       Height = 30
       Top = 5
-      Width = 585
+      Width = 547
       Anchors = [akTop, akLeft, akRight]
       BevelOuter = bvNone
       ClientHeight = 30
-      ClientWidth = 585
+      ClientWidth = 547
       TabOrder = 1
       object BreakBtn: TButton
-        Left = 502
+        Left = 464
         Height = 30
         Top = 0
         Width = 83
         Align = alRight
         Anchors = [akTop, akRight]
         Caption = 'Cancel'
-        OnClick = BreakBtnClick
         TabOrder = 0
+        OnClick = BreakBtnClick
       end
       object SEdit: TEditButton
         AnchorSideLeft.Control = Panel2
@@ -138,7 +138,7 @@ object DepsForm: TDepsForm
         Left = 0
         Height = 30
         Top = 0
-        Width = 502
+        Width = 464
         AutoSelect = False
         Align = alLeft
         Anchors = [akLeft, akRight, akBottom]
@@ -147,10 +147,10 @@ object DepsForm: TDepsForm
         Color = 16121855
         MaxLength = 0
         NumGlyphs = 1
-        OnButtonClick = SEditButtonClick
-        OnKeyUp = SEditKeyUp
         PasswordChar = #0
         TabOrder = 1
+        OnButtonClick = SEditButtonClick
+        OnKeyUp = SEditKeyUp
       end
     end
   end

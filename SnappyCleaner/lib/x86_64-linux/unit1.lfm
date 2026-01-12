@@ -22,8 +22,6 @@ object MainForm: TMainForm
     BorderSpacing.Top = 1
     Caption = 'start analysis of system...'
     Font.Color = clTeal
-    Font.Height = -12
-    Font.Name = 'Sans'
     ParentFont = False
     TabOrder = 3
   end
@@ -212,7 +210,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Control = Label26
       Left = 8
       Height = 17
-      Top = 618
+      Top = 614
       Width = 80
       Anchors = [akLeft]
       BorderSpacing.Left = 7
@@ -229,7 +227,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrBottom
       Left = 234
       Height = 17
-      Top = 618
+      Top = 614
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -344,19 +342,6 @@ object MainForm: TMainForm
       Top = 49
       Width = 247
       Anchors = [akTop, akLeft, akRight]
-      BorderSpacing.Left = 6
-      BorderSpacing.Right = 6
-      Shape = bsTopLine
-    end
-    object Bevel3: TBevel
-      AnchorSideLeft.Control = Panel1
-      AnchorSideRight.Control = Panel1
-      AnchorSideRight.Side = asrBottom
-      Left = 7
-      Height = 10
-      Top = 610
-      Width = 247
-      Anchors = [akLeft, akRight]
       BorderSpacing.Left = 6
       BorderSpacing.Right = 6
       Shape = bsTopLine

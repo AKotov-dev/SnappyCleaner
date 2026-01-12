@@ -17,7 +17,6 @@ type
     AnalyzeBtn: TBitBtn;
     Bevel1: TBevel;
     Bevel2: TBevel;
-    Bevel3: TBevel;
     AboutBtn: TBitBtn;
     AutoOrphansBox: TCheckListBox;
     Bevel4: TBevel;
