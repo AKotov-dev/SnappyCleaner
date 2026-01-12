@@ -26,6 +26,7 @@ type
     procedure ShowChromiumCache;
     procedure ShowPaleMoonCache;
     procedure ShowBraveCache;
+    procedure ShowThumbnails;
     procedure ClearFinal;
     procedure ShowDelPackages;
     procedure ShowRepairRPM;
@@ -217,8 +218,9 @@ begin
       ExProcess.Execute;
     end;
 
-    //Кеш ~/.cache/thumbnails/large/* (без индикации)
+    //Кеш ~/.cache/thumbnails/large/* (без индикации KБ/MБ)
     begin
+      Synchronize(@ShowThumbnails);
       ExProcess.Parameters.Clear;
       ExProcess.Parameters.Add('-c');
       ExProcess.Parameters.Add('if [ -d "/home/' + ActUser[0] +
@@ -324,6 +326,12 @@ end;
 procedure StartClear.ShowBraveCache;
 begin
   MainForm.StaticText1.Caption := SCleanBraveCache;
+end;
+
+//Показываю удаление ~/.cache/thumbnails/large/*
+procedure StartClear.ShowThumbnails;
+begin
+  MainForm.StaticText1.Caption := SCleanThumbnails;
 end;
 
 //Показываю удаление пакетов (ядра и сироты)

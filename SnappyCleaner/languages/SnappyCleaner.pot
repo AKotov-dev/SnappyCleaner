@@ -357,6 +357,11 @@ msgstr ""
 msgid "clean RecentDocuments user files, wait..."
 msgstr ""
 
+#: unit1.scleanthumbnails
+msgctxt "unit1.scleanthumbnails"
+msgid "clean ~/.cache/thumbnails/large/*, wait..."
+msgstr ""
+
 #: unit1.scleantmprootfiles
 msgid "clean the temporary root files, wait..."
 msgstr ""

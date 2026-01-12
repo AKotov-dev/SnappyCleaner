@@ -379,6 +379,11 @@ msgstr "очистка кеша браузера PaleMoon, ждите..."
 msgid "clean RecentDocuments user files, wait..."
 msgstr "очистка файлов RecentDocuments, ждите..."
 
+#: unit1.scleanthumbnails
+msgctxt "unit1.scleanthumbnails"
+msgid "clean ~/.cache/thumbnails/large/*, wait..."
+msgstr ""
+
 #: unit1.scleantmprootfiles
 msgid "clean the temporary root files, wait..."
 msgstr "очистка временных файлов root, ждите..."
@@ -454,3 +459,4 @@ msgstr "Поиск зависимостей пакетов"
 #: unit1.sstartanalyze
 msgid "run analysis of the system, wait..."
 msgstr "запущен анализ системы, ждите..."
+
