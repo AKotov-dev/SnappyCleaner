@@ -37,7 +37,7 @@ implementation
 
 procedure TAboutForm.FormShow(Sender: TObject);
 begin
-  AboutForm.Width := Label3.Left + Label3.Width + 20;
+  AboutForm.Width := Label3.Left + Label3.Width + 50;
   AboutForm.Height := BitBtn1.Top + BitBtn1.Height + 8;
 end;
 

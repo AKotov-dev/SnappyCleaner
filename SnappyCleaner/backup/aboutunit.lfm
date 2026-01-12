@@ -1,12 +1,12 @@
 object AboutForm: TAboutForm
-  Left = 427
+  Left = 398
   Height = 278
-  Top = 154
-  Width = 400
+  Top = 160
+  Width = 484
   BorderIcons = [biSystemMenu]
   Caption = 'About'
   ClientHeight = 278
-  ClientWidth = 400
+  ClientWidth = 484
   Position = poMainFormCenter
   LCLVersion = '4.4.0.0'
   OnShow = FormShow
@@ -1480,8 +1480,8 @@ object AboutForm: TAboutForm
     Left = 125
     Height = 187
     Top = 37
-    Width = 253
-    Caption = 'MgaRemix Cleaning Program'#10' '#10'License: GPLv3'#10'Compilation: Lazarus 4.4'#10'Author: alex_q_2000 (C) 2020'#10'Co - authorship: ingvaro'#10'Gratitude: algri14, AlexL,'#10'mozg1986, Zomby, TopE, kvv-vp'#10' '#10'Russian Linux Forum: https://linuxforum.ru'#10' '
+    Width = 284
+    Caption = 'MgaRemix Cleaning Program'#10' '#10'License: GPLv3'#10'Compilation: Lazarus 4.4'#10'Author: alex_q_2000 (C) 2026'#10'Co - authorship: ingvaro'#10'Gratitude: algri14, AlexL,'#10'mozg1986, Zomby, TopE, kvv-vp'#10' '#10'https://github.com/AKotov-dev/SnappyCleaner'#10' '
     ParentColor = False
   end
   object Bevel2: TBevel
@@ -1491,7 +1491,7 @@ object AboutForm: TAboutForm
     Left = 6
     Height = 10
     Top = 224
-    Width = 388
+    Width = 472
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 5
     BorderSpacing.Right = 5
@@ -1501,7 +1501,7 @@ object AboutForm: TAboutForm
     AnchorSideLeft.Control = Bevel2
     AnchorSideLeft.Side = asrCenter
     AnchorSideTop.Control = Bevel2
-    Left = 153
+    Left = 195
     Height = 34
     Top = 232
     Width = 95
