@@ -212,9 +212,8 @@ begin
       ExProcess.Parameters.Add('if [ -d "/home/' + ActUser[0] +
         '/.cache/BraveSoftware/Brave-Browser/Default" ]; then /usr/bin/rm -rf "/home/'
         +
-        ActUser[0] + '/.cache/BraveSoftware/Brave-Browser/Default/"* "/home/'
-        + ActUser[0] +
-        '/.cache/BraveSoftware/Brave-Browser/Default/."*; fi;');
+        ActUser[0] + '/.cache/BraveSoftware/Brave-Browser/Default/"* "/home/' +
+        ActUser[0] + '/.cache/BraveSoftware/Brave-Browser/Default/."*; fi;');
       ExProcess.Execute;
     end;
 

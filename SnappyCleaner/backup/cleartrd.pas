@@ -210,11 +210,11 @@ begin
       ExProcess.Parameters.Clear;
       ExProcess.Parameters.Add('-c');
       ExProcess.Parameters.Add('if [ -d "/home/' + ActUser[0] +
-        '/.cache/BraveSoftware/Brave-Browser/Default/Cache/Cache_Data" ]; then /usr/bin/rm -rf "/home/'
+        '/.cache/BraveSoftware/Brave-Browser/Default" ]; then /usr/bin/rm -rf "/home/'
         +
-        ActUser[0] + '/.cache/BraveSoftware/Brave-Browser/Default/Cache/Cache_Data/"* "/home/'
+        ActUser[0] + '/.cache/BraveSoftware/Brave-Browser/Default/"* "/home/'
         + ActUser[0] +
-        '/.cache/BraveSoftware/Brave-Browser/Default/Cache/Cache_Data/."*; fi;');
+        '/.cache/BraveSoftware/Brave-Browser/Default/."*; fi;');
       ExProcess.Execute;
     end;
 

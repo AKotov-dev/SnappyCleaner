@@ -462,7 +462,19 @@ begin
 end;
 
 procedure TMainForm.FormCreate(Sender: TObject);
+var
+  bmp: TBitmap;
 begin
+  //Устраняем баг иконки приложения
+  bmp := TBitmap.Create;
+  try
+    bmp.PixelFormat := pf32bit;
+    bmp.Assign(Image1.Picture.Graphic);
+    Application.Icon.Assign(bmp);
+  finally
+    bmp.Free;
+  end;
+
   //Выясняем имя активного пользователя Linux
   ActUser := TStringList.Create;
   ActUser.LoadFromFile(ExtractFilePath(ParamStr(0)) + 'tmp/actuser');

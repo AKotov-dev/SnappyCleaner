@@ -385,7 +385,7 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       Left = 7
       Height = 10
-      Top = 89
+      Top = 91
       Width = 247
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Left = 6
@@ -521,7 +521,7 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       Left = 7
       Height = 10
-      Top = 129
+      Top = 131
       Width = 247
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Left = 6
