@@ -25,7 +25,7 @@ msgid ""
 "Gratitude: algri14, AlexL,\n"
 "mozg1986, Zomby, TopE, kvv-vp\n"
 " \n"
-"Russian Linux Forum: https://linuxforum.ru\n"
+"https://github.com/AKotov-dev/SnappyCleaner\n"
 " "
 msgstr ""
 

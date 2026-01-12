@@ -35,7 +35,7 @@ implementation
 
 uses Unit1;
 
-{ TRD }
+  { TRD }
 
 procedure StartClear.Execute;
 var
@@ -210,9 +210,11 @@ begin
       ExProcess.Parameters.Clear;
       ExProcess.Parameters.Add('-c');
       ExProcess.Parameters.Add('if [ -d "/home/' + ActUser[0] +
-        '/.cache/BraveSoftware/Brave-Browser/Default/Cache/Cache_Data" ]; then /usr/bin/rm -rf "/home/' +
-        ActUser[0] + '/.cache/BraveSoftware/Brave-Browser/Default/Cache/Cache_Data/"* "/home/' +
-        ActUser[0] + '/.cache/BraveSoftware/Brave-Browser/Default/Cache/Cache_Data/."*; fi;');
+        '/.cache/BraveSoftware/Brave-Browser/Default/Cache/Cache_Data" ]; then /usr/bin/rm -rf "/home/'
+        +
+        ActUser[0] + '/.cache/BraveSoftware/Brave-Browser/Default/Cache/Cache_Data/"* "/home/'
+        + ActUser[0] +
+        '/.cache/BraveSoftware/Brave-Browser/Default/Cache/Cache_Data/."*; fi;');
       ExProcess.Execute;
     end;
 

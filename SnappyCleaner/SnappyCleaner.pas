@@ -39,8 +39,8 @@ begin
     MyProg.RunListen;
 
   RequireDerivedFormResource := True;
-  Application.Scaled := True;
-  Application.Title := 'SnappyCleaner v2.1';
+  Application.Scaled:=True;
+  Application.Title:='SnappyCleaner v2.2';
   Application.Initialize;
   Application.CreateForm(TMainForm, MainForm);
   Application.CreateForm(TAboutForm, AboutForm);

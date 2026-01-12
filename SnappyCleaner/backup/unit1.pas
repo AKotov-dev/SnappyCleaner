@@ -27,6 +27,7 @@ type
     CachePaleMoonCheck: TCheckBox;
     CacheDNFCheck: TCheckBox;
     CacheBraveCheck: TCheckBox;
+    Image1: TImage;
     Label17: TLabel;
     Label23: TLabel;
     Label27: TLabel;
@@ -344,9 +345,10 @@ begin
   end;
 end;
 
+//Выделить все
 procedure TMainForm.SelectAllCheckChange(Sender: TObject);
 begin
-    if Sender = SelectAllCheck then
+  if Sender = SelectAllCheck then
   begin
     RepairRPMCheck.State := SelectAllCheck.State;
     RootTmpCheck.State := SelectAllCheck.State;

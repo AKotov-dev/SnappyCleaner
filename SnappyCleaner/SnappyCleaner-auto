@@ -74,7 +74,7 @@ if [[ $LANG == "ru_RU.UTF-8" ]]; then
 
 #Очищаю кеш Brave
   echo -en "Очищаю кеш браузера Brave... "
-  rm -rf /home/$(logname)/.cache/BraveSoftware/Brave-Browser/Default/Cache/Cache_Data/*
+  rm -rf /home/$(logname)/.cache/BraveSoftware/Brave-Browser/Default/*
   echo -e "${rcolor}завершено${ncolor}\n"
 
 #Завершаю очистку
@@ -147,7 +147,7 @@ fi;
 
 #Очищаю кеш Brave
   echo -en "Cleab Brave browser cache... "
-  rm -rf /home/$(logname)/.cache/BraveSoftware/Brave-Browser/Default/Cache/Cache_Data/*
+  rm -rf /home/$(logname)/.cache/BraveSoftware/Brave-Browser/Default/*
   echo -e "${rcolor}completed${ncolor}\n"
 
 

@@ -7,9 +7,9 @@ object AboutForm: TAboutForm
   Caption = 'About'
   ClientHeight = 278
   ClientWidth = 400
-  OnShow = FormShow
   Position = poMainFormCenter
-  LCLVersion = '2.2.4.0'
+  LCLVersion = '4.4.0.0'
+  OnShow = FormShow
   object Image1: TImage
     Left = 8
     Height = 94
@@ -1481,7 +1481,7 @@ object AboutForm: TAboutForm
     Height = 187
     Top = 37
     Width = 253
-    Caption = 'MgaRemix Cleaning Program'#10' '#10'License: GPLv3'#10'Compilation: Lazarus 2.2.4'#10'Author: alex_q_2000 (C) 2020'#10'Co - authorship: ingvaro'#10'Gratitude: algri14, AlexL,'#10'mozg1986, Zomby, TopE, kvv-vp'#10' '#10'Russian Linux Forum: https://linuxforum.ru'#10' '
+    Caption = 'MgaRemix Cleaning Program'#10' '#10'License: GPLv3'#10'Compilation: Lazarus 4.4'#10'Author: alex_q_2000 (C) 2020'#10'Co - authorship: ingvaro'#10'Gratitude: algri14, AlexL,'#10'mozg1986, Zomby, TopE, kvv-vp'#10' '#10'Russian Linux Forum: https://linuxforum.ru'#10' '
     ParentColor = False
   end
   object Bevel2: TBevel
@@ -1545,7 +1545,7 @@ object AboutForm: TAboutForm
       0000000000000000000000000000000000000000000000000000
     }
     ModalResult = 1
-    OnClick = BitBtn1Click
     TabOrder = 0
+    OnClick = BitBtn1Click
   end
 end

@@ -49,7 +49,7 @@ implementation
 
 uses Unit1;
 
-{ TRD }
+  { TRD }
 
 procedure StartAnalyze.Execute;
 var
@@ -217,8 +217,10 @@ begin
     ExProcess.Parameters.Clear;
     ExProcess.Parameters.Add('-c');
     ExProcess.Parameters.Add('if [ -d "/home/' + ActUser[0] +
-      '/.cache/BraveSoftware/Brave-Browser/Default/Cache/Cache_Data" ]; then ' + 'bravecache=$(/usr/bin/du -csh /home/' +
-      ActUser[0] + '/.cache/BraveSoftware/Brave-Browser/Default/Cache/Cache_Data/* /home/' + ActUser[0] +
+      '/.cache/BraveSoftware/Brave-Browser/Default/Cache/Cache_Data" ]; then ' +
+      'bravecache=$(/usr/bin/du -csh /home/' + ActUser[0] +
+      '/.cache/BraveSoftware/Brave-Browser/Default/Cache/Cache_Data/* /home/' +
+      ActUser[0] +
       '/.cache/BraveSoftware/Brave-Browser/Default/Cache/Cache_Data/.[!.]* | tail -n1 | cut -f1); else bravecache="no"; fi; echo $bravecache');
     ExProcess.Execute;
     Result.LoadFromStream(ExProcess.Output);
