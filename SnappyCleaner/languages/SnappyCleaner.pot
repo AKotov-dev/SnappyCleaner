@@ -359,7 +359,7 @@ msgstr ""
 
 #: unit1.scleanthumbnails
 msgctxt "unit1.scleanthumbnails"
-msgid "clean ~/.cache/thumbnails/large/*, wait..."
+msgid "clean ~/.cache/thumbnails/*, wait..."
 msgstr ""
 
 #: unit1.scleantmprootfiles

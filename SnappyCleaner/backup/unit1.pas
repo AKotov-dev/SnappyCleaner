@@ -136,7 +136,7 @@ resourcestring
   SCleanChromiumCache = 'clean Chromium browser cache, wait...';
   SCleanPalemoonCache = 'clean PaleMoon browser cache, wait...';
   SCleanBraveCache = 'clean Brave browser cache, wait...';
-  SCleanThembnails = 'clean ~/.cache/thumbnails/large/*, wait...';
+  SCleanThumbnails = 'clean ~/.cache/thumbnails/*, wait...';
   SRemoveSelectedPackages = 'remove the selected packages, wait...';
   SPackage = 'Package:';
   SAnalizePackagesDeps = 'run analysis of the package dependencies, wait...';

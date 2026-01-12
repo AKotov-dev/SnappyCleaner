@@ -218,14 +218,14 @@ begin
       ExProcess.Execute;
     end;
 
-    //Кеш ~/.cache/thumbnails/large/* (без индикации)
+    //Кеш ~/.cache/thumbnails/* (без индикации KБ/MБ)
     begin
       Synchronize(@ShowThumbnails);
       ExProcess.Parameters.Clear;
       ExProcess.Parameters.Add('-c');
       ExProcess.Parameters.Add('if [ -d "/home/' + ActUser[0] +
         '/.cache/thumbnails/large" ]; then /usr/bin/rm -rf /home/' +
-        ActUser[0] + '/.cache/thumbnails/large/* ; fi;');
+        ActUser[0] + '/.cache/thumbnails/* ; fi;');
       ExProcess.Execute;
     end;
 

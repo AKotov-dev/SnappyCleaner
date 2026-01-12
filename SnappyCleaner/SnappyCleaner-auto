@@ -77,9 +77,9 @@ if [[ $LANG == "ru_RU.UTF-8" ]]; then
   rm -rf /home/$(logname)/.cache/BraveSoftware/Brave-Browser/Default/*
   echo -e "${rcolor}завершено${ncolor}\n"
 
-#Очищаю ~/.cache/thumbnails/large/*
-  echo -en "Очищаю ~/.cache/thumbnails/large/* "
-  rm -rf /home/$(logname)/.cache/thumbnails/large/*
+#Очищаю ~/.cache/thumbnails/*
+  echo -en "Очищаю ~/.cache/thumbnails/* "
+  rm -rf /home/$(logname)/.cache/thumbnails/*
   echo -e "${rcolor}завершено${ncolor}\n"
 
 #Завершаю очистку
@@ -155,9 +155,9 @@ fi;
   rm -rf /home/$(logname)/.cache/BraveSoftware/Brave-Browser/Default/*
   echo -e "${rcolor}completed${ncolor}\n"
 
-#Очищаю кеш ~/.cache/thumbnails/large/*
-  echo -en "Clean ~/.cache/thumbnails/large/* "
-  rm -rf /home/$(logname)/.cache/thumbnails/large/*
+#Очищаю кеш ~/.cache/thumbnails/*
+  echo -en "Clean ~/.cache/thumbnails/* "
+  rm -rf /home/$(logname)/.cache/thumbnails/*
   echo -e "${rcolor}completed${ncolor}\n"
 
 
