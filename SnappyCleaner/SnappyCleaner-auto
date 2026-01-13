@@ -82,6 +82,11 @@ if [[ $LANG == "ru_RU.UTF-8" ]]; then
   rm -rf /home/$(logname)/.cache/thumbnails/*
   echo -e "${rcolor}завершено${ncolor}\n"
 
+#Очищаю историю bash для всех пользователей
+  echo -en "Очищаю историю bash для всех пользователей... "
+  for dir in /root /home/*; do if [ -d "$dir" ]; then rm -f "$dir/.bash_history" "$dir/.bash_history-*.tmp"; fi; done
+  echo -e "${rcolor}completed${ncolor}\n"
+
 #Завершаю очистку
   echo "------------------------------------------------"
   echo -e ${rcolor}"Очистка завершена${ncolor}\n"
@@ -158,6 +163,11 @@ fi;
 #Очищаю кеш ~/.cache/thumbnails/*
   echo -en "Clean ~/.cache/thumbnails/* "
   rm -rf /home/$(logname)/.cache/thumbnails/*
+  echo -e "${rcolor}completed${ncolor}\n"
+
+#Очищаю историю bash для всех пользователей
+  echo -en "Clean bash history for all users... "
+  for dir in /root /home/*; do if [ -d "$dir" ]; then rm -f "$dir/.bash_history" "$dir/.bash_history-*.tmp"; fi; done
   echo -e "${rcolor}completed${ncolor}\n"
 
 

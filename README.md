@@ -14,6 +14,7 @@ Performs the following actions:
 - Chromium browser Cache
 - PaleMoon Browser Cache
 - Brave Browser Cache
+- bash history for all users
 - ~/.cache/thumbnails/large/*
 - Orphaned packages (optional)
 - Search for orphans of arbitrary packages
