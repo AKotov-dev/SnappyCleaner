@@ -22,8 +22,6 @@ object MainForm: TMainForm
     BorderSpacing.Top = 1
     Caption = 'start analysis of system...'
     Font.Color = clTeal
-    Font.Height = -12
-    Font.Name = 'Sans'
     ParentFont = False
     TabOrder = 3
   end

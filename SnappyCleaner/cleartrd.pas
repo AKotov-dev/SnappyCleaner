@@ -27,6 +27,7 @@ type
     procedure ShowPaleMoonCache;
     procedure ShowBraveCache;
     procedure ShowThumbnails;
+    procedure ShowBashHistory;
     procedure ClearFinal;
     procedure ShowDelPackages;
     procedure ShowRepairRPM;
@@ -229,6 +230,17 @@ begin
       ExProcess.Execute;
     end;
 
+    //Очистка истории BASH для всех пользователей (без индикации KБ/MБ)
+    begin
+      Synchronize(@ShowBashHistory);
+      ExProcess.Parameters.Clear;
+      ExProcess.Parameters.Add('-c');
+      ExProcess.Parameters.Add(
+        'for dir in /root /home/*; do if [ -d "$dir" ]; ' +
+        'then rm -f "$dir/.bash_history" "$dir/.bash_history-*.tmp"; fi; done');
+      ExProcess.Execute;
+    end;
+
     //Удаление списка пакетов
     if (DelKernels <> '') or (DelOrphans <> '') then
     begin
@@ -332,6 +344,12 @@ end;
 procedure StartClear.ShowThumbnails;
 begin
   MainForm.StaticText1.Caption := SCleanThumbnails;
+end;
+
+//Показываю удаление истории BASH для всех пользователей
+procedure StartClear.ShowBashHistory;
+begin
+  MainForm.StaticText1.Caption := SCleanBashHistory;
 end;
 
 //Показываю удаление пакетов (ядра и сироты)

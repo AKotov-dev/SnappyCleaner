@@ -325,6 +325,10 @@ msgstr ""
 msgid "run analysis of the package dependencies, wait..."
 msgstr ""
 
+#: unit1.scleanbashhistory
+msgid "clean bash history for all users, wait..."
+msgstr ""
+
 #: unit1.scleanbravecache
 msgid "clean Brave browser cache, wait..."
 msgstr ""

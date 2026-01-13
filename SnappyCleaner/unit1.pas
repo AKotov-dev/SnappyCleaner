@@ -136,6 +136,7 @@ resourcestring
   SCleanPalemoonCache = 'clean PaleMoon browser cache, wait...';
   SCleanBraveCache = 'clean Brave browser cache, wait...';
   SCleanThumbnails = 'clean ~/.cache/thumbnails/*, wait...';
+  SCleanBashHistory = 'clean bash history for all users, wait...';
   SRemoveSelectedPackages = 'remove the selected packages, wait...';
   SPackage = 'Package:';
   SAnalizePackagesDeps = 'run analysis of the package dependencies, wait...';

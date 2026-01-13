@@ -347,6 +347,10 @@ msgstr "анализ завершен..."
 msgid "run analysis of the package dependencies, wait..."
 msgstr "запущен анализ зависимостей пакета, ждите..."
 
+#: unit1.scleanbashhistory
+msgid "clean bash history for all users, wait..."
+msgstr "очистка истории bash для всех пользователей, ждите..."
+
 #: unit1.scleanbravecache
 msgid "clean Brave browser cache, wait..."
 msgstr "очистка кеша браузера Brave, ждите..."
