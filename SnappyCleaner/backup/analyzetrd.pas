@@ -144,8 +144,8 @@ begin
     //Каталог кеш-DNF
     ExProcess.Parameters.Clear;
     ExProcess.Parameters.Add('-c');
-    ExProcess.Parameters.Add('if [ -d "/var/cache/dnf" ]; then ' +
-      'dnfcache=$(/usr/bin/du -csh /var/cache/dnf/* /var/cache/dnf/.[!.]* | tail -n1 | cut -f1'
+    ExProcess.Parameters.Add('if [ -d "/var/cache/libdnf5" ]; then ' +
+      'dnfcache=$(/usr/bin/du -csh /var/cache/libdnf5/* /var/cache/libdnf5/.[!.]* | tail -n1 | cut -f1'
       + '); else dnfcache="no"; fi; echo $dnfcache');
     ExProcess.Execute;
     Result.LoadFromStream(ExProcess.Output);
@@ -217,11 +217,11 @@ begin
     ExProcess.Parameters.Clear;
     ExProcess.Parameters.Add('-c');
     ExProcess.Parameters.Add('if [ -d "/home/' + ActUser[0] +
-      '/.cache/BraveSoftware/Brave-Browser/Default/Cache/Cache_Data" ]; then ' +
+      '/.cache/BraveSoftware/Brave-Browser/Default" ]; then ' +
       'bravecache=$(/usr/bin/du -csh /home/' + ActUser[0] +
-      '/.cache/BraveSoftware/Brave-Browser/Default/Cache/Cache_Data/* /home/' +
+      '/.cache/BraveSoftware/Brave-Browser/Default/* /home/' +
       ActUser[0] +
-      '/.cache/BraveSoftware/Brave-Browser/Default/Cache/Cache_Data/.[!.]* | tail -n1 | cut -f1); else bravecache="no"; fi; echo $bravecache');
+      '/.cache/BraveSoftware/Brave-Browser/Default/.[!.]* | tail -n1 | cut -f1); else bravecache="no"; fi; echo $bravecache');
     ExProcess.Execute;
     Result.LoadFromStream(ExProcess.Output);
     //Показываем размер кеша Brave

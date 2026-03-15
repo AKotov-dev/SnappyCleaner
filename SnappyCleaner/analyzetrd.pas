@@ -144,9 +144,16 @@ begin
     //Каталог кеш-DNF
     ExProcess.Parameters.Clear;
     ExProcess.Parameters.Add('-c');
-    ExProcess.Parameters.Add('if [ -d "/var/cache/dnf" ]; then ' +
-      'dnfcache=$(/usr/bin/du -csh /var/cache/dnf/* /var/cache/dnf/.[!.]* | tail -n1 | cut -f1'
-      + '); else dnfcache="no"; fi; echo $dnfcache');
+
+    if DirectoryExists('/var/cache/libdnf5') then
+      ExProcess.Parameters.Add('if [ -d "/var/cache/libdnf5" ]; then ' +
+        'dnfcache=$(/usr/bin/du -csh /var/cache/libdnf5/* /var/cache/libdnf5/.[!.]* | tail -n1 | cut -f1'
+        + '); else dnfcache="no"; fi; echo $dnfcache')
+    else
+      ExProcess.Parameters.Add('if [ -d "/var/cache/dnf" ]; then ' +
+        'dnfcache=$(/usr/bin/du -csh /var/cache/dnf/* /var/cache/dnf/.[!.]* | tail -n1 | cut -f1'
+        + '); else dnfcache="no"; fi; echo $dnfcache');
+
     ExProcess.Execute;
     Result.LoadFromStream(ExProcess.Output);
     //Показываем размер кеша DNF
