@@ -2,6 +2,8 @@
 
 SnappyCleaner is a system utility designed for comprehensive junk file removal and system maintenance on Mageia Linux.
 
+![](https://github.com/AKotov-dev/SnappyCleaner/blob/main/ScreenShot2.png)
+
 ## 🚀 Features
 
 The utility automatically performs the following actions:
@@ -39,5 +41,3 @@ scleaner --auto
 ## 🐧 Compatibility
 
 *   Developed and tested **exclusively** on **Mageia Linux 9 / 10**.
-
-![](https://github.com/AKotov-dev/SnappyCleaner/blob/main/ScreenShot2.png)
