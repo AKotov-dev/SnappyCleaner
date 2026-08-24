@@ -1,7 +1,7 @@
 **SnappyCleaner** - program for comprehensive garbage clearing in the system
 
 Performs the following actions:
-- Delete not active kernel's
+- Delete inactive kernels
 - Temporary root files
 - User basket
 - Temporary user files
