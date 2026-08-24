@@ -1,6 +1,6 @@
 # SnappyCleaner
 
-SnappyCleaner is a system utility designed for comprehensive junk file removal and system maintenance on Mageia Linux.
+SnappyCleaner — A comprehensive system cleanup and maintenance utility for Mageia Linux.
 
 ![](https://github.com/AKotov-dev/SnappyCleaner/blob/main/ScreenShot2.png)
 
