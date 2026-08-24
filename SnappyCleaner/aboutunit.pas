@@ -39,6 +39,7 @@ uses  unit1;
 
 procedure TAboutForm.FormShow(Sender: TObject);
 begin
+  AboutForm.Label1.Caption := Application.Title;
   AboutForm.Width := Label3.Left + Label3.Width + 40;
   AboutForm.Height := BitBtn1.Top + BitBtn1.Height + 8;
 

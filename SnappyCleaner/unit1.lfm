@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 297
+  Left = 303
   Height = 669
-  Top = 130
+  Top = 127
   Width = 909
   ActiveControl = AnalyzeBtn
   Caption = 'SnappyCleaner'

@@ -1,11 +1,11 @@
 object MainForm: TMainForm
-  Left = 304
-  Height = 665
-  Top = 126
+  Left = 297
+  Height = 669
+  Top = 130
   Width = 909
   ActiveControl = AnalyzeBtn
   Caption = 'SnappyCleaner'
-  ClientHeight = 665
+  ClientHeight = 669
   ClientWidth = 909
   SessionProperties = 'CacheChromeCheck.Checked;CacheChromiumCheck.Checked;CacheDNFCheck.Checked;CacheMozillaCheck.Checked;CacheOperaCheck.Checked;CachePaleMoonCheck.Checked;CacheURPMICheck.Checked;Height;LangBtn.Caption;Left;Panel1.Width;RepairRPMCheck.Checked;RootTmpCheck.Checked;SelectAllCheck.Checked;Top;UserRecentCheck.Checked;UserTMPCheck.Checked;UserTrashCheck.Checked;Width;CacheBraveCheck.Checked'
   LCLVersion = '4.4.0.0'
@@ -15,7 +15,7 @@ object MainForm: TMainForm
   object StaticText1: TStaticText
     Left = 0
     Height = 20
-    Top = 645
+    Top = 649
     Width = 909
     Align = alBottom
     BorderSpacing.Top = 1
@@ -26,12 +26,12 @@ object MainForm: TMainForm
   end
   object Panel1: TPanel
     Left = 0
-    Height = 644
+    Height = 648
     Hint = 'Wipe options'
     Top = 0
     Width = 261
     Align = alLeft
-    ClientHeight = 644
+    ClientHeight = 648
     ClientWidth = 261
     ParentFont = False
     ParentShowHint = False
@@ -75,7 +75,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrCenter
       Left = 234
       Height = 17
-      Top = 143
+      Top = 144
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -92,7 +92,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrCenter
       Left = 234
       Height = 17
-      Top = 182
+      Top = 183
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -109,7 +109,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrCenter
       Left = 234
       Height = 17
-      Top = 222
+      Top = 223
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -126,7 +126,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrCenter
       Left = 234
       Height = 17
-      Top = 262
+      Top = 264
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -143,7 +143,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrCenter
       Left = 234
       Height = 17
-      Top = 302
+      Top = 304
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -160,7 +160,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrCenter
       Left = 234
       Height = 17
-      Top = 382
+      Top = 384
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -177,7 +177,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrCenter
       Left = 234
       Height = 17
-      Top = 422
+      Top = 425
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -194,7 +194,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrCenter
       Left = 234
       Height = 17
-      Top = 462
+      Top = 465
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -209,7 +209,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Control = Label26
       Left = 8
       Height = 17
-      Top = 614
+      Top = 618
       Width = 80
       Anchors = [akLeft]
       BorderSpacing.Left = 7
@@ -226,7 +226,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrBottom
       Left = 234
       Height = 17
-      Top = 614
+      Top = 618
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -240,7 +240,7 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 136
+      Top = 137
       Width = 155
       Anchors = [akLeft]
       BorderSpacing.Left = 4
@@ -252,7 +252,7 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 175
+      Top = 176
       Width = 129
       Anchors = [akLeft]
       BorderSpacing.Left = 4
@@ -264,7 +264,7 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 215
+      Top = 216
       Width = 161
       Anchors = [akLeft]
       BorderSpacing.Left = 4
@@ -276,7 +276,7 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 255
+      Top = 257
       Width = 149
       Anchors = [akLeft]
       BorderSpacing.Left = 4
@@ -288,7 +288,7 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 295
+      Top = 297
       Width = 117
       Anchors = [akLeft]
       BorderSpacing.Left = 4
@@ -300,7 +300,7 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 375
+      Top = 377
       Width = 162
       Anchors = [akLeft]
       BorderSpacing.Left = 4
@@ -312,7 +312,7 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 415
+      Top = 418
       Width = 171
       Anchors = [akLeft]
       BorderSpacing.Left = 4
@@ -324,7 +324,7 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 455
+      Top = 458
       Width = 111
       Anchors = [akLeft]
       BorderSpacing.Left = 4
@@ -405,7 +405,7 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       Left = 7
       Height = 10
-      Top = 371
+      Top = 373
       Width = 247
       Anchors = [akLeft, akRight]
       BorderSpacing.Left = 6
@@ -419,7 +419,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrCenter
       Left = 234
       Height = 17
-      Top = 501
+      Top = 504
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -433,7 +433,7 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 494
+      Top = 497
       Width = 138
       Anchors = [akLeft]
       BorderSpacing.Left = 4
@@ -445,7 +445,7 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 534
+      Top = 537
       Width = 135
       Anchors = [akLeft]
       BorderSpacing.Left = 4
@@ -460,7 +460,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrCenter
       Left = 234
       Height = 17
-      Top = 541
+      Top = 544
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -474,7 +474,7 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 335
+      Top = 337
       Width = 111
       Anchors = [akLeft]
       BorderSpacing.Left = 4
@@ -489,7 +489,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrCenter
       Left = 234
       Height = 17
-      Top = 342
+      Top = 344
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -516,7 +516,7 @@ object MainForm: TMainForm
       AnchorSideLeft.Control = Panel1
       Left = 5
       Height = 32
-      Top = 574
+      Top = 578
       Width = 159
       Anchors = [akLeft]
       BorderSpacing.Left = 4
@@ -531,7 +531,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Side = asrCenter
       Left = 234
       Height = 17
-      Top = 581
+      Top = 585
       Width = 18
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
@@ -544,11 +544,11 @@ object MainForm: TMainForm
   end
   object Panel2: TPanel
     Left = 266
-    Height = 644
+    Height = 648
     Top = 0
     Width = 643
     Align = alClient
-    ClientHeight = 644
+    ClientHeight = 648
     ClientWidth = 643
     ParentFont = False
     TabOrder = 1
@@ -823,7 +823,7 @@ object MainForm: TMainForm
       AnchorSideBottom.Control = Panel2
       AnchorSideBottom.Side = asrBottom
       Left = 11
-      Height = 386
+      Height = 390
       Top = 250
       Width = 624
       Anchors = [akTop, akLeft, akRight, akBottom]
@@ -1087,7 +1087,7 @@ object MainForm: TMainForm
   end
   object Splitter1: TSplitter
     Left = 261
-    Height = 644
+    Height = 648
     Top = 0
     Width = 5
   end
