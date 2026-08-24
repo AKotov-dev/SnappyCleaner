@@ -1,28 +1,43 @@
-**SnappyCleaner** - program for comprehensive garbage clearing in the system
+# SnappyCleaner
 
-Performs the following actions:
-- Delete inactive kernels
-- Temporary root files
-- User basket
-- Temporary user files
-- Recent User Documents
-- Directory-URPMI cache
-- Directory-DNF cache
-- Mozilla FireFox cache
-- Google Chrome Cache
-- Opera Browser Cache
-- Chromium browser Cache
-- PaleMoon Browser Cache
-- Brave Browser Cache
-- bash history for all users
-- ~/.cache/thumbnails/large/*
-- Orphaned packages (optional)
-- Search for orphans of arbitrary packages
-- scleaner --auto (clean up without kernels and orphans)
-- Repairs the RPM database
+SnappyCleaner is a system utility designed for comprehensive junk file removal and system maintenance on Mageia Linux.
 
-After installation, SnappyCleaner goes to the `Utilities-System` menu and starts with a shortcut, or with the `scleaner` command from under a normal user (`scleaner --auto` - cleaning without taking into account kernels and orphans). Requires `root` privileges.
+## 🚀 Features
 
-Developed and tested only on Mageia Linux-9/10.
+The utility automatically performs the following actions:
+
+*   **Kernel Management:** Deletes inactive kernels to free up boot space.
+*   **System Cleanup:** 
+    *   Removes temporary root and user files.
+    *   Empties the user trash bin.
+    *   Clears recent documents history.
+    *   Wipes `bash` history for all system users.
+    *   Deletes thumbnail cache (`~/.cache/thumbnails/large/*`).
+*   **Package Manager Maintenance:**
+    *   Flushes directory caches for both **URPMI** and **DNF**.
+    *   Repairs and rebuilds the **RPM database**.
+*   **Browser Cache Cleaning:** Clears caches for Mozilla Firefox, Google Chrome, Opera, Chromium, PaleMoon, and Brave.
+*   **Orphaned Packages (Optional):** Searches for and removes orphaned packages (including arbitrary package orphans).
+
+## 💻 Usage
+
+> [!IMPORTANT]
+> SnappyCleaner requires **root privileges** to perform most cleanup tasks.
+
+After installation, you can launch SnappyCleaner in two ways:
+1.  **GUI:** Find it in the **Utilities → System** desktop menu.
+2.  **CLI:** Run the `scleaner` command from a normal user terminal (it will prompt for root privileges).
+
+### Automation Mode
+
+To run a quick cleanup without touching kernels or orphaned packages, use the auto flag:
+
+```bash
+scleaner --auto
+```
+
+## 🐧 Compatibility
+
+*   Developed and tested **exclusively** on **Mageia Linux 9 / 10**.
 
 ![](https://github.com/AKotov-dev/SnappyCleaner/blob/main/ScreenShot2.png)
