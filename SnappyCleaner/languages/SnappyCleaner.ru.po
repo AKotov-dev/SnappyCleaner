@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.8\n"
 
 #: taboutform.bitbtn1.caption
 msgid "Оk"
@@ -93,8 +93,8 @@ msgid "Chromium cache:"
 msgstr "Кеш Chromium:"
 
 #: tmainform.cachednfcheck.caption
-msgid "DNF Cache:"
-msgstr "Кеш DNF:"
+msgid "DNF5 Cache:"
+msgstr "Кеш DNF5:"
 
 #: tmainform.cachemozillacheck.caption
 msgid "Mozilla Firefox cache:"

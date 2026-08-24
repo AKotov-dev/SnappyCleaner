@@ -139,7 +139,15 @@ begin
       Synchronize(@ShowDNFCache);
       ExProcess.Parameters.Clear;
       ExProcess.Parameters.Add('-c');
-      ExProcess.Parameters.Add('/usr/bin/dnf clean all');
+
+      //Кеши DNF5
+      ExProcess.Parameters.Add('if [ -d "/home/' + ActUser[0] +
+        '/.cache/libdnf5" ]; then /usr/bin/rm -rf /home/' + ActUser[0] +
+        '/.cache/libdnf5/*; fi; ' +
+        'if [ -d "/var/cache/libdnf5" ]; then /usr/bin/rm -rf /var/cache/libdnf5/*; fi; '
+        +
+        'if [ -d "/var/cache/PackageKit" ]; then /usr/bin/rm -rf /var/cache/PackageKit/*; fi;');
+
       ExProcess.Execute;
     end;
 

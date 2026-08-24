@@ -415,7 +415,10 @@ end;
 procedure StartAnalyze.ShowDNFCache;
 begin
   //Показываем размер кеша DNF
-  MainForm.Label17.Caption := Result[0];
+  if (Result[0] = 'no') then
+    MainForm.Label17.Caption := SNo
+  else
+    MainForm.Label17.Caption := Result[0];
 end;
 
 procedure StartAnalyze.ShowMozillaCache;

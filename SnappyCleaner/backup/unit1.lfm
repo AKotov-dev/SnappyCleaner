@@ -7,7 +7,6 @@ object MainForm: TMainForm
   Caption = 'SnappyCleaner'
   ClientHeight = 665
   ClientWidth = 909
-  Position = poDefault
   SessionProperties = 'CacheChromeCheck.Checked;CacheChromiumCheck.Checked;CacheDNFCheck.Checked;CacheMozillaCheck.Checked;CacheOperaCheck.Checked;CachePaleMoonCheck.Checked;CacheURPMICheck.Checked;Height;LangBtn.Caption;Left;Panel1.Width;RepairRPMCheck.Checked;RootTmpCheck.Checked;SelectAllCheck.Checked;Top;UserRecentCheck.Checked;UserTMPCheck.Checked;UserTrashCheck.Checked;Width;CacheBraveCheck.Checked'
   LCLVersion = '4.4.0.0'
   OnClose = FormClose
@@ -476,10 +475,10 @@ object MainForm: TMainForm
       Left = 5
       Height = 32
       Top = 335
-      Width = 104
+      Width = 111
       Anchors = [akLeft]
       BorderSpacing.Left = 4
-      Caption = 'DNF Cache:'
+      Caption = 'DNF5 Cache:'
       ParentFont = False
       TabOrder = 8
     end
@@ -495,10 +494,10 @@ object MainForm: TMainForm
       Anchors = [akRight, akBottom]
       BorderSpacing.Right = 8
       Caption = '***'
-      Font.Color = clInactiveCaption
       Font.Style = [fsUnderline]
       ParentColor = False
       ParentFont = False
+      OnChangeBounds = Label24ChangeBounds
     end
     object Bevel6: TBevel
       AnchorSideLeft.Control = Panel1

@@ -1,13 +1,12 @@
 object AboutForm: TAboutForm
-  Left = 398
+  Left = 471
   Height = 278
-  Top = 160
+  Top = 203
   Width = 484
   BorderIcons = [biSystemMenu]
   Caption = 'About'
   ClientHeight = 278
   ClientWidth = 484
-  Position = poMainFormCenter
   LCLVersion = '4.4.0.0'
   OnShow = FormShow
   object Image1: TImage

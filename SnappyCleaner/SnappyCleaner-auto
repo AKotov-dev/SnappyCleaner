@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 clear
 
@@ -43,8 +43,8 @@ if [[ $LANG == "ru_RU.UTF-8" ]]; then
   echo -e "${rcolor}завершено${ncolor}\n"
 
 #Очищаю кеш dnf
-  echo -en "Очищаю кеш DNF... "
-  /usr/bin/dnf clean all 2>&1 >/dev/null;
+  echo -en "Очищаю кеш DNF5... "
+  rm -rf /var/cache/libdnf5/* /var/cache/PackageKit/* /home/$(logname)/.cache/libdnf5/*
   echo -e "${rcolor}завершено${ncolor}\n"
 
 #Очищаю кеш Mozilla Firefox
@@ -126,8 +126,8 @@ fi;
   echo -e "${rcolor}completed${ncolor}\n"
 
 #Очищаю кеш dnf
-  echo -en "Clean DNF cache... "
-  /usr/bin/dnf clean all 2>&1 >/dev/null;
+  echo -en "Clean DNF5 cache... "
+  rm -rf /var/cache/libdnf5/* /var/cache/PackageKit/* /home/$(logname)/.cache/libdnf5/*
   echo -e "${rcolor}completed${ncolor}\n"
 
 #Очищаю кеш Mozilla Firefox

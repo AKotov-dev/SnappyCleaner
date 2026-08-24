@@ -71,7 +71,7 @@ msgid "Chromium cache:"
 msgstr ""
 
 #: tmainform.cachednfcheck.caption
-msgid "DNF Cache:"
+msgid "DNF5 Cache:"
 msgstr ""
 
 #: tmainform.cachemozillacheck.caption

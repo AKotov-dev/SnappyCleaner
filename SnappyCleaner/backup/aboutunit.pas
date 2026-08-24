@@ -30,6 +30,7 @@ var
   AboutForm: TAboutForm;
 
 implementation
+  uses  unit1;
 
 {$R *.lfm}
 
@@ -37,8 +38,11 @@ implementation
 
 procedure TAboutForm.FormShow(Sender: TObject);
 begin
-  AboutForm.Width := Label3.Left + Label3.Width + 50;
+  AboutForm.Width := Label3.Left + Label3.Width + 40;
   AboutForm.Height := BitBtn1.Top + BitBtn1.Height + 8;
+
+  //Центр MainForm
+  AboutForm.Left:=MainForm.Width div 2 - AboutForm.Width div 2;
 end;
 
 procedure TAboutForm.BitBtn1Click(Sender: TObject);
