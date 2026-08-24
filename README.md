@@ -16,7 +16,7 @@ The utility automatically performs the following actions:
     *   Wipes `bash` history for all system users.
     *   Deletes thumbnail cache (`~/.cache/thumbnails/large/*`).
 *   **Package Manager Maintenance:**
-    *   Flushes directory caches for both **URPMI** and **DNF**.
+    *   Flushes directory caches for both **URPMI** and **DNF5**.
     *   Repairs and rebuilds the **RPM database**.
 *   **Browser Cache Cleaning:** Clears caches for Mozilla Firefox, Google Chrome, Opera, Chromium, PaleMoon, and Brave.
 *   **Orphaned Packages (Optional):** Searches for and removes orphaned packages (including arbitrary package orphans).
